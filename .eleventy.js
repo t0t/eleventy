@@ -5,9 +5,12 @@ const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
+// const threejs = require("three");
 
 module.exports = function(eleventyConfig) {
+
   // Add plugins
+  // eleventyConfig.addPlugin(threejs);
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginNavigation);
@@ -60,9 +63,10 @@ module.exports = function(eleventyConfig) {
     return filterTagList([...tagSet]);
   });
 
-  // Copy the `img` and `css` folders to the output
+  // Copy the `img` , `css` , `js` folders to the output
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("css");
+  eleventyConfig.addPassthroughCopy("js");
 
   // Customize Markdown library and settings:
   let markdownLibrary = markdownIt({

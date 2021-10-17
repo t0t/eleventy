@@ -1,0 +1,45 @@
+---
+layout: layouts/page.html
+eleventyNavigation:
+  key: Home
+  order: 1
+---
+{% set maxPosts = collections.posts.length | min(3) %}
+
+<h1>EncontrArte desde Cero</h1>
+<img src="/img/mapa-1.svg" alt="Mapa 1">
+
+
+<section>
+  <div id="render">
+    <label class="switch m-2">
+      <input type="checkbox" id="btn-mover">
+      <span class="slider round"></span>
+    </label>
+  </div>
+</section>
+
+
+
+<h3>Latest {% if maxPosts == 1 %}Post{% else %}{{ maxPosts }} Posts{% endif %}</h3>
+
+{% set postslist = collections.posts | head(-3) %}
+{% set postslistCounter = collections.posts | length %}
+{% include "postslist.html" %}
+
+<p>More posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p>
+
+<canvas id="main"></canvas>
+
+<!-- capture the JS content as a Nunjucks variable -->
+{% set js %}
+  {% include "test.js" %}
+{% endset %}
+<!-- pequeno script en linea -->
+<script>
+  {{ js | safe }}
+</script>
+
+
+<script type="text/javascript" src="{{ '/js/main.js' | url }}"></script>
+
