@@ -1,4 +1,4 @@
-
+console.log("kkk");
 var slideIndex = 1;
 showSlide(slideIndex);
 
@@ -24,9 +24,9 @@ function showSlide(n) {
   let modalPreviews = document.getElementsByClassName('modal-preview');
 
   if (n > slides.length) {
-    slideIndex = 1;	
+    slideIndex = 1;
   }
-  
+
   if (n < 1) {
   	slideIndex = slides.length;
   }
@@ -37,7 +37,7 @@ function showSlide(n) {
   for (let i = 0; i < modalPreviews.length; i++) {
       modalPreviews[i].className = modalPreviews[i].className.replace(' active', '');
   }
-  
+
   slides[slideIndex - 1].style.display = 'grid';
   modalPreviews[slideIndex - 1].className += ' active';
 }
