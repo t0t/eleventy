@@ -115,10 +115,6 @@ background: linear-gradient(
 	var(--grey-color-2) 80%);
 }
 
-main {
-	font-size: var(--size-1);
-}
-
 .section--cover {
   display: grid;
   gap: var(--size-3);
@@ -174,7 +170,8 @@ h3 {
 }
 
 @media screen and (min-width: 550px) {
-  h2 {
+  h2,
+  h3 {
     text-align: center;
   }
 }
@@ -493,6 +490,7 @@ img {
 .btn-whatsapp,
 .btn-telegram {
 	letter-spacing: 1px;
+  text-decoration: none;
 	/* font-weight: var(--bold); */
 	text-transform: uppercase;
 	padding: var(--size-1);
@@ -561,13 +559,23 @@ img {
   position: fixed;
   list-style: none;
   transition: top 0.3s;
-  width: 90%;
+  /* width: 90%; */
   z-index: 1;
   margin: 0;
   text-align: center;
   height: var(--size-5);
   align-items: center;
   font-weight: var(--bold);
+}
+@media screen and (min-width: 800px) {
+  .nav {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1420px) {
+  .nav {
+    width: 30%;
+  }
 }
 /* .nav-item {
   display: inline-block;
