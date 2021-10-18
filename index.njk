@@ -7,12 +7,15 @@ eleventyNavigation:
 {% set maxPosts = collections.posts.length | min(3) %}
 
 <h1>EncontrArte desde Cero</h1>
+
 <img src="/img/mapa-1.svg" alt="Mapa 1">
 
-<model-viewer src="/img/cuadro.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral" poster="/img/poster.webp" shadow-intensity="5.2" exposure="0.57" shadow-softness="1" auto-rotate camera-orbit="-416deg 88.56deg auto">
+  <label class="switch m-2">
+    <input type="checkbox" id="btn-mover">
+    <span class="slider round"></span>
+  </label>
+  <model-viewer src="/img/cuadro.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral" poster="/img/poster.webp" shadow-intensity="5.2" exposure="0.57" shadow-softness="1" auto-rotate camera-orbit="-416deg 88.56deg auto">
 </model-viewer>
-
-
 
 <h3>Latest {% if maxPosts == 1 %}Post{% else %}{{ maxPosts }} Posts{% endif %}</h3>
 
@@ -26,7 +29,7 @@ eleventyNavigation:
 
 <!-- capture the JS content as a Nunjucks variable -->
 {% set js %}
-  {% include "test.js" %}
+  {% include "switcher-3d-scroll.js" %}
 {% endset %}
 <!-- pequeno script en linea -->
 <script>

@@ -331,8 +331,7 @@ input:checked+.slider:before {
 }
 
 .switch {
-	position: absolute;
-	right: 0;
+	position: relative;
 	display: inline-block;
 	width: 60px;
 	height: 34px;
@@ -712,6 +711,12 @@ a[href].direct-link:focus:visited,
 
 /* Web components */
 model-viewer {
-  width: 100% !important;
-  height: 500px !important;
+  width: 100%;
+  height: 500px;
+  z-index: -1;
+}
+/* JS - Deshabilita touch en mobil */
+.deshabilitar  {
+	touch-action: auto !important;
+  z-index: 1111;
 }
