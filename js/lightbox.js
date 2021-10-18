@@ -1,4 +1,3 @@
-console.log("kkk");
 var slideIndex = 1;
 showSlide(slideIndex);
 
