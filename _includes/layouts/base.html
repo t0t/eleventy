@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
   <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}">
   <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
   <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,9 +15,20 @@
 
 <body>
   <header>
-    {# <h1 class="home"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1> #}
+    <a href="{{ '/' | url }}">
+      <svg class="home logo" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.5" viewBox="0 0 118 118">
+        <title>{{ metadata.title }}</title>
+        <circle cx="102436" cy="13938.8" r="553.055" transform="rotate(180 2695.11 394.127) scale(.05233)" vector-effect="non-scaling-stroke" />
+        <circle cx="102436" cy="13938.8" r="553.055" style="fill:#2bc4a9;" transform="rotate(180 1391.936 211.88) scale(.02618)" vector-effect="non-scaling-stroke" />
+        <circle cx="102436" cy="13938.8" r="553.055" style="fill:#ff6874;" transform="rotate(180 1377.459 211.88) scale(.02618)" vector-effect="non-scaling-stroke" />
+        <circle cx="102436" cy="13938.8" r="553.055" style="fill:#9f9fff;" transform="rotate(180 1362.98 211.88) scale(.02618)" vector-effect="non-scaling-stroke" />
+        <circle cx="102436" cy="13938.8" r="553.055" style="fill:#ffff9f;" transform="rotate(180 1348.504 211.88) scale(.02618)" vector-effect="non-scaling-stroke" />
+        <circle cx="102436" cy="13938.8" r="553.055" transform="rotate(180 5389.747 758.822) scale(.10466)" vector-effect="non-scaling-stroke" />
+        <circle cx="102436" cy="13938.8" r="553.055" style="fill:none;" transform="rotate(180 2709.611 394.127) scale(.05233)" vector-effect="non-scaling-stroke" />
+        <circle cx="102436" cy="13938.8" r="553.055" transform="rotate(180 2724.08 394.127) scale(.05233)" vector-effect="non-scaling-stroke"/>
+      </svg>
+    </a>
 
-    {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
     <nav class="nav" id="navbar">
       {%- for entry in collections.all | eleventyNavigation %}
       <li class="nav-item{% if entry.url == page.url %} nav-item-active{% endif %}">

@@ -10,7 +10,6 @@ const markdownItAnchor = require("markdown-it-anchor");
 module.exports = function(eleventyConfig) {
 
   // Add plugins
-  // eleventyConfig.addPlugin(threejs);
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginNavigation);
@@ -63,6 +62,8 @@ module.exports = function(eleventyConfig) {
     return filterTagList([...tagSet]);
   });
 
+  // Copy `img/favicon/` to `_site/`
+  // eleventyConfig.addPassthroughCopy({ "img/favicon": "/" });
   // Copy the `img` , `css` , `js` folders to the output
   eleventyConfig.addPassthroughCopy("img");
   eleventyConfig.addPassthroughCopy("css");
