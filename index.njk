@@ -9,15 +9,8 @@ eleventyNavigation:
 <h1>EncontrArte desde Cero</h1>
 <img src="/img/mapa-1.svg" alt="Mapa 1">
 
-
-<section>
-  <div id="render">
-    <label class="switch m-2">
-      <input type="checkbox" id="btn-mover">
-      <span class="slider round"></span>
-    </label>
-  </div>
-</section>
+<model-viewer src="/img/cuadro.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral" poster="/img/poster.webp" shadow-intensity="5.2" exposure="0.57" shadow-softness="1" auto-rotate camera-orbit="-416deg 88.56deg auto">
+</model-viewer>
 
 
 
@@ -40,6 +33,7 @@ eleventyNavigation:
   {{ js | safe }}
 </script>
 
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
-<script type="text/javascript" src="{{ '/js/main.js' | url }}"></script>
+<script type="module" src="{{ '/js/main.js' | url }}"></script>
 

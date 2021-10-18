@@ -707,3 +707,11 @@ a[href].direct-link:focus:visited,
   color: var(--primary-color);
   /* text-shadow: none; */
 }
+
+
+
+/* Web components */
+model-viewer {
+  width: 100% !important;
+  height: 500px !important;
+}
