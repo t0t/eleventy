@@ -342,30 +342,58 @@ button:hover {
 	/* background-color: var(--black-color); */
 }
 
-input:checked+.slider {
-	background-color: var(--secondary-color);
-}
+/* input:checked+.slider {
+	background-color: blue;
+} */
 
-input:focus+.slider {
+/* input:focus+.slider {
   background-color: var(--black-color);
+} */
+
+.menu3d {
+  display: grid;
+  width: 100%;
+  padding-bottom: var(--size-1);
+  gap: var(--size-1);
+  grid-template-columns: 1fr 1fr;
+  place-content: center;
+  place-items: center;
 }
 
-.indicador-icono path {
-  fill: var(--primary-color);
-  -webkit-transform: rotate(35deg);
-  transform: rotate(35deg);
+#icono-switcher {
+  -ms-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
 
+  -ms-transform-origin: center;
   -webkit-transform-origin: center;
   transform-origin: center;
+
+  -ms-transition: transform .4s;
+  -webkit-transition: transform .4s;
+  transition: transform .4s;
+
+  width: 30px;
+}
+
+#icono-switcher.indicador-icono {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
 
   -webkit-transition: transform .4s;
   transition: transform .4s;
 }
+.indicador-icono path {
+  fill: var(--primary-color);
+}
 
-.switch input {
+input {
   display: none;
 }
 
+.switch {
+  /* padding-bottom: 30px; */
+}
 .switch:hover {
   cursor: pointer;
   color: var(--primary-color);
@@ -400,10 +428,10 @@ input:focus+.slider {
   transform: translateX(26px) rotate(180deg);
 }
 
-#btn-mover {
-	/* position: absolute; */
+/* #btn-mover {
+	position: absolute;
 	right: 0;
-}
+} */
 
 /* JS - Deshabilita touch en mobil */
 .deshabilitar  {

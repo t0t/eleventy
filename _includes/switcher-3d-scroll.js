@@ -1,29 +1,25 @@
+// selecciono el canvas
 const canvasElement = document.querySelector("model-viewer");
 
-// Anula interferencia con scroll html
+// selecciono elementos del switcher
 const icono = document.getElementById("icono-switcher");
-// icono.addEventListener("click", activarControl, true);
-
-// /selecciono el label
 let innerTxtSwitch = document.getElementById("idSwitch");
-
 const boton = document.getElementById("btn-mover");
-boton.addEventListener("click", activarControl, true);
-// canvasElement.classList.add("deshabilitar");
 
-// Mobil
+// Escucho los eventos
+boton.addEventListener("click", activarControl, true);
 boton.addEventListener("touchstart", activarControl, true);
 
-console.log(innerTxtSwitch);
-innerTxtSwitch.innerText = "Clica aquí para mover el modelo 3D";
+// Texto indicador de accion
+innerTxtSwitch.innerText = "Habilitar mover grafico 3D";
 
 function activarControl() {
   if (boton.checked) {
-    innerTxtSwitch.innerText = "Ahora puedes mover el modelo 3D";
+    innerTxtSwitch.innerText = "Habilitar scroll de la página";
     canvasElement.classList.add("deshabilitar");
     icono.classList.add("indicador-icono");
   } else if (!boton.checked){
-    innerTxtSwitch.innerText = "Clica aquí para mover el modelo 3D";
+    innerTxtSwitch.innerText = "Habilitar mover grafico 3D";
     canvasElement.classList.remove("deshabilitar");
     icono.classList.remove("indicador-icono");
   }
