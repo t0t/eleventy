@@ -10,11 +10,11 @@ tags:
 layout: layouts/post.html
 ---
 
-Hermeneutiké también es un término que hace referencia al dios Griego Hermes, encargado de llevar mensajes secretos de una dimensión a otra y descifrarlos sólo a determinados destinatarios. Hermes era un psicopompo, un mismo mensajero alado que daba significado al Mercurio de los romanos y, por supuesto, al Toth de los egipcios, dios-símbolo de la mediación y de la interpretación entre distintos mundos o caras de una misma realidad.
+**Hermeneutiké** también es un término que hace referencia al dios Griego Hermes, encargado de llevar mensajes secretos de una dimensión a otra y descifrarlos sólo a determinados destinatarios. Hermes era un psicopompo, un mismo mensajero alado que daba significado al Mercurio de los romanos y, por supuesto, al Toth de los egipcios, dios-símbolo de la mediación y de la interpretación entre distintos mundos o caras de una misma realidad.
 
 ![ejemplo de obra de arte](/img/blog/arte3d.jpeg)
 
-Podemos estar de acuerdo en que interpretar, actualizar, comprender y simbolizar son palabras que pueden apuntar al mismo hecho y que germinan desde la misma realidad. Hay una fuerza que tiende a esencializar, reunir, simplificar. Esa fuerza es lo que re-presenta el símbolo. El símbolo permite completar lo que podemos ver con aquella parte que no vemos. De hecho Arte, símbolo, analogía… todo eso es 3 o 5 según que mapa usemos, y no es más que la función mercurial de Hermes.
+Podemos estar de acuerdo en que interpretar, actualizar, comprender y simbolizar son palabras que pueden apuntar al mismo hecho y que germinan desde una misma realidad. Hay una fuerza que tiende a esencializar, reunir, simplificar. Esa fuerza es lo que re-presenta el símbolo. El símbolo permite completar lo que podemos ver con aquella parte que no vemos. De hecho Arte, símbolo, analogía… todo eso es 3 o 5 según que mapa usemos, y no es más que la función mercurial de Hermes.
 
 El positivismo y el cartesianismo racional empírico han renegado del pensamiento simbólico y han alimentado la fuerza contraria; la confusión y el extravío de lo que somos.
 
@@ -40,7 +40,7 @@ Una hermenéutica holística necesariamente tiene que poder leer lo simbólico, 
 
 Lo humano “imita” algo, hay una imitatio en las formas, o como dice el astrólogo Eugenio Carutti “el humano recorta la realidad y construye con ello objetos” pero esta mimesis no entendida como mera imitación de algo previamente conocido, sino como “llevar algo latente a su representación actualizada”.
 
-> La obra de arte o el símbolo representa algo que ya está siendo en otro nivel…
+> La obra de arte o el símbolo representa algo que ya está siendo en otro nivel...
 
 En la obra de arte, como producto de una acción simbólica auténtica que es, se produce un reconocimiento mutuo entre dos polos de una misma realidad que se encuentran. La realidad se reúne a sí misma, se completa a sí misma haciéndose presente como símbolo y  proporcionando la experiencia del descubrimiento de una realidad más íntegra.
 
@@ -48,4 +48,4 @@ En la obra de arte, como producto de una acción simbólica auténtica que es, s
 
 Por otra parte, la experiencia de conocimiento que se libera es a través del arte y el símbolo, como un chasquido, un darse cuenta preñado de infinitas posibilidades que la experiencia sensible ordinaria por sí sola no puede realizar.
 
-En la obra del arttística estas posibilidades se actualizan; salen a la luz y toman una forma definida completando la forma del encuentro.
+En la obra del artística estas posibilidades se actualizan; salen a la luz y toman una forma definida completando la forma del encuentro.

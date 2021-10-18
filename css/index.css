@@ -199,11 +199,13 @@ blockquote {
   padding-top: var(--size-2);
   padding-bottom: var(--size-2);
   font-weight: var(--bold);
+  margin-top: var(--size-4);
+  margin-bottom: var(--size-4);
 }
 
 hr {
   width: var(--size-4);
-  background-color: var(--grey-color-3);
+  background-color: var(--secondary-color);
   padding: 2px;
   border: none;
   margin-top: var(--size-3);
@@ -342,9 +344,9 @@ button:hover {
 	/* background-color: var(--black-color); */
 }
 
-/* input:checked+.slider {
-	background-color: blue;
-} */
+input:checked+.switch {
+	color: var(--primary-color);
+}
 
 /* input:focus+.slider {
   background-color: var(--black-color);
@@ -352,9 +354,9 @@ button:hover {
 
 .menu3d {
   display: grid;
-  width: 100%;
+  /* width: 100%; */
   padding-bottom: var(--size-1);
-  gap: var(--size-1);
+  gap: var(--size-0);
   grid-template-columns: 1fr 1fr;
   place-content: center;
   place-items: center;
@@ -374,15 +376,19 @@ button:hover {
   transition: transform .4s;
 
   width: 30px;
+  justify-self: end;
 }
 
 #icono-switcher.indicador-icono {
+  -ms-transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 
+  -ms-transition: transform .4s;
   -webkit-transition: transform .4s;
   transition: transform .4s;
 }
+
 .indicador-icono path {
   fill: var(--primary-color);
 }
@@ -392,46 +398,14 @@ input {
 }
 
 .switch {
-  /* padding-bottom: 30px; */
+  justify-self: start;
+  font-size: var(--size-0);
+  font-weight: var(--bold);
 }
 .switch:hover {
   cursor: pointer;
   color: var(--primary-color);
 }
-
-.slider {
-	position: relative;
-	top: 0;
-	left: 0;
-	right: 0;
-	/* bottom: 0; */
-	background-color: var(--primary-color);
-	-ms-transition: .4s;
-	-webkit-transition: .4s;
-	transition: transform .4s;
-}
-
-.slider:before {
-	position: absolute;
-	content: "";
-	height: var(--size-3);
-	width: var(--size-3);
-	left: 4px;
-	bottom: -4px;
-	background-image: url("/img/touch.svg");
-  background-repeat: no-repeat;
-  /* background-color: red; */
-	-webkit-transition: .4s;
-	transition: .4s;
-  -webkit-transform: translateX(26px) rotate(180deg);
-	-ms-transform: translateX(26px) rotate(180deg);
-  transform: translateX(26px) rotate(180deg);
-}
-
-/* #btn-mover {
-	position: absolute;
-	right: 0;
-} */
 
 /* JS - Deshabilita touch en mobil */
 .deshabilitar  {
@@ -637,7 +611,7 @@ img {
 /* Posts list */
 .postlist {
   display: grid;
-  gap: var(--size-1);
+  gap: var(--size-2);
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   list-style: none;
   padding: 0;
@@ -651,6 +625,9 @@ img {
   align-content: center;
   counter-increment: start-from -1;
   border: 1px solid var(--black-color);
+  -webkit-box-shadow: 7px 7px 0px -3px rgba(0,0,0,0.17);
+  -moz-box-shadow: 7px 7px 0px -3px rgba(0,0,0,0.17);
+  box-shadow: 7px 7px 0px -3px rgba(0,0,0,0.17);
   padding: var(--size-1);
 }
 
@@ -677,12 +654,15 @@ img {
   text-underline-offset: 0;
   text-decoration-thickness: 5px;
   text-decoration-color: var(--primary-color);
+  font-weight: var(--bold);
+
 }
 .postlist-link a {
   color: var(--quaternary-color);
 }
 .postlist-link:hover {
-  color: var(--secondary-color);
+  color: var(--primary-color);
+  text-decoration-color: var(--secondary-color);
 }
 .postlist-item-active .postlist-link {
   font-weight: var(--normal);
@@ -772,7 +752,6 @@ model-viewer {
   width: 300px;
 }
 
-
 .preview {
 	width: var(--size-6);
 	height: var(--size-6);
@@ -790,8 +769,6 @@ model-viewer {
   }
 }
 
-
-
 .modal {
   display: none;
   position: fixed;
@@ -801,7 +778,7 @@ model-viewer {
   width: 100vw;
   height: 100%;
   overflow: auto;
-  background-color: rgba(42, 41, 41, 0.89);
+  background-color: rgba(255, 255, 255, 0.89);
 }
 
 .modal-content {
@@ -828,9 +805,12 @@ model-viewer {
 }
 
 .image-slide {
-	width: 100%;
-	/* height: var(--size-6); */
-  padding: var(--size-2) 0;
+	width: 400px;
+	/* height: 400px; */
+  /* padding: var(--size-2) 0; */
+  -webkit-box-shadow: 0px 0px 36px 7px rgb(0 0 0 / 62%);
+-moz-box-shadow: 0px 0px 36px 7px rgb(0 0 0 / 62%);
+box-shadow: 0px 0px 36px 7px rgb(0 0 0 / 62%);
 }
 
 .modal-preview {
@@ -865,11 +845,11 @@ img.hover-shadow {
 }
 
 .close {
-  color: rgb(255 255 255 / 50%);
+  color: var(--primary-color);
   position: fixed;
   top: 0;
-  right: 10px;
-  font-size: var(--size-3);
+  right: var(--size-3);
+  font-size: var(--size-5);
   z-index: 1;
 }
 

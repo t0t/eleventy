@@ -10,11 +10,9 @@ tags:
 layout: layouts/post.html
 ---
 
-> «y cuando el Todo hubo comenzado a ordenarse…
-> Todos los elementos recibieron de Dios sus figuras
-> por acción de las ideas
-> y los números.»
-> – Platón
+> ...y cuando el Todo hubo comenzado a ordenarse... Todos los elementos recibieron de Dios sus figuras por acción de las ideas y los números.
+>
+> ─ Platón
 
 En ocasiones ni siquiera necesitas no estar viendo algo para estar viendo algo, es decir, cuando no ves también ves… Aquí vamos a descifrar la Creación! así que vamos a tener que acostumbrarnos a las paradojas porque la realidad no entiende del limitado racionalismo humano y se expresa a través de otra lógica.
 

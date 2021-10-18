@@ -11,15 +11,15 @@ boton.addEventListener("click", activarControl, true);
 boton.addEventListener("touchstart", activarControl, true);
 
 // Texto indicador de accion
-innerTxtSwitch.innerText = "Habilitar mover grafico 3D";
+innerTxtSwitch.innerText = "ACTIVAR controles 3D";
 
 function activarControl() {
   if (boton.checked) {
-    innerTxtSwitch.innerText = "Habilitar scroll de la página";
+    innerTxtSwitch.innerText = "Controles 3D ACTIVOS";
     canvasElement.classList.add("deshabilitar");
     icono.classList.add("indicador-icono");
   } else if (!boton.checked){
-    innerTxtSwitch.innerText = "Habilitar mover grafico 3D";
+    innerTxtSwitch.innerText = "ACTIVAR controles 3D";
     canvasElement.classList.remove("deshabilitar");
     icono.classList.remove("indicador-icono");
   }
