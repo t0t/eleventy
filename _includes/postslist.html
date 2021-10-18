@@ -16,11 +16,11 @@
       {{ post.date | readableDate }}
     </time>
 
-    {% for tag in post.data.tags | filterTagList %}
+   <div class="wrap-tags"> {% for tag in post.data.tags | filterTagList %}
     {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
       <a href="{{ tagUrl | url }}" class="post-tag">
       {{ tag }}</a>
-    {% endfor %}
+    {% endfor %}</div>
   </li>
   {% endfor %}
 </ol>

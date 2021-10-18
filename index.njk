@@ -10,7 +10,7 @@ layout: layouts/home.html
 </header>
 
 <section class="section--base vh50 dg pic">
-  <h3 class="">Proyectos</h3>
+  <h3>Proyectos</h3>
   <div class="actividad dg pic">
     <div>
       <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"
@@ -98,23 +98,29 @@ layout: layouts/home.html
   </div>
 </section>
 
-{# Activar/desactivar scroll en navegador #}
-<label class="switch m-2">
-  <input type="checkbox" id="btn-mover">
-  <span class="slider round"></span>
-</label>
+<section>
+  {# Activar/desactivar scroll en navegador #}
+  <label class="switch">
+    <small>Clica en este icono para para mover el modelo 3D</small>
+    <input type="checkbox" id="btn-mover">
+    <span class="slider round"></span>
+  </label>
 
-<model-viewer src="/img/cuadro.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral" poster="/img/poster.webp" shadow-intensity="5.2" exposure="0.57" shadow-softness="1" auto-rotate camera-orbit="-416deg 88.56deg auto"></model-viewer>
+  <model-viewer src="/img/cuadro.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="neutral" poster="/img/poster.webp" shadow-intensity="5.2" exposure="0.57" shadow-softness="1" auto-rotate camera-orbit="-416deg 88.56deg auto"></model-viewer>
+</section>
 
-<h3>{% if maxPosts == 1 %}Post{% else %}{{ maxPosts }} Artículos Recientes{% endif %}</h3>
+<hr>
 
-{% set postslist = collections.posts | head(-3) %}
-{% set postslistCounter = collections.posts | length %}
-{% include "postslist.html" %}
+<section>
+  <h3>{% if maxPosts == 1 %}Post{% else %}{{ maxPosts }} escritos recientes{% endif %}</h3>
 
-<p>More posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p>
+  {% set postslist = collections.posts | head(-3) %}
+  {% set postslistCounter = collections.posts | length %}
+  {% include "postslist.html" %}
 
-<canvas id="main"></canvas>
+  <p class="tac">More posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p>
+</section>
+
 
 <!-- capture the JS content as a Nunjucks variable -->
 {% set js %}
