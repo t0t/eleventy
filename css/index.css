@@ -553,13 +553,15 @@ img {
 /* Nav */
 .nav {
   display: grid;
+  gap: var(--size-1);
   top: 0;
   right: 0;
   padding: var(--size-1);
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   position: fixed;
   list-style: none;
   transition: top 0.3s;
+  width: 90%;
   z-index: 1;
   margin: 0;
   text-align: center;
