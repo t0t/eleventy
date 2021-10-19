@@ -1,5 +1,5 @@
 ---
-title: Frases
+title: No da lo mismo que todo sea lo mismo
 description: This is a post on My Blog about leveraging agile frameworks.
 date: 2021-07-04
 tags:
