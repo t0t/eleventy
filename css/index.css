@@ -80,6 +80,7 @@ code {
 	--tertiary-color: #9F9FFF;
 	--quaternary-color: #FFFF9F;
 	--black-color: black;
+	--white-color: white;
 	--grey-color: #E8E8E8;
 	--grey-color-1: #dad9d9;
 	--grey-color-2: #a0a0a0;
@@ -600,18 +601,24 @@ img {
     width: 30%;
   }
 }
-/* .nav-item {
-  display: inline-block;
-  margin-right: 1em;
-} */
-.nav-item a[href]:not(:hover) {
+.nav a {
   text-decoration: none;
   padding: 0.3rem 0.4rem;
   border-radius: 4px;
   justify-self: end;
 }
-.nav-item-active a {
+.nav a:hover {
+  background-color: var(--white-color);
+}
+
+/* .nav-item a[href]:not(:hover) { */
+  /* background-color: red; */
+/* } */
+
+.nav-item-active a,
+.nav-item-active a:hover {
   background-color: var(--secondary-color);
+  cursor: default;
 }
 
 @media screen and (max-width: 500px) {
