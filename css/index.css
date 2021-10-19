@@ -75,15 +75,17 @@ code {
 }
 
 :root {
-	--primary-color: #FF6874;
+  --primary-color: #FF6874;
 	--secondary-color: #2BC4A9;
 	--tertiary-color: #9F9FFF;
 	--quaternary-color: #FFFF9F;
 	--black-color: black;
 	--grey-color: #E8E8E8;
+	--grey-color-1: #dad9d9;
 	--grey-color-2: #a0a0a0;
 	--grey-color-3: #6f6f6f;
 	--grey-color-4: #2e2e2e;
+	--white-color-alpha: #ffffff29;
 	--bold: 700;
 	--normal: 400;
 	--light: 300;
@@ -109,10 +111,11 @@ body {
 	font-weight: var(--normal);
 	/* overscroll-behavior: none; */
 	/* width: 100%; */
-	background: rgb(255,255,159);
+	/* background: rgb(255,255,159); */
 background: linear-gradient(
 	180deg,
-	var(--quaternary-color) 20%,
+	var(--quaternary-color) 3%,
+	var(--grey-color) 7%,
 	var(--secondary-color) 70%,
 	var(--grey-color-2) 80%);
 }
@@ -120,13 +123,10 @@ background: linear-gradient(
 .section--cover {
   display: grid;
   gap: var(--size-3);
-  /* grid-template-columns: repeat(2, 1fr ); */
   grid-template-columns: repeat(auto-fit, minmax(375px, 1fr) );
   place-items: center;
-  /* text-align: center; */
-  /* grid-template-areas:
-  "imagen texto"; */
 }
+
 .section--cover h1 {
   text-align: inherit;
   margin: inherit;
@@ -137,9 +137,9 @@ background: linear-gradient(
   }
 }
 
-/* .section--cover:nth-child(1) {
-  background-color: #fff;
-} */
+.section--cover svg {
+  margin-top: var(--size-4);
+}
 
 .section--base {
 	padding: var(--size-2);
@@ -178,6 +178,15 @@ h3 {
   }
 }
 
+.titlePage {
+  text-align: center;
+  margin-bottom: var(--size-2);
+}
+.subTitlePage {
+  text-align: center;
+  padding-bottom: var(--size-2);
+}
+
 p {
 	line-height: var(--size-2);
 }
@@ -188,7 +197,7 @@ small {
 
 a {
 	color: var(--black-color);
-	text-decoration: none;
+	/* text-decoration: none; */
 }
 
 blockquote {
@@ -601,16 +610,11 @@ img {
   border-radius: 4px;
   justify-self: end;
 }
-.nav-item-active {
-  background-color: var(--black-color);
+.nav-item-active a {
+  background-color: var(--secondary-color);
 }
 
 @media screen and (max-width: 500px) {
-  .nav-item a[href] {
-    /* padding: var(--size-0); */
-    background-color: var(--secondary-color);
-    /* color: var(--primary-color); */
-  }
   .nav-item a[href]:hover {
     background-color: var(--primary-color);
     color: var(--secondary-color);
@@ -633,7 +637,8 @@ img {
   text-align: center;
   align-content: center;
   counter-increment: start-from -1;
-  border: 1px solid var(--black-color);
+  /* border: 1px solid var(--black-color); */
+  background-color: var(--white-color-alpha);
   -webkit-box-shadow: 7px 7px 0px -3px rgba(0,0,0,0.17);
   -moz-box-shadow: 7px 7px 0px -3px rgba(0,0,0,0.17);
   box-shadow: 7px 7px 0px -3px rgba(0,0,0,0.17);
@@ -662,7 +667,7 @@ img {
   text-underline-position: from-font;
   text-underline-offset: 0;
   text-decoration-thickness: 5px;
-  text-decoration-color: var(--primary-color);
+  text-decoration-color: var(--secondary-color);
   font-weight: var(--bold);
 
 }
