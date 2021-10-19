@@ -435,7 +435,8 @@ input {
 
 
 img {
-	max-width: inherit;
+	max-width: 100%;
+  height: auto;
 }
 
 .actividad {
@@ -563,7 +564,8 @@ img {
   gap: var(--size-1);
   top: 0;
   right: 0;
-  padding: var(--size-1);
+  padding-top: var(--size-1);
+  padding-right: var(--size-1);
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   position: fixed;
   list-style: none;
@@ -572,13 +574,16 @@ img {
   z-index: 1;
   margin: 0;
   text-align: center;
-  height: var(--size-5);
+  height: var(--size-4);
   align-items: center;
+  justify-items: end;
   font-weight: var(--bold);
 }
 @media screen and (min-width: 800px) {
   .nav {
-    width: 50%;
+    gap: inherit;
+    height: var(--size-5);
+    width: var(--size-8);
   }
 }
 @media screen and (min-width: 1420px) {
@@ -592,6 +597,9 @@ img {
 } */
 .nav-item a[href]:not(:hover) {
   text-decoration: none;
+  padding: 0.3rem 0.4rem;
+  border-radius: 4px;
+  justify-self: end;
 }
 .nav-item-active {
   background-color: var(--black-color);
@@ -755,17 +763,24 @@ model-viewer {
 
 .preview {
 	width: var(--size-6);
-	height: var(--size-6);
+	/* height: var(--size-6); */
   /* padding-bottom: var(--size-2); */
 }
 
 .gallery {
+  display: grid;
+  gap: var(--size-2);
+  /* text-align: center; */
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
 }
+
+/* .gallery__item {
+  background-color: red;
+} */
 
 @media screen and (min-width: 426px) {
   .gallery {
-    display: grid;
-    gap: var(--size-2);
+    justify-items: center;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
 }
@@ -807,15 +822,18 @@ model-viewer {
 
 .image-slide {
 	width: 400px;
-	/* height: 400px; */
-  /* padding: var(--size-2) 0; */
   -webkit-box-shadow: 0px 0px 36px 7px rgb(0 0 0 / 62%);
--moz-box-shadow: 0px 0px 36px 7px rgb(0 0 0 / 62%);
-box-shadow: 0px 0px 36px 7px rgb(0 0 0 / 62%);
+  -moz-box-shadow: 0px 0px 36px 7px rgb(0 0 0 / 62%);
+  box-shadow: 0px 0px 36px 7px rgb(0 0 0 / 62%);
+  margin-bottom: var(--size-2);
+}
+
+.image-slide + small {
+  text-align: center;
 }
 
 .modal-preview {
-	width: 100%;
+	/* width: 100%; */
 }
 
 .dots {
