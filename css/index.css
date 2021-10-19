@@ -19,7 +19,8 @@ p:last-child {
 p,
 .tmpl-post li,
 img,
-blockquote {
+blockquote,
+pre {
   max-width: var(--size-9);
   margin-left: auto;
   margin-right: auto;

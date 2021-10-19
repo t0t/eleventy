@@ -17,9 +17,10 @@ code[class*="language-"], pre[class*="language-"] {
 	color: #f8f8f2;
 }
 pre[class*="language-"] {
-	padding: 1.5em 0;
-	margin: .5em 0;
+	padding: var(--size-3);
+	margin: .5em auto;
 	overflow: auto;
+  border-radius: var(--size-1);
 }
 :not(pre) > code[class*="language-"] {
 	padding: .1em;
