@@ -7,6 +7,8 @@ tags:
 layout: layouts/post.html
 ---
 
+<img src="/img/mapa.svg" class="rounded">
+
 Hace tiempo que quería reflexionar a cerca de esto: **todo es lo mismo pero parece diferente**.
 
 Un ejemplo rotundo es la analogía entre el mundo del desarrollo web y la vida real. Ambos mundos son muy extensos, así que acotaremos el desarrollo web a las esferas que conozco más: `HTML`, `CSS` y `Javascript` básico.
