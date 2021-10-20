@@ -13,9 +13,9 @@ body {
   margin: 0;
 }
 
-p:last-child {
+/* p:last-child {
   margin-bottom: 0;
-}
+} */
 p,
 .tmpl-post li,
 img,
@@ -111,6 +111,18 @@ body {
 	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 	font-size: var(--size-1);
 	font-weight: var(--normal);
+}
+
+
+.section--nomargin {
+  width: 100vw;
+  min-height: 75vh;
+  margin-left: calc(var(--size-3) * -1);
+  margin-right: calc(var(--size-3) * -1);
+  margin-bottom: calc(var(--size-2) * -1);
+  background-color: red;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 video {
@@ -866,7 +878,7 @@ model-viewer {
 .tmpl-page,
 .tmpl-post {
   padding-top: var(--size-4);
-  padding-bottom: var(--size-4);
+  padding-bottom: var(--size-2);
 }
 
 .tmpl-home {
@@ -877,6 +889,29 @@ model-viewer {
     var(--secondary-color) 70%,
     var(--grey-color-2) 80%
   );
+}
+
+.img--25vw {
+  max-width: 25vw;
+}
+.img--50vw {
+  max-width: 50vw;
+}
+.img--100vw {
+  max-width: 100vw;
+}
+.img--fl,
+.img--fr {
+  margin-bottom: var(--size-3);
+}
+
+.img--fl {
+    float: left;
+    margin-right: var(--size-3);
+}
+.img--fr {
+    float: right;
+    margin-left: var(--size-3);
 }
 
 .tmpl-home img {
@@ -904,6 +939,7 @@ model-viewer {
   .gallery {
     justify-items: center;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    padding-bottom: var(--size-2);
   }
 }
 

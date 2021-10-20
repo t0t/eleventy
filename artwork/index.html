@@ -40,32 +40,36 @@ eleventyNavigation:
 
 </div>
 
-
 <div id="Lightbox" class="modal">
 
-      <span class="close pointer" onclick="closeLightbox()">&times;</span>
+<span class="close pointer" onclick="closeLightbox()">&times;</span>
 
-      <div class="modal-content">
+<div class="modal-content">
 
-        {% for obra in obras.obras %}
-        <div class="slide">
-          <img src="{{ obra.imagen }}" alt="{{ obra.title }}" class="image-slide">
-          <small><strong>{{ obra.title }}</strong> {{ obra.description }}. REF: {{ obra.ref }}</small>
-        </div>
-        {% endfor %}
+  {% for obra in obras.obras %}
+  <div class="slide">
+    <img src="{{ obra.imagen }}" alt="{{ obra.title }}" class="image-slide">
+    <small><strong>{{ obra.title }}</strong> {{ obra.description }}. REF: {{ obra.ref }}</small>
+  </div>
+  {% endfor %}
 
-        <a class="previous" onclick="changeSlide(-1)">&#10094;</a>
-        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+  <a class="previous" onclick="changeSlide(-1)">&#10094;</a>
+  <a class="next" onclick="changeSlide(1)">&#10095;</a>
 
-        <div class="dots">
+  <div class="dots">
 
-          {% for obra in obras.obras %}
-            <img src="{{ obra.preview }}" alt="{{ obra.title }}" class="modal-preview hover-shadow"
-            onclick="toSlide({{ obra.id }})">
-          {% endfor %}
+    {% for obra in obras.obras %}
+      <img src="{{ obra.preview }}" alt="{{ obra.title }}" class="modal-preview hover-shadow"
+      onclick="toSlide({{ obra.id }})">
+    {% endfor %}
 
-        </div>
-      </div>
+  </div>
+</div>
+</div>
+
+<section class="section--nomargin" style = "background-image: url('/img/img3.jpg');">
+  <!-- <img src="/img/img3.jpg" class="" alt="detalle" > -->
+</section>
 
 {# <script type="module" src="{{ '/js/main.js' | url }}"></script> #}
 <script src="{{ '/js/lightbox.js' | url }}"></script>

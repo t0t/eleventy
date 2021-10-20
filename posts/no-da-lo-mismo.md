@@ -1,17 +1,21 @@
 ---
 title: No da lo mismo que todo sea lo mismo
-description: Notas acerca de la jerarquía analógica como orden sagrado
+description: Notas acerca de la jerarquía tecnológica como orden sagrado
 date: 2021-10-20
 tags:
   - number 2
 layout: layouts/post.html
 ---
 
-<img src="/img/mapa.svg" class="rounded">
+## Notas acerca de la jerarquía tecnológica como orden sagrado
+
+<img src="/img/blog/tecnologia.svg" class="img--50vw img--fl">
 
 Hace tiempo que quería reflexionar a cerca de esto: **todo es lo mismo pero parece diferente**.
 
 Un ejemplo rotundo es la analogía entre el mundo del desarrollo web y la vida real. Ambos mundos son muy extensos, así que acotaremos el desarrollo web a las esferas que conozco más: `HTML`, `CSS` y `Javascript` básico.
+
+<img src="/img/mapa.svg" class="img--25vw img--fr">
 
 Un sitio web como éste en el que estás ahora es un sistema de códigos interrelacionados entre sí. Cada elemento vive anidado en un contexto mayor que lo contiene. Eso es el DOM (Document Object Model).
 

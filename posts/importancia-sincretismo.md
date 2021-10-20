@@ -42,9 +42,11 @@ Lo humano “imita” algo, hay una imitatio en las formas, o como dice el astr�
 
 > La obra de arte o el símbolo representa algo que ya está siendo en otro nivel...
 
+<img src="/img/blog/arte3d.jpeg" class="img--25vw img--fl" alt="ejemplo de obra de arte">
+
 En la obra de arte, como producto de una acción simbólica auténtica que es, se produce un reconocimiento mutuo entre dos polos de una misma realidad que se encuentran. La realidad se reúne a sí misma, se completa a sí misma haciéndose presente como símbolo y  proporcionando la experiencia del descubrimiento de una realidad más íntegra.
 
-![ejemplo de obra de arte](/img/blog/arte3d.jpeg)
+<!-- ![](/img/blog/) -->
 
 Por otra parte, la experiencia de conocimiento que se libera es a través del arte y el símbolo, como un chasquido, un darse cuenta preñado de infinitas posibilidades que la experiencia sensible ordinaria por sí sola no puede realizar.
 
