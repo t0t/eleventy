@@ -1,46 +1,199 @@
 {
-  "data": [
+  "products": [
     {
-      "title": "NUSMods",
-      "screenshots": ["images/nusmods-1.jpg", "images/nusmods-2.jpg"],
-      "description": "<p><strong><a href='http://nusmods.com' target='_blank'>NUSMods</a></strong> provides students with a better way to plan their school timetables with a user-friendly timetable builder and also serves to be a complete knowledge bank of NUS modules by providing useful module-related information such as archived NUS CORS bidding statistics and community-driven module reviews and discussions.</p>",
-      "tags": ["BackboneJS", "MarionetteJS", "d3.js"]
+      "id": 0,
+      "slug": "product0",
+      "excerpt": "xxx",
+      "title": "Vesica Holística ",
+      "thumb": "img/th-img11.jpg",
+      "imagen": "img/img11.jpg",
+      "description": "Arena negra y latex. 100cm ø 2019",
+      "content":
+        {
+          "h1":"El viento colocó la arena",
+          "img1":"/img/detalle2.jpg",
+          "p":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa doloribus in provident placeat dolore!"
+        }
     },
     {
-      "title": "Una",
-      "screenshots": ["images/una.jpg"],
-      "description": "<p><strong><a href='http://una-org.github.io/' target='_blank'>Una</a></strong> is a free and open source Javascript library that allows developers to create interactive applications where multiple users can interact with large central displays in real-time using mobile devices.</p><p>This project was completed in the course of CS3216 Software Development on Evolving Platforms and won the <strong>Best Project Award</strong> for STePS (NUS School of Computing Term Project Showcase) 2013/14 Semester I.</p>",
-      "tags": ["Node.js", "Socket.io", "Express"]
+      "id": 1,
+      "slug": "product1",
+      "excerpt": "xxx",
+      "title": "Sand's frecuency prototype",
+      "description": "3D Print + beach sand",
+      "imagen": "img/img12.jpg",
+      "thumb": "img/th-img12.jpg",
+      "content":
+        {
+          "h1":"Ondas de arena",
+          "img1":"/img/detalle1.jpg",
+          "p":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa doloribus in provident placeat dolore!"
+        }
     },
     {
-      "title": "Nutty Ninjas",
-      "screenshots": ["images/nutty-ninjas-1.jpg", "images/nutty-ninjas-2.jpg"],
-      "description": "<p><strong><a href='http://nuttyninjas.com/' target='_blank'>Nutty Ninjas</a></strong> is a real-time shooter that brings the experience of social multiplayer gaming to a whole new level; it is a console-style game that can be played anywhere and anytime, simply with your computer and mobile devices. Multiple players can join a common gameplay screen just by using their mobile devices, and control their ninja character to unleash dangerous weapons at fellow players!</p><p>It was developed using the cross-display interaction library <a href='http://una-org.github.io/' target='_blank'>Una</a></strong>. I played the role of UI/UX designer and front-end developer for this project.</p>",
-      "tags": ["Node.js", "Una", "Socket.io", "Express", "Box2D", "AngularJS"]
+      "id": 2,
+      "slug": "product2",
+      "title": "Pentágono de energía caleidoscópica",
+      "excerpt": "prototipado-holistico",
+      "thumb": "img/th-img6.jpg",
+      "imagen": "img/img6.jpg",
+      "description": "Resin, gesso, sand. 2020",
+      "content":
+        {
+          "h1":"El cuadro es sensible a la luz que le viene de fuera",
+          "img1":"/img/detalle1.jpg",
+          "p":"La raíz profunda de la Creación es el orden y sentirlo nos reconecta dando forma a la conexión de todo cuanto existe."
+        }
     },
     {
-      "title": "EasilyDo Corporate Site",
-      "screenshots": ["images/easilydo.jpg"],
-      "description": "<p><strong><a href='http://www.easilydo.com' target='_blank'>EasilyDo's</a></strong> corporate site was solely developed and maintained by me while I was an interning at EasilyDo. I also developed the site's plugins to maintain a responsive layout. A Wordpress theme was created for the EasilyDo blog so that it was consistent with the other static pages of the site.</p>",
-      "tags": ["Wordpress", "AngularJS"]
+      "id": 3,
+      "slug": "product3",
+      "title": "Pentágono",
+      "excerpt": "xxx",
+      "thumb": "img/th-img2.jpg",
+      "imagen": "img/img2.jpg",
+      "description": "3D Print. 2020",
+      "content":
+        {
+          "h1":"Ondas de arena",
+          "img1":"/img/detalle1.jpg",
+          "p":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa doloribus in provident placeat dolore!"
+        }
     },
     {
-      "title": "Corspedia",
-      "screenshots": ["images/corspedia.jpg"],
-      "description": "<p><strong><a href='http://www.corspedia.com' target='_blank'>Corspedia</a></strong> is an easy-to-use search engine for National University of Singapore's CORS Bidding Archives. It provides a clean and simple interface for students to search for the bidding history of any module. Built using AngularJS and Google App Engine.</p>",
-      "tags": ["Node.js", "Express", "Google App Engine", "AngularJS", "Pure"]
+      "id": 4,
+      "slug": "product4",
+      "title": "Carta de ajuste",
+      "excerpt": "xxx",
+      "thumb": "img/th-img4.jpg",
+      "imagen": "img/img4.jpg",
+      "description": "3D Print. 2020",
+      "content":
+        {
+          "h1":"Dividiendo la totalidad del círculo en partes",
+          "img1":"/img/detalle1.jpg",
+          "p":"Ésta es una línea secundaria de exploración que podría considerarse como más purista en el sentido formal."
+        }
     },
     {
-      "title": "Osmose",
-      "screenshots": ["images/osmose-1.jpg", "images/osmose-2.jpg"],
-      "description": "<p><strong>Osmose</strong> is a platform to facilitate the interaction and sharing between students and instructors of a course. Students can ask questions, answer questions from their peers, and also share new findings with one another.</p>",
-      "tags": ["Sails.js", "Express", "AngularJS", "Foundation"]
+      "id": 5,
+      "slug": "product5",
+      "title": "La línea negra del horizonte",
+      "excerpt": "xxx",
+      "thumb": "img/th-img19.jpg",
+      "imagen": "img/img19.jpg",
+      "description": "Arena, óleos y nogalina. 100cm ø. 2019",
+      "content":
+        {
+          "h1":"La autenticidad salvaje de no saber",
+          "img1":"/img/detalle1.jpg",
+          "p":"Pura intuición inconsciente. Un dejarse llevar por el no saber descubriendo que el transfondo de las cosas cumple su función."
+        }
     },
     {
-      "title": "#ifihadglass",
-      "screenshots": ["images/ifihadglass.jpg"],
-      "description": "<p>My entry for Google's <strong>#ifihadglass</strong> competition where participants demonstrate potential uses for Google Glass and selected entries can be part of the Glass Explorer Program. I used jQuery and HTML5/CSS to simulate the Google glass interface to demonstrate potential use-cases of Google Glass. View the full site <strong><a href='http://yangshun.im/ifihadglass/' target='_blank'>here</a></strong>.</p>",
-      "tags": ["jQuery"]
+      "id": 6,
+      "slug": "product6",
+      "title": "Frecuencia",
+      "excerpt": "xxx",
+      "thumb": "img/th-img10.jpg",
+      "imagen": "img/img10.jpg",
+      "description": "100cm ø 2019",
+      "content":
+        {
+          "h1":"La autenticidad salvaje de no saber",
+          "img1":"/img/detalle1.jpg",
+          "p":"Pura intuición inconsciente. Un dejarse llevar por el no saber descubriendo que el transfondo de las cosas cumple su función."
+        }
+    },
+    {
+      "id": 7,
+      "slug": "product7",
+      "title": "Gravedad incontrolada",
+      "excerpt": "xxx",
+      "thumb": "img/th-img8.jpg",
+      "imagen": "img/img8.jpg",
+      "description": "100cm ø 2019",
+      "content":
+        {
+          "h1":"Sutilizando la materia",
+          "img1":"/img/detalle1.jpg",
+          "p":"Arena aún húmeda arrastrada por la gravedad. Aire de mis pulmones creando una burbuja de látex. El misterio ocurriendo."
+        }
+    },
+    {
+      "id": 8,
+      "slug": "product8",
+      "title": "Sin título. Serie Paisajes circulares",
+      "excerpt": "xxx",
+      "thumb": "img/th-img16.jpg",
+      "imagen": "img/img16.jpg",
+      "description": "50cm ø 2019",
+      "content":
+        {
+          "h1":"Paisaje circular",
+          "img1":"/img/detalle1.jpg",
+          "p":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa doloribus in provident placeat dolore!"
+        }
+    },
+    {
+      "id": 9,
+      "slug": "product9",
+      "title": "Pintura neptuniana",
+      "excerpt": "xxx",
+      "thumb": "img/th-img15.jpg",
+      "imagen": "img/img15.jpg",
+      "description": "Técnica mixta. 100cm ø 2019",
+      "content":
+        {
+          "h1":"Superficie y profundidad de campo.",
+          "img1":"/img/detalle2.jpg",
+          "p":"Polvo de cobre, mica nacarada y arena moviéndose libremente por la superficie aún húmeda del cosmos."
+        }
+    },
+    {
+      "id": 10,
+      "slug": "product10",
+      "title": "Sin título",
+      "excerpt": "xxx",
+      "thumb": "img/th-img18.jpg",
+      "imagen": "img/img18.jpg",
+      "description": "100cm ø 2019",
+      "content":
+        {
+          "h1":"Ondas de arena",
+          "img1":"/img/detalle1.jpg",
+          "p":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa doloribus in provident placeat dolore!"
+        }
+    },
+    {
+      "id": 11,
+      "slug": "product11",
+      "title": "Sin título",
+      "excerpt": "xxx",
+      "thumb": "img/th-img17.jpg",
+      "imagen": "img/img17.jpg",
+      "description": "100cm ø 2019",
+      "content":
+        {
+          "h1":"Ondas de arena",
+          "img1":"/img/detalle1.jpg",
+          "p":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa doloribus in provident placeat dolore!"
+        }
+    },
+    {
+      "id": 12,
+      "slug": "product12",
+      "title": "Sin título",
+      "excerpt": "xxx",
+      "thumb": "img/th-img9.jpg",
+      "imagen": "img/img9.jpg",
+      "description": "Arena negra. 190x130cm. 2019",
+      "content":
+        {
+          "h1":"Arena dibujada con viento",
+          "img1":"/img/detalle1.jpg",
+          "p":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio ipsa doloribus in provident placeat dolore!"
+        }
     }
   ]
 }
