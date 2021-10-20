@@ -12,9 +12,9 @@
       {% endif %}
     </a>
 
-    <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">
+    {# <time class="postlist-date" datetime="{{ post.date | htmlDateString }}">
       {{ post.date | readableDate }}
-    </time>
+    </time> #}
 
    <div class="wrap-tags"> {% for tag in post.data.tags | filterTagList %}
     {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}

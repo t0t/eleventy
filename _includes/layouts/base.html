@@ -41,17 +41,17 @@
     </nav>
   </header>
 
-  <main{% if templateClass %} class="{{ templateClass }}" {% endif %}>
+  <main{% if templateClass %} class="main--content {{ templateClass }}" {% endif %}>
     {{ content | safe }}
     </main>
 
     <footer class="footer-site section--base vh50">
       <h3>¿Más info?</h3>
       <p class="tac">Sergio Forés es artista plástico, diseñador digital y desarrollador web.</p>
-      <main class="contact-me">
+      <div class="contact-me">
         <a class="btn-whatsapp m-2" href="https://api.whatsapp.com/send?phone=+34619549032" target="_blank">WhatsApp</a>
         <a class="btn-telegram m-2" href="https://t.me/sergiofores" target="_blank">Telegram</a>
-      </main>
+      </div>
       <aside class="social-links mb-3">
 
         <a href="https://www.instagram.com/t.o.d.h/" target="_blank" rel="noopener"><svg
