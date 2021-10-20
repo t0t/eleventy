@@ -110,15 +110,45 @@ body {
 	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 	font-size: var(--size-1);
 	font-weight: var(--normal);
-	/* overscroll-behavior: none; */
-	/* width: 100%; */
-	/* background: rgb(255,255,159); */
-background: linear-gradient(
-	180deg,
-	var(--quaternary-color) 3%,
-	var(--grey-color) 7%,
-	var(--secondary-color) 70%,
-	var(--grey-color-2) 80%);
+  background: linear-gradient(
+    180deg,
+    var(--quaternary-color) 3%,
+    var(--grey-color) 7%,
+    var(--secondary-color) 70%,
+    var(--grey-color-2) 80%
+  );
+}
+
+video {
+  width: 100%;
+}
+
+.section--video {
+  text-align: center;
+  margin-bottom: var(--size-4);
+}
+
+@media screen and (min-width: 978px) {
+  .section--video {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "texto video";
+    grid-template-areas: "video texto";
+    /* padding: var(--size-3); */
+    gap: var(--size-3);
+    background-color: var(--grey-color-1);
+  }
+  .section--video :nth-child(1) {
+    grid-area: texto;
+  }
+  .section--video :nth-child(2) {
+    grid-area: video;
+  }
+  .section--video :nth-child(2) video {
+    /* position: relative; */
+  }
+  .section--video :nth-child(2) button {
+  }
 }
 
 .section--cover {
@@ -430,6 +460,7 @@ input {
   top: var(--size-1);
   left: var(--size-1);
   position: fixed;
+  z-index: 10000;
 }
 
 .logo:hover {
@@ -442,7 +473,6 @@ input {
 	stroke-width: 2px;
 	fill: none;
 }
-
 
 img {
 	max-width: 100%;
@@ -505,6 +535,11 @@ img {
 		grid-template-columns: 1fr 1fr;
 		gap: var(--size-1);
 	}
+}
+
+.btn--white {
+  color: white;
+  border: 2px solid var(--white-color);
 }
 
 .btn-whatsapp,

@@ -13,6 +13,20 @@ eleventyNavigation:
   Mis pinturas son tridimensionales porque me interesa cómo la luz real modela las superfícies.
 </p>
 
+<section class="section--video">
+  <div>
+    <p>Presentación</p>
+    <button class="btn--white" onclick="playPause()">Play/Pause</button>
+  </div>
+
+  <div class="section--video__customplayer">
+    <video id="video1">
+      <source src="/videos/desdelapoesiadelamateria.mp4" type='video/mp4' />
+      <source src="/videos/desdelapoesiadelamateria.webm" type='video/webm' />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</section>
 
 <div class="gallery">
 
@@ -55,3 +69,4 @@ eleventyNavigation:
 
 {# <script type="module" src="{{ '/js/main.js' | url }}"></script> #}
 <script src="{{ '/js/lightbox.js' | url }}"></script>
+<script src="{{ '/js/videoplayer.js' | url }}"></script>
