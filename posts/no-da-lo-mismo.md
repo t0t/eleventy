@@ -1,43 +1,71 @@
 ---
 title: No da lo mismo que todo sea lo mismo
-description: This is a post on My Blog about leveraging agile frameworks.
-date: 2021-07-04
+description: Notas acerca de la jerarquía analógica como orden sagrado
+date: 2021-10-20
 tags:
   - number 2
 layout: layouts/post.html
 ---
 
-``` text/2-3
-// this is a command
-function myCommand() {
-	let counter = 0;
-	counter++;
+Hace tiempo que quería reflexionar a cerca de esto: **todo es lo mismo pero parece diferente**.
+
+Un ejemplo rotundo es la analogía entre el mundo del desarrollo web y la vida real. Ambos mundos son muy extensos, así que acotaremos el desarrollo web a las esferas que conozco más: `HTML`, `CSS` y `Javascript` básico.
+
+Un sitio web como éste en el que estás ahora es un sistema de códigos interrelacionados entre sí. Cada elemento vive anidado en un contexto mayor que lo contiene. Eso es el DOM (Document Object Model).
+
+Todos los elementos del DOM vienen predefinidos por defecto, en el navegador, por una serie de propiedades o cualidades que son las que luego el programador usa/modifica para generar apariencias y comportamientos.
+
+> Al igual que tú, cada elemento es una división de la existencia con unas cualidades.
+
+
+
+CSS
+
+``` scss
+// Define qué se ve cuando algo me toca, qué tamaño tengo,
+// a cuanta distancia estoy del resto de elementos, etc
+:root {
+  --mi-color-de-piel: pink;
 }
 
-// Test with a line break above this line.
-console.log('Test');
+div {
+  background-color: var(--mi-color-de-piel);
+}
 ```
 
-## Section Header
+Javascript
 
-<a href="{{ '/posts/firstpost/' | url }}">First post</a>
-<a href="{{ '/posts/thirdpost/' | url }}">Third post</a>
+``` javascript
+// Escoge un elemento del DOM
+let quiensoy = document.getelementById("yo")
 
-## Section Header
-
-Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.
-
-``` text/2-3
-// this is a command
-function myCommand() {
-	let counter = 0;
-	counter++;
+// Realiza una acción
+function miAccion() {
+	Alert("me han dado una identidad")
 }
 
-// Test with a line break above this line.
-console.log('Test');
+// Muestra por consola
+console.log('quien soy');
 ```
 
-Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.
+Html
 
-Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.
+``` html
+<!-- Este es el vacío inmanente -->
+<head>
+  Este es el origen de la existencia de esta página.
+  es inaccesible desde un contexto de nivel más bajo.
+</head>
+<main>
+  <div>
+    Lo que hay aquí es lo que soy "yo"
+  </div>
+
+  <div>
+    Este eres tú
+  </div>
+</main>
+<footer>
+  Esta es la realidad, el plano 1
+</footer>
+```
