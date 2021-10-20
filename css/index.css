@@ -113,6 +113,11 @@ body {
 	font-weight: var(--normal);
 }
 
+.section-videogallery {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(375px,1fr));
+}
 
 .section--nomargin {
   width: 100vw;
@@ -122,9 +127,12 @@ body {
   margin-left: calc(var(--size-3) * -1);
   margin-right: calc(var(--size-3) * -1);
   margin-bottom: calc(var(--size-2) * -1);
+}
+
+.section--bg-image {
+  background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  background-color: var(--grey-color-0);
 }
 
 video {
@@ -728,6 +736,10 @@ img {
   /* border-radius: var(--size-0); */
 }
 
+.postlist-moreinfo {
+  padding-top: var(--size-3);
+}
+
 .postlist-item:before {
   display: inline-block;
   pointer-events: none;
@@ -739,7 +751,6 @@ img {
 .postlist-date,
 .postlist-item:before {
   font-size: var(--size-0); /* 13px /16 */
-  /* color: var(--black-color); */
 }
 .postlist-date {
   word-spacing: -0.5px;
@@ -752,7 +763,7 @@ img {
   text-decoration-thickness: 5px;
   text-decoration-color: var(--secondary-color);
   font-weight: var(--bold);
-
+  line-height: var(--size-2);
 }
 .postlist-link a {
   color: var(--quaternary-color);
@@ -845,14 +856,18 @@ img {
 .post-tag {
   display: inline-flex;
   align-items: center;
-  /* justify-content: center; */
   text-transform: uppercase;
   padding: 4px;
   font-size: var(--size-0);
-  /* color: var(--grey-color-3); */
   border-radius: 0.25em; /* 3px /12 */
   text-decoration: none;
   letter-spacing: 1px;
+  color: var(--grey-color-3);
+  font-weight: var(--bold);
+}
+
+.post-tag:hover {
+  color: var(--black-color);
 }
 
 .postlist-item > .post-tag {
@@ -1131,6 +1146,37 @@ img.hover-shadow {
 }
 .color-grey-3{
   color: var(--grey-color-3);
+}
+
+.bgcolor-primary {
+  background-color: var(--primary-color);
+}
+.bgcolor-secondary {
+  background-color: var(--secondary-color);
+}
+.bgcolor-tertiary {
+  background-color: var(--tertiary-color);
+}
+.bgcolor-black {
+  background-color: var(--black-color);
+}
+.bgcolor-white {
+  background-color: var(--white-color);
+}
+.bgcolor-grey {
+  background-color: var(--grey-color);
+}
+.bgcolor-grey-0 {
+  background-color: var(--grey-color-0);
+}
+.bgcolor-grey-1 {
+  background-color: var(--grey-color-1);
+}
+.bgcolor-grey-2 {
+  background-color: var(--grey-color-2);
+}
+.bgcolor-grey-3{
+  background-color: var(--grey-color-3);
 }
 
 
