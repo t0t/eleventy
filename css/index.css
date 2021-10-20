@@ -41,6 +41,7 @@ html {
 
 main {
   padding: var(--size-2);
+  background-color: var(--grey-color);
 }
 /* main :first-child {
   margin-top: var(--size-4);
@@ -110,13 +111,6 @@ body {
 	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 	font-size: var(--size-1);
 	font-weight: var(--normal);
-  background: linear-gradient(
-    180deg,
-    var(--quaternary-color) 3%,
-    var(--grey-color) 7%,
-    var(--secondary-color) 70%,
-    var(--grey-color-2) 80%
-  );
 }
 
 video {
@@ -308,6 +302,10 @@ footer svg {
 
 .pr-2 {
 	padding-right: var(--size-2);
+}
+
+.pr-3 {
+	padding-right: var(--size-3);
 }
 
 .pr-4 {
@@ -855,6 +853,16 @@ model-viewer {
 .tmpl-post {
   padding-top: var(--size-4);
   padding-bottom: var(--size-4);
+}
+
+.tmpl-home {
+  background: linear-gradient(
+    180deg,
+    var(--quaternary-color) 3%,
+    var(--grey-color) 7%,
+    var(--secondary-color) 70%,
+    var(--grey-color-2) 80%
+  );
 }
 
 .tmpl-home img {
