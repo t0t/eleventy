@@ -691,56 +691,63 @@ img {
 
 /* Post navigation */
 .nav-posts {
-  margin-top: var(--size-4);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   list-style: none;
-  align-items: center;
   background-color: var(--primary-color);
-  padding-left: 0;
-}
-
-.nav-posts li {
-  max-width: 60%;
+  margin-top: var(--size-4);
+  padding-right: var(--size-1);
+  padding-bottom: var(--size-1);
+  padding-left: var(--size-1);
 }
 
 .nav-posts li a {
   display: grid;
   position: relative;
-  padding: var(--size-1);
   text-align: center;
-}
-.nav-posts li a:hover {
-  transition: transform .3s;
-  font-weight: var(--bold);
+  text-decoration: none;
 }
 
-.nav-posts li:nth-child(1) a:hover {
-  transform: translateX(30px);
-  padding-left: var(--size-2);
-}
-.nav-posts li:nth-child(2) a:hover {
-  transform: translateX(-30px);
-  padding-right: var(--size-2);
-}
-
-/* iconos */
-.nav-posts li:nth-child(1) a:hover::before,
-.nav-posts li:nth-child(2) a:hover::before {
+.nav-posts li a::before {
   font-size: var(--size-4);
-  font-weight: var(--normal);
-  top: 1%;
-  position: absolute;
+  line-height: 1;
 }
 
-.nav-posts li:nth-child(1) a:hover::before {
+.nav-posts li:nth-child(1) a::before {
   content: "←";
-  left: -30px;
 }
 
-.nav-posts li:nth-child(2) a:hover::before {
+.nav-posts li:nth-child(2) a::before {
   content: "→";
-  right: -30px;
+}
+
+@media screen and (min-width: 500px) {
+
+  .nav-posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+  .nav-posts li {
+    max-width: 60%;
+  }
+  .nav-posts li a {
+    padding: var(--size-1);
+    -webkit-transition: transform .5s;
+    -moz-transition: transform .5s;
+    transition: transform .5s;
+  }
+  .nav-posts a::before {
+    transition: transform .5s;
+
+  }
+  .nav-posts a:hover::before {
+    transition: transform .3s;
+    font-size: var(--size-4);
+    -webkit-transform: rotate(45deg) scale(1.5);
+    -moz-transform: rotate(45deg) scale(1.5);
+    transform: rotate(45deg) scale(1.5);
+  }
+  /* .nav-posts li:nth-child(1) a:hover::before {} */
+
 }
 
 /* Meta */
