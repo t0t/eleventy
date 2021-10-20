@@ -839,9 +839,9 @@ model-viewer {
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
 }
 
-/* .gallery__item {
-  background-color: red;
-} */
+.gallery__item {
+  text-align: center;
+}
 
 @media screen and (min-width: 426px) {
   .gallery {
