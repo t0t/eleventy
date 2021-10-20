@@ -115,15 +115,17 @@ layout: layouts/home.html
 
 <hr>
 
-<section>
-  <h3>{% if maxPosts == 1 %}Post{% else %}{{ maxPosts }} escritos recientes{% endif %}</h3>
+<div class="section--nomargin">
+  <section class="section--base">
+    <h3 class="subTitlePage">{% if maxPosts == 1 %}Post{% else %}{{ maxPosts }} escritos recientes{% endif %}</h3>
 
-  {% set postslist = collections.posts | head(-3) %}
-  {% set postslistCounter = collections.posts | length %}
-  {% include "postslist.html" %}
+    {% set postslist = collections.posts | head(-3) %}
+    {% set postslistCounter = collections.posts | length %}
+    {% include "postslist.html" %}
 
-  <p class="tac">More posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p>
-</section>
+    <p class="tac">More posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p>
+  </section>
+</div>
 
 
 <!-- capture the JS content as a Nunjucks variable -->

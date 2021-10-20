@@ -19,6 +19,8 @@ Este es el resumen de una mini charla de Jaime Buhigas sobre la creatividad. Una
 
 He aquí la fusión gráfica entre lo que él dice y mi experiencia.
 
+<img src="/img/blog/creatividad-universal.svg" class="img--25vw img--fr">
+
 **Transcripción retocada y resumida:**
 
 La creatividad está relacionada con todas las facetas del ser humano. Ser creativo es necesario para vivir. La creatividad es vivir las cosas, no sólo decirlas. No existe un libro de instrucciones para ser creativo pero sí una arquitectura lógica que está disponible para todos.

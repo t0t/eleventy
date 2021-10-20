@@ -24,12 +24,16 @@ La nada, es esa inmanencia cuyo máximo ocultamiento genera lo que existe, el ar
 
 Parece lioso pero se va descubriendo con la práctica, todo esto es un camino de descubrimiento continuo que no termina.
 
+<img src="/img/blog/metodo.svg" class="img--50vw img--fr">
+
 Tanto la cifra (0) como el arjé (1), la mímesis/separación que vendría a continuación (2), el símbolo (3) y el ritmo (4) se experimentan y se averiguan durante el reverso de la observación.
 
 > “Lo que la realidad es, es su símbolo”.
 > ─ Raimon Panikkar
 
 01234 son 5 símbolos que constituyen la estructura dinámica sobre la que se construye la realidad. Por un lado son **simultáneos**, se dan todos a la vez.  Y por otro lado decir que aunque les haya puesto un título a cada uno en realidad condensan miles de significados en función del contexto. Tienen una parte que es constante y estructural (recipiente) y otra que es variable y sensible al contexto (contenido).
+
+<img src="/img/blog/creatividad-universal.svg" class="img--50vw img--fr">
 
 Vamos a sobrevolar brevemente sus 5 fundamentos:
 
