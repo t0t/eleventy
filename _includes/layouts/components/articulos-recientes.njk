@@ -1,0 +1,26 @@
+<section class="section--nomargin  bgcolor-grey-0">
+
+  <section>
+
+  {% set maxPosts = collections.posts.length | min(3) %}
+
+    <h3 class="subTitlePage">
+
+      {% if maxPosts == 1 %} Post {% else %}{{ maxPosts }} escritos recientes {% endif %}
+
+    </h3>
+
+    {% set postslist = collections.posts | head(-3) %}
+    {% set postslistCounter = collections.posts | length %}
+
+    {% include "postslist.html" %}
+
+    <p class="postlist-moreinfo tac">
+
+      More posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.
+
+    </p>
+
+  </section>
+
+</section>
