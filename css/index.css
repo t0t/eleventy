@@ -41,7 +41,8 @@ html {
 }
 
 .main--content {
-    background-color: var(--grey-color-1);
+    background-color: var(--primary-color-1);
+    padding-bottom: var(--size-4);
 }
 /* @media screen and (min-width: 500px) {
   .main--content {
@@ -114,11 +115,11 @@ code {
 
 body {
 	margin: 0;
-	/* background-color: var(--grey-color-2); */
 	color: var(--black-color);
 	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 	font-size: var(--size-1);
 	font-weight: var(--normal);
+	background-color: var(--grey-color-0);
 }
 
 .section-videogallery {

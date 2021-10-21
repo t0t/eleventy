@@ -10,7 +10,7 @@
       {% include "./nav.njk" %}
   </header>
 
-  <main{% if templateClass %} class="main--content {{ templateClass }}" {% endif %}>
+  <main{% if templateClass %} class="{{ templateClass }}" {% endif %}>
 
   {{ content | safe }}
 
