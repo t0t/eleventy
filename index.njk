@@ -6,8 +6,22 @@ layout: layouts/home.html
 
 {% include "./_includes/layouts/components/features.njk" %}
 
+<div class="bgcolor-grey-2 pt-4">
+  <h3 class="subTitle">Un Método Neutro Universal</h3>
+<section class="grid  p-0 vh50">
+  <!-- <div class="grid__item">
+    {% include "./_includes/layouts/components/tabs-colored.njk" %}
+  </div> -->
+  <figure class="grid__item">
+    <img src="/img/435685.svg" alt="">
+  </figure>
+</section>
+</div>
+
 {# {% include "./_includes/layouts/components/3dweb-component.njk" %} #}
 
 {% include "./_includes/layouts/components/articulos-recientes.njk" %}
+
+<script src="{{ '/js/tabs-colored.js' | url }}"></script>
 
 <script type="module" src="{{ '/js/main.js' | url }}"></script>
