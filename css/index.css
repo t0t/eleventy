@@ -159,7 +159,7 @@ body {
   text-align: center;
   gap: var(--size-2);
   padding: var(--size-3);
-  place-content: center;
+  place-content: end;
   place-items: center;
   justify-content: center;
 }
@@ -327,7 +327,7 @@ hr {
 	background-repeat: no-repeat;
   background-size: var(--size-5);
 	background-attachment: fixed;
-	background-position: right var(--size-8);
+	background-position: center var(--size-5);
 }
 
 /* Helpers */
@@ -687,7 +687,7 @@ img {
 .nav {
   display: grid;
   gap: var(--size-1);
-  top: var(--size-1);
+  top: var(--size-2);
   right: var(--size-1);
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   position: fixed;
