@@ -1,26 +1,22 @@
-<div class="section--nomargin bgcolor-grey-1 pt-4 pb-4">
+<div class="bgcolor-grey-1 pt-4 pb-4">
 
   {% set maxPosts = collections.posts.length | min(3) %}
 
-  <h3 class="subTitlePage">
-
+  <h3 class="">
     {% if maxPosts == 1 %} Post {% else %}{{ maxPosts }} escritos recientes {% endif %}
-
   </h3>
 
+    <p class="tac">
+
+    Archivo de
+    <a href="{{ '/posts/' | url }}">artículos</a> (en proceso permanente).
+
+    </p>
 
     {% set postslist = collections.posts | head(-3) %}
     {% set postslistCounter = collections.posts | length %}
 
     {% include "postslist.html" %}
 
-
-  <p class="postlist-moreinfo tac">
-
-    Archivo de
-    <a href="{{ '/posts/' | url }}">artículos</a> <br>
-    (en proceso permanente).
-
-  </p>
-
 </div>
+

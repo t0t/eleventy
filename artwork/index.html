@@ -7,19 +7,21 @@ eleventyNavigation:
   order: 3
 ---
 
-<h1 class="titlePage">La poesía de la materia</h1>
-<p class="subTitlePage">
-  Mis pinturas al ser tridimensionales son esculpidas por una luz que es real.
-</p>
+<header>
+  <h1 class="titlePage">La poesía de la materia</h1>
+  <p class="subTitlePage">
+    Mis pinturas al ser tridimensionales son esculpidas por una luz que es real.
+  </p>
+</header>
 
-<section class="section--video">
+<section class="grid  bgcolor-grey-2">
 
-  <div>
+  <div class="grid__item" >
     <p>Fluidos en un espacio estérico reaccionan a la vibración y la inercia generando vibraciones que fraguan...</p>
     <button class="btn--black" onclick="playPause()">Ver Video</button>
   </div>
 
-  <div>
+  <div class="grid__item">
     <video id="video1"
     poster="/img/arte3d.jpeg">
       <source src="/videos/desdelapoesiadelamateria.mp4" type='video/mp4' />
@@ -29,7 +31,7 @@ eleventyNavigation:
   </div>
 
 </section>
-
+<br>
 <div class="gallery">
 
   {% for obra in obras.obras %}
@@ -70,21 +72,23 @@ eleventyNavigation:
 
 </div>
 
-<article>
-  <h3>Proceso</h3>
-  <div class="section--nomargin  section-videogallery">
+<h3>Proceso</h3>
+<div class="grid">
+  <div class="grid__item">
     <video id="video1" controls loop>
       <source src="/videos/pieza-123.webm" type='video/webm' />
       Your browser does not support the video tag.
     </video>
+  </div>
+  <div class="grid__item">
     <video id="video2" controls loop>
       <source src="/videos/anim.webm" type='video/webm' />
       Your browser does not support the video tag.
     </video>
   </div>
-</article>
+</div>
 
-<section class="section--nomargin  section--bg-image" style="background-image: url('/img/img3.jpg');">
+<div class="nomargin  section--bg-image" style="background-image: url('/img/img3.jpg');">
   <blockquote class="blockquote--default  color-grey-0">
     <h3>
       "Sólo cuando bajamos al abismo recuperamos los auténticos tesoros de la vida."
@@ -92,7 +96,7 @@ eleventyNavigation:
       <small>__Joseph Campbell</small>
     </h3>
   </blockquote>
-</section>
+</div>
 
 {# <script type="module" src="{{ '/js/main.js' | url }}"></script> #}
 <script src="{{ '/js/lightbox.js' | url }}"></script>
