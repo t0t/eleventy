@@ -7,26 +7,15 @@ tags:
 layout: layouts/post.html
 ---
 
-<ul class="grid">
-  <li class="grid__item">
-    Cerramos los ojos, no vemos nada, nuestra visión, que es mental, se expande porque ya no “tropieza” con cosas.
-  </li>
-  <li class="grid__item">
-    Abres los ojos, ves por ejemplo una mesa y cuando cierras los ojos sigues viendo la mesa pero ahora “de otra manera”.
-  </li>
-  <li class="grid__item">
-    Miras la misma mesa con los ojos abiertos y le “ordenas” a tu mente que vea ambas, la que viene del mundo físico y la que proviene del mental, simultáneamente.
-  </li>
-  <li class="grid__item">
-    Cierras los ojos y pones en tu mente otra vez la mesa y junto a ella permites que simultáneamente tu mente “vea“ otras cosas que también son “mesa.” Atención, estás a punto de percibir dos objetos mentales que son dos modos de ser iguales! Por ejemplo “mesa” + “cenar” o “cuatro patas”. Usa de ejemplo lo que te de la gana.
-  </li>
-  <li class="grid__item">
-    Ahora con los ojos cerrados prueba con ver otra cosa, por ejemplo el “agua” y junto a ella pones todas esas otras cosas que también son agua para tu mente. Permite que tu mente sea quien las decida. Por ejemplo: agua + sensibilidad + verano + humedad + fría + ducha + lluvia… lo que sea  que tu mente te esté mostrando que “es análogo o tiene relación con agua”. Sin tener el agua delante estamos amplificando nuestra percepción de lo que “agua” es. Con esto estás usando tu mente abstracta.
-  </li>
-  <li class="grid__item">
-    Ahora miras con los ojos abiertos, por ejemplo un cero de una pantalla o en un papel y, sin cerrarlos, ves simultáneamente todas las otras cosas mentales que tu mente te está diciendo que son “cero”. Mientras ves el cero puedes ver lo que tu mente sabe que también es cero como: La infinitud, Vacío, Ausencia, Pura Potencialidad, Principio femenino, Disolución, Silencio, Trascendencia, Inmanifestado, Inmanente, Inefable, Incognoscible, Intangible, Esencia, Espacio, Metafísica, Huevo cósmico, Hyraniagarba, Ein Sof, La nube, Omniscente, lo sacro, Abismo, Caos Primordial, Círculo, vasija, la nota de un examen, lo que sea...
-  </li>
-</ul>
+- Cerramos los ojos, no vemos nada, nuestra visión, que es mental, se expande porque ya no “tropieza” con cosas.
+- Abres los ojos, ves por ejemplo una mesa y cuando cierras los ojos sigues viendo la mesa pero ahora “de otra manera”.
+- Miras la misma mesa con los ojos abiertos y le “ordenas” a tu mente que vea ambas, la que viene del mundo físico y la que proviene del mental, simultáneamente.
+
+- Cierras los ojos y pones en tu mente otra vez la mesa y junto a ella permites que simultáneamente tu mente “vea“ otras cosas que también son “mesa.” Atención, estás a punto de percibir dos objetos mentales que son dos modos de ser iguales! Por ejemplo “mesa” + “cenar” o “cuatro patas”. Usa de ejemplo lo que te de la gana.
+
+- Ahora con los ojos cerrados prueba con ver otra cosa, por ejemplo el “agua” y junto a ella pones todas esas otras cosas que también son agua para tu mente. Permite que tu mente sea quien las decida. Por ejemplo: agua + sensibilidad + verano + humedad + fría + ducha + lluvia… lo que sea  que tu mente te esté mostrando que “es análogo o tiene relación con agua”. Sin tener el agua delante estamos amplificando nuestra percepción de lo que “agua” es. Con esto estás usando tu mente abstracta.
+- Ahora miras con los ojos abiertos, por ejemplo un cero de una pantalla o en un papel y, sin cerrarlos, ves simultáneamente todas las otras cosas mentales que tu mente te está diciendo que son “cero”. Mientras ves el cero puedes ver lo que tu mente sabe que también es cero como: La infinitud, Vacío, Ausencia, Pura Potencialidad, Principio femenino, Disolución, Silencio, Trascendencia, Inmanifestado, Inmanente, Inefable, Incognoscible, Intangible, Esencia, Espacio, Metafísica, Huevo cósmico, Hyraniagarba, Ein Sof, La nube, Omniscente, lo sacro, Abismo, Caos Primordial, Círculo, vasija, la nota de un examen, lo que sea...
+
 
 Quizás al principio tu lista no sea tan larga, no importa, con la practica uno va incrementando la cantidad de cosas que ve y que provienen del mismo lugar, percibes los objetos físicos o no físicos al mismo tiempo, todo aquello que resuena con ellos. En resumen percibes cualquier cosa como lo que és; un símbolo que, como tal, condensa millones de significados.
 

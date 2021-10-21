@@ -422,6 +422,10 @@ hr {
 	margin-bottom: var(--size-4);
 }
 
+.mt-4 {
+	margin-top: var(--size-4);
+}
+
 .vh100 {
 	min-height: 100vh;
 }
@@ -601,6 +605,13 @@ img {
 .social-links svg {
 	width: var(--size-3);
 }
+
+@media screen and (min-width: 500px) {
+  .social-links svg {
+    width: var(--size-2);
+  }
+}
+
 /* Contact me */
 .contact-me {
 	display: grid;
