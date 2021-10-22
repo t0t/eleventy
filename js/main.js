@@ -2,6 +2,7 @@
 // LOADER con fundido
 let loader = document.getElementById("wrap-preloader");
 let theSite = document.getElementById("theSite");
+let noOverflow = document.querySelector("body");
 
 // Cuando carge todo, DOM, recursos, etc
 window.addEventListener("load", () =>  {
@@ -10,6 +11,7 @@ window.addEventListener("load", () =>  {
   // Muestra la pagina
   theSite.style.display = "inherit";
   // y pon su opacidad a 1
+  noOverflow.style.overflow = "visible";
   fundidoPagina();
 });
 
