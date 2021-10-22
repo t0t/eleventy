@@ -3,8 +3,14 @@
 
   {% include "./head.njk" %}
 
-
 <body>
+
+  <div id="wrap-preloader" style="display: grid; place-items: center; width: 100vw; height: 100vh; background-color: #2BC4A9;">
+    <div id="preloader" style="width: 600px; height: 600px">
+    </div></div>
+
+  <div id="theSite" class="fade-page-off">
+
   <header>
       {% include "./components/brand.njk" %}
       {% include "./nav.njk" %}
@@ -18,7 +24,10 @@
 
   {% include "./components/footer.njk" %}
 
+  </div>
+
   <script type="text/javascript" src="{{ '/js/navbar.js' | url }}"></script>
+  <script type="module" src="{{ '/js/main.js' | url }}"></script>
   <!-- Current page: {{ page.url | url }} -->
 </body>
 
