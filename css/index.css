@@ -120,7 +120,7 @@ body {
 /* LOADER */
 
 .fade-page-off {
-  opacity: 0;
+  opacity: 0.2;
 }
 .fade-page-off.fade-page-on {
   opacity: 1;
@@ -136,37 +136,38 @@ body {
 }
 
 .animintro {
-  width: 350px;
-  height: auto;
+  width: 200px;
+  /* height: auto; */
 }
 .animintro > circle {
-  fill: none;
-  stroke-width: 4px;
+  /* fill: none; */
+  stroke-width: 0px;
   animation-duration: 0.4s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
+  mix-blend-mode: color-burn;
 }
 
 circle.uno {
-  stroke:var(--quaternary-color);
+  fill: var(--quaternary-color);
   animation-name: spin-amarillo;
   animation-delay: 0.2s;
 }
 circle.dos {
-  stroke: var(--primary-color);
+  fill: var(--primary-color);
   animation-name: spin-rojo;
   animation-delay: 0.23s;
 }
 circle.tres {
-  stroke: var(--tertiary-color);
+  fill: var(--tertiary-color);
   animation-name: spin-lila;
   animation-delay: 0.37s;
   transform: translateX(-25px);
 }
 circle.cuatro {
+  fill: var(--secondary-color);
   animation-name: spin-verde;
   animation-delay: .45s;
-  stroke: var(--secondary-color);
 }
 
 circle.grande {
