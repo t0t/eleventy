@@ -25,8 +25,12 @@
   <div id="theSite" class="fade-page-off">
 
   <header>
-      {% include "./components/brand.njk" %}
-      {% include "./nav.njk" %}
+    {% include "./components/brand.njk" %}
+    {% include "./nav.njk" %}
+
+    {% include "./sidenav.njk" %}
+    <span class="hambutton" style="font-size:30px;cursor:pointer"
+    onclick="openNav()">&#9776;</span>
   </header>
 
   <main{% if templateClass %} class="{{ templateClass }}" {% endif %}>
@@ -40,6 +44,7 @@
   </div>
 
   <script type="text/javascript" src="{{ '/js/navbar.js' | url }}"></script>
+  <script type="text/javascript" src="{{ '/js/sidenav.js' | url }}"></script>
   <script type="module" src="{{ '/js/main.js' | url }}"></script>
   <!-- Current page: {{ page.url | url }} -->
 </body>

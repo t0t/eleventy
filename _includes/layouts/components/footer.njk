@@ -1,15 +1,17 @@
 <footer class="footer-site  grid--secondary">
 
-  <div class="grid--secondary__item">
+  <header class="grid--secondary__item p-3">
     <h3>
       <strong>Cuenta conmigo!</strong>
     </h3>
+  </header>
+  <main>
     <p>
       Si quieres implicarte en tu proceso  de Creación de manera holística y profunda, si quieres usar tu momento Cero que te bloquea para propulsarte a una percepción más madura y coherente...
     </p>
-  </div>
+  </main>
 
-  <div class="grid--secondary__item  contact-me">
+  <div class="contact-me">
 
     <a class="btn-whatsapp  m-2" href="https://api.whatsapp.com/send?phone=+34619549032" target="_blank">WhatsApp ↗</a>
 
@@ -17,16 +19,22 @@
 
   </div>
 
-  <div class="grid--secondary__item">
+  <aside class="p-3">
 
     <p>Sígueme en éstas redes:</p>
 
     {% include "./social-links.njk" %}
 
-  </div>
+  </aside>
 
-  <nav>
-    <a href="/faqs/"><small>FAQ's</small></a>
-  </nav>
+  <footer class="bgcolor-grey-3">
+    <small class="subTitle">Un Método Neutro Universal</small>
+      {# <figure class="grid__item">
+        <img src="/img/435685.svg" alt="">
+      </figure> #}
+    <nav class="">
+      <a href="/faqs/"><small>FAQ's</small></a>
+    </nav>
+  </footer>
 
 </footer>

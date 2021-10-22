@@ -116,7 +116,6 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
 }
 
-
 /* LOADER */
 
 .fade-page-off {
@@ -124,9 +123,9 @@ body {
 }
 .fade-page-off.fade-page-on {
   opacity: 1;
-  -ms-transition: opacity 0.3s;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -ms-transition: opacity 0.5s;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
 }
 
 #preloader {
@@ -263,16 +262,14 @@ text {
   }
 }
 
-.grid--secondary {
+/* .grid--secondary {
   display: grid;
-  /* width: 100%; */
   text-align: center;
   gap: var(--size-2);
-  padding: var(--size-3);
   place-content: end;
   place-items: center;
   justify-content: center;
-}
+} */
 
 figure {
   margin: 0;
@@ -411,10 +408,10 @@ a {
 }
 
 .blockquote--pie>blockquote h3 {
-  font-weight: var(--extralight);
+  /* font-weight: var(--light); */
 }
 
-.blockquote--pie>blockquote {
+.blockquote--pie blockquote {
   border-left: 0;
   padding-left: 0px;
   padding-top: var(--size-0);
@@ -438,9 +435,13 @@ blockquote {
 }
 
 .overlay {
-  display: block;
+  display: grid;
+  place-content: center;
   width: 100%;
+  position: absolute;
+  height: 100%;
   background-color: var(--black-color-alpha-1);
+  padding: var(--size-1) var(--size-3);
 }
 
 hr {
@@ -453,13 +454,30 @@ hr {
 }
 
 .footer-site {
-  height: 100vh;
   background-color: var(--grey-color-2);
   background-image: url("../img/avatar.jpg");
   background-repeat: no-repeat;
   background-size: var(--size-5);
   background-attachment: fixed;
   background-position: center var(--size-5);
+}
+
+.footer-site footer {
+  padding: var(--size-1);
+  color: var(--grey-color-2);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  background-color: var(--grey-color-4);
+}
+
+.footer-site footer nav a {
+  text-decoration: none;
+  color: var(--grey-color-3);
+}
+
+.footer-site footer nav a:hover {
+  color: var(--grey-color-2);
 }
 
 /* Helpers */
@@ -478,6 +496,10 @@ hr {
 
 .p-0 {
   padding: 0;
+}
+
+.p-3 {
+  padding: var(--size-3);
 }
 
 .p-4 {
@@ -806,9 +828,22 @@ img {
   text-decoration: none;
 }
 
+/* hambutton */
+.hambutton {
+  display: none;
+}
+@media screen and (max-width: 929px) {
+  .hambutton {
+    display: block;
+    position: fixed;
+    top: var(--size-2);
+    right: var(--size-2);
+  }
+}
+
 /* Nav */
 .nav {
-  display: grid;
+  display: none;
   gap: var(--size-1);
   top: var(--size-2);
   right: var(--size-1);
@@ -825,8 +860,9 @@ img {
   font-weight: var(--bold);
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 930px) {
   .nav {
+    display: grid;
     gap: inherit;
     padding-right: var(--size-3);
     height: var(--size-5);
@@ -1433,4 +1469,55 @@ img.hover-shadow {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
+}
+
+
+/* SIDE NAV */
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: var(--quaternary-color);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: var(--size-5);
+}
+
+.sidenav li {
+  list-style: none;
+}
+
+.sidenav a {
+  padding: var(--size-1);
+  text-decoration: none;
+  /* font-size: 25px; */
+  color: var(--black-color);
+  display: block;
+  transition: 0.3s;
+}
+
+/* .sidenav a:hover {
+  color: #f1f1f1;
+} */
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: var(--size-1);
+  font-size: var(--size-3);
+  /* margin-right: var(--size-0); */
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: var(--size-2);
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }
