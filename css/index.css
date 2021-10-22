@@ -1,6 +1,6 @@
 /* Global stylesheet */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;700&display=swap');
 
 html {
   box-sizing: border-box;
@@ -22,7 +22,6 @@ body {
 p,
 .tmpl-post li,
 img,
-blockquote,
 pre {
   max-width: var(--size-9);
   margin-left: auto;
@@ -101,9 +100,12 @@ code {
 	--grey-color-4: #2e2e2e;
 	--white-color-alpha-0: #ffffff29;
 	--white-color-alpha-1: #ffffff77;
-	--bold: 700;
-	--normal: 500;
+	--black-color-alpha-1: #0000009e;
+	--extralight: 200;
 	--light: 300;
+	--normal: 400;
+	--medium: 500;
+	--bold: 700;
 	--size-1: 0.37rem;
 	--size-0: 0.61rem;
 	--size-1: 1rem;
@@ -301,6 +303,37 @@ a {
   text-decoration-color: var(--primary-color);
 }
 
+.blockquote--pie {
+  display: grid;
+  padding-right: var(--size-2);
+  padding-left: var(--size-2);
+  border-left: none;
+  height: 100vh;
+  place-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--grey-color-1);
+  /* letter-spacing: 1px; */
+}
+
+/* @media screen and (max-width: 500px) {
+  .blockquote--pie {
+    height: 50vh;
+  }
+} */
+
+.blockquote--pie > blockquote h3 {
+  font-weight: var(--extralight);
+}
+
+.blockquote--pie > blockquote {
+  border-left: 0;
+  padding-left: 0px;
+  padding-top: var(--size-0);
+  padding-bottom: var(--size-0);
+}
+
 blockquote {
   border-left: var(--size-1);
   border-left-width: var(--size-0);
@@ -312,10 +345,15 @@ blockquote {
   font-weight: var(--bold);
   margin-top: var(--size-4);
   margin-bottom: var(--size-4);
+  max-width: var(--size-9);
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.blockquote--default {
-  border-left: none;
+.overlay {
+  display: block;
+  width: 100%;
+  background-color: var(--black-color-alpha-1);
 }
 
 hr {
@@ -755,8 +793,7 @@ img {
 
 @media screen and (max-width: 500px) {
   .nav-item a[href]:hover {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
+    background-color: var(--secondary-color);
   }
 }
 
