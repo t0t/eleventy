@@ -1,40 +1,27 @@
 
-
+// LOADER con fundido
 let loader = document.getElementById("wrap-preloader");
 let theSite = document.getElementById("theSite");
 
+// Cuando carge todo, DOM, recursos, etc
 window.addEventListener("load", () =>  {
-  loader.style.display = "none";
+  // oculta el loader
+  loader.style.display = "none"; //poner en none/grid
+  // Muestra la pagina
   theSite.style.display = "inherit";
+  // y pon su opacidad a 1
   fundidoPagina();
 });
 
 let fundidoPagina = () => {
   document.querySelector("#theSite").classList.add("fade-page-on")
-  console.log("Web cargada sin errores");
 }
 
-// Page Preload y fade page
+// Muestra Creditos
 document.addEventListener("DOMContentLoaded", () => {
-
-  console.log(loader);
-
-  // showPage();
-  // document.querySelector("body").addEventListener("click", credits)
+  document.querySelector("body").addEventListener("click", credits)
 });
 
-
-// let credits = () => {
-//   console.log("Website desarrollada a mano y con mucho cariño por Sergio Forés")
-// }
-
-
-
-// function myFunction() {
-//   myVar = setTimeout(showPage, 3000);
-// }
-
-// function showPage() {
-//   preLoader.style.display = "none";
-//   document.getElementById("theSite").style.display = "block";
-// }
+let credits = () => {
+  console.log("Website desarrollada a mano y con mucho cariño por Sergio Forés")
+}
