@@ -1,33 +1,42 @@
 <footer class="footer-site">
 
-  <header>
-    <h3>Cuenta conmigo!</h3>
-  </header>
+  <div class="footer-site__item">
 
-  <main>
-    <p>
-      Si quieres implicarte en tu proceso  de Creación de manera holística y profunda, si quieres usar tu momento Cero que te bloquea para propulsarte a una percepción más madura y coherente...
-    </p>
-  </main>
+    <header>
+      <h3>Cuenta conmigo!</h3>
+    </header>
 
-  <div class="contact-me">
+    <main>
+      <p>
+        Si quieres implicarte en tu proceso  de Creación de manera holística y profunda, si quieres usar tu momento Cero que te bloquea para propulsarte a una percepción más madura y coherente...
+      </p>
+    </main>
 
-    <a class="btn-whatsapp  m-2" href="https://api.whatsapp.com/send?phone=+34619549032" target="_blank">WhatsApp ↗</a>
-    <a class="btn-telegram  m-2" href="https://t.me/sergiofores" target="_blank">Telegram ↗</a>
+    <div class="contact-me grid__item">
+
+      <a class="btn-whatsapp  m-2" href="https://api.whatsapp.com/send?phone=+34619549032" target="_blank">WhatsApp ↗</a>
+      <a class="btn-telegram  m-2" href="https://t.me/sergiofores" target="_blank">Telegram ↗</a>
+
+    </div>
 
   </div>
 
-  {# <p>Sígueme en éstas redes:</p> #}
-  {% include "./social-links.njk" %}
+  <!-- <figure class="grid__item">
+    <img src="/img/bg4.jpg" alt="">
+  </figure> -->
 
-  <footer class="bgcolor-grey-3">
-    <small class="subTitle">Un Método Neutro Universal</small>
-      {# <figure class="grid__item">
-        <img src="/img/435685.svg" alt="">
-      </figure> #}
-    <nav class="">
-      <a href="/faqs/"><small>FAQ's</small></a>
-    </nav>
-  </footer>
+  <div class="followme">
+    <p>Sígueme en éstas redes:</p>
+    {% include "./social-links.njk" %}
+  </div>
 
 </footer>
+
+
+<div class="franjapie">
+  <small class="subTitle">Un Método Neutro Universal</small>
+
+  <nav class="">
+    <a href="/faqs/"><small>FAQ's</small></a>
+  </nav>
+</div>

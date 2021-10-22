@@ -454,22 +454,34 @@ hr {
 }
 
 .footer-site {
+  /* height: 100vh; */
+  display: grid;
+  align-content: center;
+  justify-items: center;
   background-color: var(--grey-color-2);
-  background-image: url("../img/avatar.jpg");
   background-repeat: no-repeat;
   background-size: var(--size-5);
   background-attachment: fixed;
   background-position: center var(--size-5);
-  padding-top: var(--size-3);
+  padding: var(--size-4);
 }
 
-.footer-site footer {
-  padding: var(--size-1);
-  color: var(--grey-color-2);
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  place-items: center;
-  background-color: var(--grey-color-4);
+@media screen and (max-width: 514px) {
+  .footer-site {
+    padding: var(--size-2);
+  }
+  .footer-site .contact-me {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.footer-site__item {
+  border: 1px solid var(--black-color);
+  padding: var(--size-3);
+}
+.footer-site__item p {
+  text-align: center;
 }
 
 .footer-site footer nav a {
@@ -481,9 +493,21 @@ hr {
   color: var(--grey-color-2);
 }
 
-.footer-site main {
-  padding: 0 var(--size-2);
+.footer-site .followme {
+  margin-top: var(--size-3);
+  text-align: center;
 }
+
+.franjapie {
+  padding: var(--size-1);
+  color: var(--black-color);
+  display: grid;
+  font-weight: var(--medium);
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  background-color: var(--grey-color-3);
+}
+
 /* Helpers */
 
 .tar {
@@ -740,13 +764,12 @@ img {
 /* Contact me */
 .contact-me {
   grid-template-columns: 1fr 1fr;
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
   gap: var(--size-0);
-  padding-bottom: var(--size-3);
   padding-top: var(--size-2);
-  padding-left: var(--size-2);
-  padding-right: var(--size-2);
+  /* padding-left: var(--size-2);
+  padding-right: var(--size-2); */
 }
 
 .btn--white {
@@ -1482,7 +1505,7 @@ img.hover-shadow {
   right: 0;
   background-color: var(--grey-color-3);
   overflow-x: hidden;
-  transition: 0.5s;
+  transition: 0.2s;
   padding-top: var(--size-5);
 }
 
@@ -1514,11 +1537,11 @@ img.hover-shadow {
 }
 
 #main {
-  transition: margin-left .5s;
+  transition: margin-left .3s;
   padding: var(--size-2);
 }
 
-@media screen and (max-height: 450px) {
+/* @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
-}
+} */
