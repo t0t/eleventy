@@ -460,6 +460,7 @@ hr {
   background-size: var(--size-5);
   background-attachment: fixed;
   background-position: center var(--size-5);
+  padding-top: var(--size-3);
 }
 
 .footer-site footer {
@@ -480,6 +481,9 @@ hr {
   color: var(--grey-color-2);
 }
 
+.footer-site main {
+  padding: 0 var(--size-2);
+}
 /* Helpers */
 
 .tar {
@@ -715,6 +719,9 @@ img {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: var(--size-1);
+  padding: 0 var(--size-2) var(--size-2);
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .social-links path,
@@ -727,26 +734,19 @@ img {
 }
 
 .social-links svg {
-  width: var(--size-3);
-}
-
-@media screen and (min-width: 500px) {
-  .social-links svg {
-    width: var(--size-2);
-  }
+  width: var(--size-2);
 }
 
 /* Contact me */
 .contact-me {
+  grid-template-columns: 1fr 1fr;
   display: grid;
   place-items: center;
-}
-
-@media screen and (min-width: 500px) {
-  .contact-me {
-    grid-template-columns: 1fr 1fr;
-    gap: var(--size-1);
-  }
+  gap: var(--size-0);
+  padding-bottom: var(--size-3);
+  padding-top: var(--size-2);
+  padding-left: var(--size-2);
+  padding-right: var(--size-2);
 }
 
 .btn--white {
@@ -768,11 +768,11 @@ img {
 
 .btn-whatsapp,
 .btn-telegram {
-  letter-spacing: 1px;
   text-decoration: none;
   padding: var(--size-0) var(--size-1);
   background-color: transparent;
   border: 2px solid var(--black-color);
+  margin: 0;
 }
 
 .btn-whatsapp:hover {
@@ -844,27 +844,26 @@ img {
 /* Nav */
 .nav {
   display: none;
-  gap: var(--size-1);
-  top: var(--size-2);
-  right: var(--size-1);
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  position: fixed;
-  list-style: none;
-  transition: top 0.3s;
-  z-index: 1;
-  margin: 0;
-  text-align: center;
-  height: var(--size-4);
-  align-items: center;
-  justify-items: end;
-  font-weight: var(--bold);
 }
 
 @media screen and (min-width: 930px) {
   .nav {
     display: grid;
-    gap: inherit;
+    /* top: var(--size-2);
+    right: var(--size-1); */
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    position: fixed;
+    list-style: none;
+    transition: top 0.3s;
+    z-index: 1;
+    margin: 0;
     padding-right: var(--size-3);
+    text-align: center;
+    height: var(--size-4);
+    align-items: center;
+    justify-items: end;
+    font-weight: var(--bold);
+    gap: inherit;
     height: var(--size-5);
     width: var(--size-8);
     top: inherit;
