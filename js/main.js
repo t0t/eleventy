@@ -6,13 +6,12 @@ let noOverflow = document.querySelector("body");
 
 // Cuando carge todo, DOM, recursos, etc
 window.addEventListener("load", () =>  {
+  fundidoPagina();
   // oculta el loader
   loader.style.display = "none"; //poner en none/grid
   // Muestra la pagina
   theSite.style.display = "inherit";
-  // y pon su opacidad a 1
   noOverflow.style.overflow = "visible";
-  fundidoPagina();
 });
 
 let fundidoPagina = () => {
