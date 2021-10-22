@@ -40,9 +40,11 @@ html {
   font-size: 18px;
 }
 
-.main--content {
+.content {
     background-color: var(--primary-color-1);
     padding-bottom: var(--size-4);
+    padding-left: var(--size-2);
+    padding-right: var(--size-2);
 }
 /* @media screen and (min-width: 500px) {
   .main--content {

@@ -16,7 +16,10 @@ templateClass: tmpl-post
   </div>
 </footer>
 
-   {{ content | safe }}
+<main class="content">
+    {{ content | safe }}
+</main>
+
    {%- if collections.posts %} {%- set nextPost = collections.posts | getNextCollectionItem(page) %} {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %} {%- if nextPost or previousPost %}
 
 <ul class="nav-posts">
