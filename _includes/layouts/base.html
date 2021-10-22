@@ -33,7 +33,7 @@
     onclick="openNav()">&#9776;</span>
   </header>
 
-  <main{% if templateClass %} class="{{ templateClass }}" {% endif %}>
+  <main{% if templateClass %} id="maincontent" class="{{ templateClass }}" {% endif %}>
 
   {{ content | safe }}
 

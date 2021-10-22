@@ -1480,7 +1480,7 @@ img.hover-shadow {
   z-index: 1;
   top: 0;
   right: 0;
-  background-color: var(--quaternary-color);
+  background-color: var(--secondary-color);
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: var(--size-5);
