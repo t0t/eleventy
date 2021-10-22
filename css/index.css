@@ -322,6 +322,8 @@ section {
 }
 
 .section--cover {
+  display: grid;
+  gap: var(--size-3);
   padding-right: var(--size-3);
   padding-left: var(--size-3);
   padding-bottom: var(--size-2);
@@ -330,8 +332,6 @@ section {
 
 @media screen and (min-width: 550px) {
   .section--cover {
-    display: grid;
-    gap: var(--size-3);
     grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
     place-items: center;
     padding-bottom: var(--size-3);
@@ -1477,10 +1477,10 @@ img.hover-shadow {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 99;
   top: 0;
   right: 0;
-  background-color: var(--secondary-color);
+  background-color: var(--grey-color-3);
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: var(--size-5);
@@ -1488,12 +1488,14 @@ img.hover-shadow {
 
 .sidenav li {
   list-style: none;
+  text-align: center;
 }
 
 .sidenav a {
-  padding: var(--size-1);
+  padding: var(--size-2) var(--size-1);
   text-decoration: none;
-  /* font-size: 25px; */
+  font-size: var(--size-2);
+  font-weight: var(--medium);
   color: var(--black-color);
   display: block;
   transition: 0.3s;
