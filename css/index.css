@@ -705,6 +705,15 @@ img {
   width: var(--size-2);
 }
 
+/* Lienzo */
+canvas {
+  /* border: 1px solid black; */
+}
+.lienzo {
+  position: relative;
+  background-color: var(--grey-color-3);
+}
+
 /* Contact me */
 .contact-me {
   grid-template-columns: 1fr 1fr;
@@ -729,7 +738,7 @@ img {
   border: 2px solid var(--black-color);
 }
 
-.btn-whatsapp,
+.btn--default,
 .btn-telegram {
   text-decoration: none;
   padding: var(--size-0) var(--size-1);
@@ -738,7 +747,7 @@ img {
   margin: 0;
 }
 
-.btn-whatsapp:hover {
+.btn--default:hover {
   background-color: var(--tertiary-color);
   border-color: var(--tertiary-color);
 }
@@ -1395,7 +1404,7 @@ img.hover-shadow {
   }
 
   .section--metodo svg {
-    width: var(--bp0);
+    /* width: var(--bp0); */
     height: 100%;
   }
 
@@ -1502,13 +1511,13 @@ img.hover-shadow {
     padding-top: var(--size-3);
   }
   .section--metodo svg {
-    width: var(--bp1);
+    /* width: var(--bp1); */
   }
 }
 
 @media screen and (min-width: 424px) {
   .section--metodo svg {
-    width: var(--bp2);
+    /* width: var(--bp2); */
   }
 
 }
@@ -1516,7 +1525,7 @@ img.hover-shadow {
 @media screen and (min-width: 767px) {
 
   .section--metodo svg {
-    width: var(--bp3);
+    /* width: var(--bp3); */
   }
 
   p {
@@ -1564,7 +1573,7 @@ img.hover-shadow {
 
   .nav {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     position: fixed;
     list-style: none;
     transition: top 0.3s;
@@ -1578,7 +1587,7 @@ img.hover-shadow {
     font-weight: var(--bold);
     gap: inherit;
     height: var(--size-5);
-    width: var(--size-8);
+    /* width: var(--size-8); */
     top: inherit;
     right: 0;
   }
@@ -1609,7 +1618,7 @@ img.hover-shadow {
   }
 
   .section--metodo svg {
-    width: var(--bp4);
+    /* width: var(--bp4); */
     /* height: var(--bp2); */
   }
 

@@ -26,7 +26,3 @@ document.addEventListener("DOMContentLoaded", () => {
 let credits = () => {
   console.log("Website desarrollada a mano y con mucho cariño por Sergio Forés")
 }
-
-
-let puntero =document.getElementsByClassName("puntero");
-console.log(puntero);
