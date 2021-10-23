@@ -404,7 +404,7 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  color: var(--grey-color-1);
+  color: var(--grey-color-2);
 }
 
 .blockquote--pie>blockquote h3 {
@@ -1545,3 +1545,72 @@ img.hover-shadow {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 } */
+
+.section--metodo {
+  padding: var(--size-3);
+  background-color: var(--grey-color-2);
+}
+
+.section--metodo svg {
+  width: 100%;
+  height: 100%;
+}
+
+.section--metodo svg circle {
+  stroke-width: 1px;
+}
+
+.section--metodo svg * {
+  transform-box: fill-box;
+}
+
+.section--metodo svg g {
+  stroke-width: 10px;
+  stroke: var(--black-color);
+  transform: translateX(35px) translateY(22px);
+}
+
+circle {
+  fill: none;
+}
+circle#uno {
+  fill: var(--secondary-color);
+}
+circle#dos {
+  fill: var(--primary-color)
+}
+circle#tres {
+  fill: var(--tertiary-color)
+}
+circle#cuatro {
+  fill: var(--quaternary-color)
+}
+circle#cinco {
+  fill: var(--grey-color-2)
+}
+circle#seis {
+  fill: var(--grey-color-2)
+}
+circle#siete {
+  fill: var(--grey-color-2)
+}
+circle#ocho {
+  fill: var(--grey-color-2)
+}
+circle#nueve {
+  fill: var(--grey-color-2)
+}
+circle#cero {
+  fill: var(--black-color)
+}
+#uno,#dos,#tres,#cuatro,#cinco,#seis,#siete,#ocho,#nueve,#cero {
+  stroke: none;
+}
+#uno:hover,#dos:hover,#tres:hover,#cuatro:hover,#cinco:hover,#seis:hover,#siete:hover,#ocho:hover,#nueve:hover,#cero:hover {
+  /* stroke-width: 2px; */
+  /* stroke: var(--black-color); */
+  cursor: pointer;
+  transform-origin: center;
+  transform: scale(4);
+  transition: transform .4s;
+}
