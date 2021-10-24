@@ -296,7 +296,7 @@ a {
   padding-right: var(--size-2);
   padding-left: var(--size-2);
   border-left: none;
-  height: 100vh;
+  height: 50vh;
   place-items: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -330,9 +330,8 @@ blockquote {
 .overlay {
   display: grid;
   place-content: center;
-  width: 100%;
   position: absolute;
-  height: 100%;
+  height: auto;
   background-color: var(--black-color-alpha-1);
   padding: var(--size-1) var(--size-3);
 }
@@ -1528,6 +1527,7 @@ img.hover-shadow {
 #coversvg {
   /* border: 1px solid black; */
 }
+
 #coversvg g {
   stroke-width: 2px;
   stroke: var(--black-color);
@@ -1537,6 +1537,7 @@ img.hover-shadow {
   translateY(50%)
   scale(1.8);
 }
+
 #coversvg g circle {
   fill: none;
   animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -1570,22 +1571,27 @@ img.hover-shadow {
   fill: var(--secondary-color);
   animation-delay: 1s;
 }
+
 #coversvg #dos {
   fill: var(--primary-color);
   animation-delay: 3s;
 }
+
 #coversvg #tres {
   fill: var(--tertiary-color);
   animation-delay: 5s;
 }
+
 #coversvg #cuatro {
   fill: var(--quaternary-color);
   animation-delay: 7s;
 }
+
 #coversvg #cero {
   fill: none;
   animation-delay: 9s;
 }
+
 #coversvg #siete {
   fill: var(--black-color);
   animation-delay: 9s;
@@ -1624,6 +1630,7 @@ svg:not(.logo) * {
   stroke-width: 1px;
   stroke: var(--black-color);
   transform-origin: center;
+  -webkit-transform-origin: center;
   transform:
     translateX(35px)
     translateY(22px)
