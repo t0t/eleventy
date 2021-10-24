@@ -194,57 +194,6 @@ text {
   letter-spacing: 1px;
 }
 
-@-webkit-keyframes fadetranslate {
-  30% {
-    -webkit-transform: translateY(-55px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0px);
-    opacity: 1;
-  }
-}
-@keyframes fadetranslate {
-  30% {
-    transform: translateY(-55px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
-
-/* @keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-} */
-
-@keyframes spin-amarillo {
-  50% {
-    transform: translateX(25px);
-  }
-}
-@keyframes spin-rojo {
-  50% {
-    transform: translateX(25px);
-  }
-}
-@keyframes spin-lila {
-  50% {
-    transform: translateX(0px);
-  }
-}
-@keyframes spin-verde {
-  50% {
-    transform: translateX(-25px);
-  }
-}
-
 /* GRID */
 
 .grid {
@@ -254,8 +203,6 @@ text {
   padding: var(--size-2);
   place-items: center;
 }
-
-.grid__item {}
 
 .grid__item img {
   max-height: 50vh;
@@ -284,10 +231,6 @@ section {
   text-align: center;
   margin-bottom: var(--size-4);
   gap: var(--size-3);
-}
-
-.section--cover {
-  padding-top: 0;
 }
 
 h1 {
@@ -1303,14 +1246,12 @@ img.hover-shadow {
 .nav-posts li:nth-child(2) a::before {
   content: "→";
 }
+
+.section--cover {
+  padding-top: 0;
+}
+
 /* MEDIAQUERIES */
-/* --bp0: 319px;
-  --bp1: 374px;
-  --bp2: 424px;
-  --bp3: 767px;
-  --bp4: 1023px;
-  --bp5: 1439px;
-  --bp6: 2559px; */
 
 @media screen and (min-width: 319px) {
 
@@ -1398,137 +1339,6 @@ img.hover-shadow {
     text-align: center;
   }
 
-  /* Grafica animada el METODO */
-
-  .section--metodo {
-    padding-top: var(--size-3);
-    background-color: var(--grey-color-2);
-  }
-
-  .section--metodo svg {
-    /* width y height vienen por js */
-    /* que superponga a otros elementos de la pagina no se si tiene sentido*/
-    z-index: 3;
-  }
-
-  .section--metodo svg circle {
-    stroke-width: 1px;
-  }
-
-  .section--metodo svg * {
-    /* Para que svg funcione mas como css */
-    transform-box: fill-box;
-  }
-
-  .section--metodo svg g {
-    stroke-width: 1px;
-    stroke: var(--black-color);
-    transform-origin: center;
-    transform:
-      translateX(35px)
-      translateY(22px)
-      scale(1.5)
-    ;
-  }
-  @keyframes escalaitem {
-    to {
-      transform: scale(2);
-    }
-  }
-  circle {
-    fill: none;
-    transform-origin: center;
-    animation-play-state: paused;
-    animation-duration: 1s;
-    animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
-  }
-  circle#uno {
-    fill: var(--secondary-color);
-    animation-delay: 1s;
-  }
-  circle#dos {
-    fill: var(--primary-color);
-    animation-delay: 2s;
-  }
-  circle#tres {
-    fill: var(--tertiary-color);
-    animation-delay: 3s;
-  }
-  circle#cuatro {
-    fill: var(--quaternary-color);
-    animation-delay: 4s;
-  }
-  circle#cinco {
-    fill: var(--grey-color-2)
-  };
-  circle#seis {
-    fill: var(--grey-color-2)
-  };
-  circle#siete {
-    fill: var(--grey-color-2)
-  };
-  circle#ocho {
-    fill: var(--grey-color-2)
-  };
-  circle#nueve {
-    fill: var(--grey-color-2)
-  };
-  circle#cero {
-    fill: var(--black-color)
-  }
-
-  #uno,#dos,#tres,#cuatro,#cinco,#seis,#siete,#ocho,#nueve,#cero {
-    stroke: none;
-    animation-name: escalaitem;
-  }
-
-  .puntero:hover {
-    transform: scale(15.9);
-    stroke:none;
-  }
-
-  #uno+.puntero:hover,
-  #dos+.puntero:hover,
-  #tres+.puntero:hover,
-  #cuatro+.puntero:hover,
-  #cinco+.puntero:hover,
-  #seis+.puntero:hover,
-  #siete+.puntero:hover,
-  #ocho+.puntero:hover,
-  #nueve+.puntero:hover,
-  #cero+.puntero:hover {
-    cursor: pointer;
-    transform-origin: center;
-    transition: transform .4s;
-    animation-name: escalaitem;
-    animation-play-state: running;
-  }
-
-  #cinco+.puntero,
-  #seis+.puntero,
-  #siete+.puntero,
-  #cero+.puntero {
-    fill: var(--black-color);
-  }
-
-  #uno+.puntero:hover {
-    fill: var(--secondary-color);
-  }
-  #dos+.puntero:hover {
-    fill: var(--primary-color);
-  }
-  #tres+.puntero {
-    fill: var(--tertiary-color);
-  }
-  #cuatro+.puntero {
-    fill: var(--quaternary-color);
-  }
-  #ocho+.puntero,
-  #nueve+.puntero {
-    fill: var(--grey-color-2);
-    stroke:inherit;
-  }
-
 }
 
 @media screen and (min-width: 374px) {
@@ -1540,18 +1350,9 @@ img.hover-shadow {
   }
 }
 
-@media screen and (min-width: 424px) {
-  .section--metodo svg {
-    /* width: var(--bp2); */
-  }
-
-}
+/* @media screen and (min-width: 424px) {} */
 
 @media screen and (min-width: 767px) {
-
-  .section--metodo svg {
-    /* width: var(--bp3); */
-  }
 
   p {
     max-width: var(--bp3);
@@ -1563,6 +1364,7 @@ img.hover-shadow {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: var(--size-2);
   }
+
   .section--video {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "video texto";
@@ -1598,7 +1400,7 @@ img.hover-shadow {
 
   .nav {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     position: fixed;
     list-style: none;
     transition: top 0.3s;
@@ -1697,4 +1499,221 @@ img.hover-shadow {
     margin-right: auto;
   }
 
+}
+
+
+/* Animacion svg en cover */
+
+#coversvg {
+  /* border: 1px solid black; */
+}
+#coversvg g {
+  stroke: var(--black-color);
+  transform-origin: center;
+  transform:
+  translateX(50%)
+  translateY(50%)
+  scale(1.8);
+}
+#coversvg g circle {
+  transform: scale(1);
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  transform-origin: center;
+}
+#coversvg g circle#cuatro {
+  animation-name: escalar;
+  animation-duration: 3s;
+}
+
+/* Grafica animada el METODO */
+
+.section--metodo {
+  padding-top: var(--size-3);
+  background-color: var(--grey-color-2);
+}
+
+.section--metodo svg {
+  /* width y height vienen por js */
+  /* que superponga a otros elementos de la pagina no se si tiene sentido*/
+  z-index: 3;
+}
+
+.section--metodo svg circle {
+  stroke-width: 1px;
+}
+
+svg * {
+  /* Para que svg funcione mas como css */
+  transform-box: fill-box;
+}
+
+.section--metodo svg g {
+  stroke-width: 1px;
+  stroke: var(--black-color);
+  transform-origin: center;
+  transform:
+    translateX(35px)
+    translateY(22px)
+    scale(1.5)
+  ;
+}
+
+circle {
+  fill: none;
+  transform-origin: center;
+  animation-play-state: paused;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+}
+circle#uno {
+  fill: var(--secondary-color);
+  animation-delay: 1s;
+}
+circle#dos {
+  fill: var(--primary-color);
+  animation-delay: 2s;
+}
+circle#tres {
+  fill: var(--tertiary-color);
+  animation-delay: 3s;
+}
+circle#cuatro {
+  fill: var(--quaternary-color);
+  animation-delay: 4s;
+}
+circle#cinco {
+  fill: var(--grey-color-2)
+};
+circle#seis {
+  fill: var(--grey-color-2)
+};
+circle#siete {
+  fill: var(--grey-color-2)
+};
+circle#ocho {
+  fill: var(--grey-color-2)
+};
+circle#nueve {
+  fill: var(--grey-color-2)
+};
+circle#cero {
+  fill: var(--black-color)
+}
+
+#uno,#dos,#tres,#cuatro,#cinco,#seis,#siete,#ocho,#nueve,#cero {
+  stroke: none;
+  animation-name: escalar;
+}
+
+.puntero:hover {
+  transform: scale(15.9);
+  stroke:none;
+}
+
+#uno+.puntero:hover,
+#dos+.puntero:hover,
+#tres+.puntero:hover,
+#cuatro+.puntero:hover,
+#cinco+.puntero:hover,
+#seis+.puntero:hover,
+#siete+.puntero:hover,
+#ocho+.puntero:hover,
+#nueve+.puntero:hover,
+#cero+.puntero:hover {
+  cursor: pointer;
+  transform-origin: center;
+  transition: transform .4s;
+  animation-name: escalar;
+  animation-play-state: running;
+}
+
+#cinco+.puntero,
+#seis+.puntero,
+#siete+.puntero,
+#cero+.puntero {
+  fill: var(--black-color);
+}
+
+#uno+.puntero:hover {
+  fill: var(--secondary-color);
+}
+#dos+.puntero:hover {
+  fill: var(--primary-color);
+}
+#tres+.puntero {
+  fill: var(--tertiary-color);
+}
+#cuatro+.puntero {
+  fill: var(--quaternary-color);
+}
+#ocho+.puntero,
+#nueve+.puntero {
+  fill: var(--grey-color-2);
+  stroke:inherit;
+}
+
+/* ANIMACIONES */
+
+@keyframes escalar {
+  50% {
+    transform: scale(2);
+  }
+}
+@keyframes animcover {
+  to {
+    transform: rotate(180deg) scale(2);
+  }
+}
+
+@-webkit-keyframes fadetranslate {
+  30% {
+    -webkit-transform: translateY(-55px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes fadetranslate {
+  30% {
+    transform: translateY(-55px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-amarillo {
+  50% {
+    transform: translateX(25px);
+  }
+}
+@keyframes spin-rojo {
+  50% {
+    transform: translateX(25px);
+  }
+}
+@keyframes spin-lila {
+  50% {
+    transform: translateX(0px);
+  }
+}
+@keyframes spin-verde {
+  50% {
+    transform: translateX(-25px);
+  }
 }
