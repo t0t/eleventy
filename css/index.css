@@ -1354,6 +1354,14 @@ img.hover-shadow {
 
 @media screen and (min-width: 767px) {
 
+  h1 {
+    font-size: var(--size-3);
+  }
+
+  h3 {
+    font-size: var(--size-2);
+  }
+
   p {
     max-width: var(--bp3);
   }
@@ -1508,6 +1516,7 @@ img.hover-shadow {
   /* border: 1px solid black; */
 }
 #coversvg g {
+  stroke-width: 2px;
   stroke: var(--black-color);
   transform-origin: center;
   transform:
@@ -1516,15 +1525,64 @@ img.hover-shadow {
   scale(1.8);
 }
 #coversvg g circle {
-  transform: scale(1);
-  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  fill: none;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
   animation-iteration-count: infinite;
-  animation-play-state: running;
+  /* animation-play-state: running; */
   transform-origin: center;
+  -webkit-transform-origin: center;
+  -moz-transform-origin: center;
 }
-#coversvg g circle#cuatro {
+
+/* punteros */
+#coversvg #cinco+.puntero,
+#coversvg #seis+.puntero,
+#coversvg #siete+.puntero,
+#coversvg #cero+.puntero {
+  fill: var(--grey-color-0);
+}
+
+#coversvg #uno,
+#coversvg #dos,
+#coversvg #tres,
+#coversvg #cuatro {
+  animation-duration: 5s;
   animation-name: escalar;
-  animation-duration: 3s;
+  -webkit-animation-name: escalar;
+  -moz-animation-name: escalar;
+  stroke: none;
+}
+
+#coversvg #uno {
+  fill: var(--secondary-color);
+  animation-delay: 1s;
+}
+#coversvg #dos {
+  fill: var(--primary-color);
+  animation-delay: 3s;
+}
+#coversvg #tres {
+  fill: var(--tertiary-color);
+  animation-delay: 5s;
+}
+#coversvg #cuatro {
+  fill: var(--quaternary-color);
+  animation-delay: 7s;
+}
+#coversvg #cero {
+  fill: none;
+  animation-delay: 9s;
+}
+#coversvg #siete {
+  fill: var(--black-color);
+  animation-delay: 9s;
+}
+
+#coversvg #update {
+  stroke: var(--black-color);
+  stroke-dasharray: 10%;
+  animation: dash 10s linear infinite;
+  stroke-width: 2px;
 }
 
 /* Grafica animada el METODO */
@@ -1544,7 +1602,7 @@ img.hover-shadow {
   stroke-width: 1px;
 }
 
-svg * {
+svg:not(.logo) * {
   /* Para que svg funcione mas como css */
   transform-box: fill-box;
 }
@@ -1560,68 +1618,67 @@ svg * {
   ;
 }
 
-circle {
+#metodo circle {
   fill: none;
   transform-origin: center;
   animation-play-state: paused;
   animation-duration: 1s;
   animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
 }
-circle#uno {
+#metodo circle#uno {
   fill: var(--secondary-color);
   animation-delay: 1s;
 }
-circle#dos {
+#metodo circle#dos {
   fill: var(--primary-color);
   animation-delay: 2s;
 }
-circle#tres {
+#metodo circle#tres {
   fill: var(--tertiary-color);
   animation-delay: 3s;
 }
-circle#cuatro {
+#metodo circle#cuatro {
   fill: var(--quaternary-color);
   animation-delay: 4s;
 }
-circle#cinco {
+#metodo circle#cinco {
   fill: var(--grey-color-2)
 };
-circle#seis {
+#metodo circle#seis {
   fill: var(--grey-color-2)
 };
-circle#siete {
+#metodo circle#siete {
   fill: var(--grey-color-2)
 };
-circle#ocho {
+#metodo circle#ocho {
   fill: var(--grey-color-2)
 };
-circle#nueve {
+#metodo circle#nueve {
   fill: var(--grey-color-2)
 };
-circle#cero {
+#metodo circle#cero {
   fill: var(--black-color)
 }
 
-#uno,#dos,#tres,#cuatro,#cinco,#seis,#siete,#ocho,#nueve,#cero {
+#metodo #uno,#metodo #dos,#metodo #tres,#metodo #cuatro,#metodo #cinco,#metodo #seis,#metodo #siete,#metodo #ocho,#metodo #nueve,#metodo #cero {
   stroke: none;
-  animation-name: escalar;
 }
 
-.puntero:hover {
+#metodo .puntero:hover {
   transform: scale(15.9);
   stroke:none;
 }
 
-#uno+.puntero:hover,
-#dos+.puntero:hover,
-#tres+.puntero:hover,
-#cuatro+.puntero:hover,
-#cinco+.puntero:hover,
-#seis+.puntero:hover,
-#siete+.puntero:hover,
-#ocho+.puntero:hover,
-#nueve+.puntero:hover,
-#cero+.puntero:hover {
+#metodo #uno+.puntero:hover,
+#metodo #dos+.puntero:hover,
+#metodo #tres+.puntero:hover,
+#metodo #cuatro+.puntero:hover,
+#metodo #cinco+.puntero:hover,
+#metodo #seis+.puntero:hover,
+#metodo #siete+.puntero:hover,
+#metodo #ocho+.puntero:hover,
+#metodo #nueve+.puntero:hover,
+#metodo #cero+.puntero:hover {
   cursor: pointer;
   transform-origin: center;
   transition: transform .4s;
@@ -1629,36 +1686,43 @@ circle#cero {
   animation-play-state: running;
 }
 
-#cinco+.puntero,
-#seis+.puntero,
-#siete+.puntero,
-#cero+.puntero {
+#metodo #cinco+.puntero,
+#metodo #seis+.puntero,
+#metodo #siete+.puntero,
+#metodo #cero+.puntero {
   fill: var(--black-color);
 }
 
-#uno+.puntero:hover {
+#metodo #uno+.puntero:hover {
   fill: var(--secondary-color);
 }
-#dos+.puntero:hover {
+#metodo #dos+.puntero:hover {
   fill: var(--primary-color);
 }
-#tres+.puntero {
+#metodo #tres+.puntero {
   fill: var(--tertiary-color);
 }
-#cuatro+.puntero {
+#metodo #cuatro+.puntero {
   fill: var(--quaternary-color);
 }
-#ocho+.puntero,
-#nueve+.puntero {
+#metodo #ocho+.puntero,
+#metodo #nueve+.puntero {
   fill: var(--grey-color-2);
   stroke:inherit;
 }
 
 /* ANIMACIONES */
 
+@keyframes dash {
+  50% {
+    stroke-dashoffset: 100px;
+    /* stroke-dasharray: 0%; */
+  }
+}
 @keyframes escalar {
   50% {
-    transform: scale(2);
+    transform: scale(.5);
+    transform-origin: center;
   }
 }
 @keyframes animcover {
