@@ -887,10 +887,10 @@ model-viewer {
 }
 
 .tmpl-home {
-  background: linear-gradient(180deg,
+  /* background: linear-gradient(180deg,
   var(--grey-color-0) 7%,
   var(--secondary-color) 70%,
-  var(--grey-color-2) 80%);
+  var(--grey-color-2) 80%); */
 }
 
 .img--25vw,
@@ -1529,7 +1529,7 @@ img.hover-shadow {
 }
 
 #coversvg g {
-  stroke-width: 2px;
+  stroke-width: 0.5px;
   stroke: var(--black-color);
   transform-origin: center;
   transform:
@@ -1593,15 +1593,15 @@ img.hover-shadow {
 }
 
 #coversvg #siete {
-  fill: var(--black-color-alpha-1);
+  fill: var(--black-color);
   animation-delay: 9s;
   stroke: none;
 }
 
 #coversvg #update {
-  stroke: var(--grey-color-2);
+  stroke: var(--grey-color-1);
   stroke-dasharray: 10%;
-  animation: dash 10s linear infinite;
+  animation: dash 10s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
   stroke-width: 3px;
 }
 
