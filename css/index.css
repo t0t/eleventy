@@ -1593,15 +1593,16 @@ img.hover-shadow {
 }
 
 #coversvg #siete {
-  fill: var(--black-color);
+  fill: var(--black-color-alpha-1);
   animation-delay: 9s;
+  stroke: none;
 }
 
 #coversvg #update {
-  stroke: var(--black-color);
+  stroke: var(--grey-color-2);
   stroke-dasharray: 10%;
   animation: dash 10s linear infinite;
-  stroke-width: 2px;
+  stroke-width: 3px;
 }
 
 /* Grafica animada el METODO */
@@ -1741,7 +1742,7 @@ svg:not(.logo) * {
 }
 @keyframes escalar {
   50% {
-    transform: scale(.5);
+    transform: scale(3.5);
     transform-origin: center;
   }
 }
