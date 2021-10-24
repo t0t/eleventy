@@ -1398,14 +1398,17 @@ img.hover-shadow {
     text-align: center;
   }
 
+  /* Grafica animada el METODO */
+
   .section--metodo {
-    padding: var(--size-3) 0;
+    padding-top: var(--size-3);
     background-color: var(--grey-color-2);
   }
 
   .section--metodo svg {
-    /* width: var(--bp0); */
-    height: 100%;
+    /* width y height vienen por js */
+    /* que superponga a otros elementos de la pagina no se si tiene sentido*/
+    z-index: 3;
   }
 
   .section--metodo svg circle {
@@ -1413,50 +1416,70 @@ img.hover-shadow {
   }
 
   .section--metodo svg * {
+    /* Para que svg funcione mas como css */
     transform-box: fill-box;
   }
 
   .section--metodo svg g {
     stroke-width: 1px;
     stroke: var(--black-color);
-    transform: translateX(35px) translateY(22px);
+    transform-origin: center;
+    transform:
+      translateX(35px)
+      translateY(22px)
+      scale(1.5)
+    ;
   }
-
+  @keyframes escalaitem {
+    to {
+      transform: scale(2);
+    }
+  }
   circle {
-    fill: transparent;
+    fill: none;
+    transform-origin: center;
+    animation-play-state: paused;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
   }
   circle#uno {
     fill: var(--secondary-color);
+    animation-delay: 1s;
   }
   circle#dos {
-    fill: var(--primary-color)
+    fill: var(--primary-color);
+    animation-delay: 2s;
   }
   circle#tres {
-    fill: var(--tertiary-color)
+    fill: var(--tertiary-color);
+    animation-delay: 3s;
   }
   circle#cuatro {
-    fill: var(--quaternary-color)
+    fill: var(--quaternary-color);
+    animation-delay: 4s;
   }
   circle#cinco {
     fill: var(--grey-color-2)
-  }
+  };
   circle#seis {
     fill: var(--grey-color-2)
-  }
+  };
   circle#siete {
     fill: var(--grey-color-2)
-  }
+  };
   circle#ocho {
     fill: var(--grey-color-2)
-  }
+  };
   circle#nueve {
     fill: var(--grey-color-2)
-  }
+  };
   circle#cero {
     fill: var(--black-color)
   }
+
   #uno,#dos,#tres,#cuatro,#cinco,#seis,#siete,#ocho,#nueve,#cero {
     stroke: none;
+    animation-name: escalaitem;
   }
 
   .puntero:hover {
@@ -1477,13 +1500,15 @@ img.hover-shadow {
     cursor: pointer;
     transform-origin: center;
     transition: transform .4s;
+    animation-name: escalaitem;
+    animation-play-state: running;
   }
 
   #cinco+.puntero,
   #seis+.puntero,
   #siete+.puntero,
   #cero+.puntero {
-    fill: var(--black-color)
+    fill: var(--black-color);
   }
 
   #uno+.puntero:hover {
