@@ -1366,11 +1366,20 @@ img.hover-shadow {
     max-width: var(--bp3);
   }
 
+  .section--cover {
+    padding-top: 0;
+    padding-left: 0;
+  }
+
+  .tmpl-home, .tmpl-page, .tmpl-post {
+    padding-top: calc(var(--size-5) - var(--size-2));
+  }
+
   /* GRID */
 
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: var(--size-2);
+    gap: 0px;
   }
 
   .section--video {
@@ -1460,6 +1469,10 @@ img.hover-shadow {
 }
 
 @media screen and (min-width: 1439px) {
+
+  h1 {
+    font-size: var(--size-4);
+  }
 
   .grid {
     padding: var(--size-4);
