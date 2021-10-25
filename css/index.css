@@ -1534,11 +1534,12 @@ img.hover-shadow {
 #coversvg g {
   stroke-width: 0.5px;
   stroke: var(--black-color);
+  -moz-transform-origin: center;
+  -webkit-transform-origin: center;
   transform-origin: center;
-  transform:
-  translateX(50%)
-  translateY(50%)
-  scale(1.8);
+  -moz-transform: translateX(90%) translateY(50%) scale(1.8);
+  -webkit-transform: translateX(90%) translateY(50%) scale(1.8);
+  transform: translateX(90%) translateY(50%) scale(1.8);
 }
 
 #coversvg g circle {
@@ -1546,9 +1547,9 @@ img.hover-shadow {
   animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
   animation-iteration-count: infinite;
   /* animation-play-state: running; */
-  transform-origin: center;
   -webkit-transform-origin: center;
   -moz-transform-origin: center;
+  transform-origin: center;
 }
 
 /* punteros */
@@ -1564,9 +1565,9 @@ img.hover-shadow {
 #coversvg #tres,
 #coversvg #cuatro {
   animation-duration: 5s;
-  animation-name: escalar;
   -webkit-animation-name: escalar;
   -moz-animation-name: escalar;
+  animation-name: escalar;
   stroke: none;
 }
 
