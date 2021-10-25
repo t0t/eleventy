@@ -327,15 +327,6 @@ blockquote {
   margin-right: auto;
 }
 
-.overlay {
-  display: grid;
-  place-content: center;
-  position: absolute;
-  height: auto;
-  background-color: var(--black-color-alpha-1);
-  padding: var(--size-1) var(--size-3);
-}
-
 hr {
   width: var(--size-4);
   background-color: var(--secondary-color);
@@ -1347,14 +1338,26 @@ img.hover-shadow {
   .section--metodo svg {
     /* width: var(--bp1); */
   }
+  .overlay {
+    display: block;
+    /* place-content: center; */
+    position: absolute;
+    height: auto;
+    background-color: var(--black-color-alpha-1);
+    padding-left: var(--size-2);
+    padding-right: var(--size-2);
+  }
 }
 
 /* @media screen and (min-width: 424px) {} */
 
 @media screen and (min-width: 767px) {
 
+  .titlePage {
+    text-align: left;
+  }
   h1 {
-    font-size: var(--size-3);
+    /* font-size: var(--size-3); */
   }
 
   h3 {
@@ -1367,7 +1370,7 @@ img.hover-shadow {
 
   .section--cover {
     padding-top: 0;
-    padding-left: 0;
+    /* padding-left: 0; */
   }
 
   .tmpl-home, .tmpl-page, .tmpl-post {
@@ -1630,8 +1633,19 @@ svg:not(.logo) * {
 .section--metodo svg g {
   stroke-width: 1px;
   stroke: var(--black-color);
-  transform-origin: center;
+  -moz-transform-origin: center;
   -webkit-transform-origin: center;
+  transform-origin: center;
+  -moz-transform:
+    translateX(35px)
+    translateY(22px)
+    scale(1.5)
+  ;
+  -webkit-transform:
+    translateX(35px)
+    translateY(22px)
+    scale(1.5)
+  ;
   transform:
     translateX(35px)
     translateY(22px)
@@ -1641,6 +1655,8 @@ svg:not(.logo) * {
 
 #metodo circle {
   fill: none;
+  -moz-transform-origin: center;
+  -webkit-transform-origin: center;
   transform-origin: center;
   animation-play-state: paused;
   animation-duration: 1s;
@@ -1701,10 +1717,14 @@ svg:not(.logo) * {
 #metodo #nueve+.puntero:hover,
 #metodo #cero+.puntero:hover {
   cursor: pointer;
+  -moz-transform-origin: center;
+  -webkit-transform-origin: center;
   transform-origin: center;
+
   transition: transform .4s;
+  -moz-animation-name: escalar;
+  -webkit-animation-name: escalar;
   animation-name: escalar;
-  animation-play-state: running;
 }
 
 #metodo #cinco+.puntero,
@@ -1743,6 +1763,8 @@ svg:not(.logo) * {
 @keyframes escalar {
   50% {
     transform: scale(3.5);
+    -moz-transform-origin: center;
+    -webkit-transform-origin: center;
     transform-origin: center;
   }
 }
