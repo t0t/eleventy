@@ -18,11 +18,12 @@ let fundidoPagina = () => {
   document.querySelector("#theSite").classList.add("fade-page-on")
 }
 
-// Muestra Creditos
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelector("body").addEventListener("click", credits)
-});
 
-let credits = () => {
-  console.log("Website desarrollada a mano y con mucho cariño por Sergio Forés")
-}
+// Muestra Creditos
+// document.addEventListener("DOMContentLoaded", () => {
+//   document.querySelector("body").addEventListener("click", credits)
+// });
+
+// let credits = () => {
+//   console.log("Website desarrollada a mano y con mucho cariño por Sergio Forés")
+// }

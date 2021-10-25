@@ -1241,6 +1241,12 @@ img.hover-shadow {
   padding-top: 0;
 }
 
+.txt-wrap {
+  display: block;
+  padding-top: var(--size-2);
+  padding-bottom: var(--size-2);
+}
+
 /* MEDIAQUERIES */
 
 @media screen and (min-width: 319px) {
@@ -1335,9 +1341,7 @@ img.hover-shadow {
   .footer-site {
     padding-top: var(--size-3);
   }
-  .section--metodo svg {
-    /* width: var(--bp1); */
-  }
+
   .overlay {
     display: block;
     /* place-content: center; */
@@ -1347,9 +1351,17 @@ img.hover-shadow {
     padding-left: var(--size-2);
     padding-right: var(--size-2);
   }
+
+  .txt * {
+    font-size: var(--size-0);
+  }
 }
 
 /* @media screen and (min-width: 424px) {} */
+
+/* @media screen and (max-width: 767px) {
+
+} */
 
 @media screen and (min-width: 767px) {
 
@@ -1403,6 +1415,24 @@ img.hover-shadow {
   /* Post navigation */
   .nav-posts {
     display: flex;
+  }
+
+  .section--metodo .txt--cero,
+  .section--metodo .txt--uno,
+  .section--metodo .txt--dos,
+  .section--metodo .txt--tres,
+  .section--metodo .txt--cuatro {
+    position: unset;
+  }
+
+  .txt-wrap {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr );
+    padding: var(--size-3);
+  }
+
+  .txt--cero {
+    color: var(--black-color);
   }
 
 }
@@ -1463,9 +1493,16 @@ img.hover-shadow {
     display: inherit;
   }
 
-  .section--metodo svg {
-    /* width: var(--bp4); */
-    /* height: var(--bp2); */
+  .section--metodo .txt--cero,
+  .section--metodo .txt--uno,
+  .section--metodo .txt--dos,
+  .section--metodo .txt--tres,
+  .section--metodo .txt--cuatro {
+    position: absolute;
+  }
+
+  .txt--cero {
+    color: var(--grey-color-1);
   }
 
 }
@@ -1617,6 +1654,7 @@ img.hover-shadow {
 .section--metodo {
   padding-top: var(--size-3);
   background-color: var(--grey-color-2);
+  position: relative;
 }
 
 #metodosvg {
@@ -1625,17 +1663,8 @@ img.hover-shadow {
   z-index: 3;
 }
 
-#metodosvg circle {
-  stroke-width: 1px;
-}
-
-svg:not(.logo) * {
-  /* Para que svg funcione mas como css */
-  transform-box: fill-box;
-}
-
 #metodosvg g {
-  /* stroke-width: 0.5px; */
+  stroke-width: 1px;
   stroke: var(--black-color);
   -moz-transform-origin: center;
   -webkit-transform-origin: center;
@@ -1653,92 +1682,82 @@ svg:not(.logo) * {
   animation-play-state: paused;
   animation-duration: 1s;
   animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
-}
-#metodosvg #uno {
-  fill: var(--secondary-color);
-  animation-delay: 1s;
-}
-#metodosvg #dos {
-  fill: var(--primary-color);
-  animation-delay: 2s;
-}
-#metodosvg #tres {
-  fill: var(--tertiary-color);
-  animation-delay: 3s;
-}
-#metodosvg #cuatro {
-  fill: var(--quaternary-color);
-  animation-delay: 4s;
-}
-#metodosvg #cinco {
-  fill: var(--grey-color-2);
-};
-#metodosvg #seis {
-  fill: blue;
+  transition: transform .2s linear;
 }
 
-#metodosvg #uno,
-#metodosvg #dos,
-#metodosvg #tres,
-#metodosvg #cuatro,
-#metodosvg #cinco,
-#metodosvg #seis,
+#metodosvg #cero:hover,
+#metodosvg #uno:hover,
+#metodosvg #dos:hover,
+#metodosvg #tres:hover,
+#metodosvg #cuatro:hover {
+    transform: scale(1.2);
+    cursor: help;
+}
+
+#metodosvg #cero {
+  fill: var(--grey-color-4);
+}
+
+#metodosvg #uno {
+  fill: var(--secondary-color);
+}
+
+#metodosvg #dos {
+  fill: var(--primary-color);
+}
+
+#metodosvg #tres {
+  fill: var(--tertiary-color);
+}
+
+#metodosvg #cuatro {
+  fill: var(--quaternary-color);
+}
+
 #metodosvg #siete,
 #metodosvg #ocho,
 #metodosvg #nueve,
-#metodosvg #cero {
-  stroke: none;
-}
-
-#metodosvg .puntero:hover {
-  transform: scale(15.9);
-  stroke:none;
-}
-
-#metodosvg #uno+.puntero:hover,
-#metodosvg #dos+.puntero:hover,
-#metodosvg #tres+.puntero:hover,
-#metodosvg #cuatro+.puntero:hover,
-#metodosvg #cinco+.puntero:hover,
-#metodosvg #seis+.puntero:hover,
-#metodosvg #siete+.puntero:hover,
-#metodosvg #ocho+.puntero:hover,
-#metodosvg #nueve+.puntero:hover,
-#metodosvg #cero+.puntero:hover {
-  cursor: pointer;
-  -moz-transform-origin: center;
-  -webkit-transform-origin: center;
-  transform-origin: center;
-
-  transition: transform .4s;
-  -moz-animation-name: escalar;
-  -webkit-animation-name: escalar;
-  animation-name: escalar;
-}
-
-#metodosvg #cinco +.puntero,
-#metodosvg #seis +.puntero,
-#metodosvg #siete +.puntero,
-#metodosvg #cero +.puntero {
-  fill: var(--black-color);
-}
-
-#metodosvg #uno+.puntero:hover {
-  fill: var(--secondary-color);
-}
-#metodosvg #dos+.puntero:hover {
-  fill: var(--primary-color);
-}
-#metodosvg #tres+.puntero {
-  fill: var(--tertiary-color);
-}
-#metodosvg #cuatro+.puntero {
-  fill: var(--quaternary-color);
-}
-#metodosvg #ocho+.puntero,
-#metodosvg #nueve+.puntero {
+#metodosvg #cinco,
+#metodosvg #seis {
   fill: var(--grey-color-2);
-  stroke:inherit;
+}
+
+/* #metodosvg a#link2:hover circle {
+  transform: scale(2);
+} */
+.section--metodo .txt {
+  display: none;
+  font-size: var(--size-0);
+}
+.section--metodo .txt--active {
+  user-select:none;
+  display: block;
+}
+
+.section--metodo .txt--cero {
+  top: 50%;
+  left: 11%;
+}
+.section--metodo .txt--uno {
+  top: 50%;
+  right: 5%;
+}
+.section--metodo .txt--dos {
+  bottom: 18%;
+  right: 18%;
+}
+.section--metodo .txt--tres {
+  top: 20%;
+  right: 18%;
+}
+.section--metodo .txt--cuatro{
+  top: 50%;
+  right: 32%;
+}
+
+/* Para que svg use sistema de coordenadas del propio css */
+svg:not(.logo) * {
+  transform-box: fill-box;
 }
 
 /* ANIMACIONES */
