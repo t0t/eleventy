@@ -1358,19 +1358,17 @@ img.hover-shadow {
 }
 
 /* @media screen and (min-width: 424px) {} */
-
-/* @media screen and (max-width: 767px) {
-
-} */
+/* @media screen and (max-width: 767px) {} */
 
 @media screen and (min-width: 767px) {
 
   .titlePage {
     text-align: left;
   }
-  h1 {
-    /* font-size: var(--size-3); */
-  }
+
+  /* h1 {
+    font-size: var(--size-3);
+  } */
 
   h3 {
     font-size: var(--size-2);
@@ -1669,9 +1667,9 @@ img.hover-shadow {
   -moz-transform-origin: center;
   -webkit-transform-origin: center;
   transform-origin: center;
-  -moz-transform: translateX(90%) translateY(61%) scale(2.4);
-  -webkit-transform: translateX(90%) translateY(61%) scale(2.4);
-  transform: translateX(90%) translateY(61%) scale(2.4);
+  -moz-transform: translateX(82%) translateY(61%) scale(2.4);
+  -webkit-transform: translateX(82%) translateY(61%) scale(2.4);
+  transform: translateX(82%) translateY(61%) scale(2.4);
 }
 
 #metodosvg circle {
