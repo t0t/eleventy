@@ -878,10 +878,10 @@ model-viewer {
 }
 
 .tmpl-home {
-  /* background: linear-gradient(180deg,
-  var(--grey-color-0) 7%,
-  var(--secondary-color) 70%,
-  var(--grey-color-2) 80%); */
+  background: linear-gradient(180deg,
+  var(--grey-color-1) 0%,
+  var(--grey-color-0) 20%
+  );
 }
 
 .img--25vw,
@@ -1532,31 +1532,25 @@ img.hover-shadow {
 }
 
 #coversvg g {
-  stroke-width: 0.5px;
+  stroke-width: 2px;
   stroke: var(--black-color);
   -moz-transform-origin: center;
   -webkit-transform-origin: center;
   transform-origin: center;
-  -moz-transform: translateX(90%) translateY(50%) scale(1.8);
-  -webkit-transform: translateX(90%) translateY(50%) scale(1.8);
-  transform: translateX(90%) translateY(50%) scale(1.8);
+  -moz-transform: translateX(90%) translateY(61%) scale(2.4);
+  -webkit-transform: translateX(90%) translateY(61%) scale(2.4);
+  transform: translateX(90%) translateY(61%) scale(2.4);
 }
 
 #coversvg g circle {
   fill: none;
-  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  animation-timing-function: linear;
   animation-iteration-count: infinite;
-  /* animation-play-state: running; */
-  -webkit-transform-origin: center;
-  -moz-transform-origin: center;
-  transform-origin: center;
 }
 
 /* punteros */
 #coversvg #cinco+.puntero,
-#coversvg #seis+.puntero,
-#coversvg #siete+.puntero,
-#coversvg #cero+.puntero {
+#coversvg #seis+.puntero {
   fill: var(--grey-color-0);
 }
 
@@ -1564,16 +1558,15 @@ img.hover-shadow {
 #coversvg #dos,
 #coversvg #tres,
 #coversvg #cuatro {
-  animation-duration: 5s;
-  -webkit-animation-name: escalar;
-  -moz-animation-name: escalar;
-  animation-name: escalar;
+  animation-duration: 10s;
   stroke: none;
 }
 
 #coversvg #uno {
   fill: var(--secondary-color);
   animation-delay: 1s;
+  /* -webkit-transform-origin: right;
+  -moz-transform-origin: right; */
 }
 
 #coversvg #dos {
@@ -1588,7 +1581,17 @@ img.hover-shadow {
 
 #coversvg #cuatro {
   fill: var(--quaternary-color);
-  animation-delay: 7s;
+  /* animation-delay: 7s; */
+}
+
+#coversvg #satelite {
+  fill: var(--quaternary-color);
+  /* animation-delay: 7s; */
+  fill: none;
+  animation-duration: 5s;
+  -webkit-animation-name: animcover;
+  -moz-animation-name: animcover;
+  animation-name: animcover;
 }
 
 #coversvg #cero {
@@ -1603,7 +1606,7 @@ img.hover-shadow {
 }
 
 #coversvg #update {
-  stroke: var(--grey-color-1);
+  stroke: var(--grey-color-2);
   stroke-dasharray: 10%;
   animation: dash 10s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
   stroke-width: 3px;
@@ -1616,13 +1619,13 @@ img.hover-shadow {
   background-color: var(--grey-color-2);
 }
 
-.section--metodo svg {
+#metodosvg {
   /* width y height vienen por js */
   /* que superponga a otros elementos de la pagina no se si tiene sentido*/
   z-index: 3;
 }
 
-.section--metodo svg circle {
+#metodosvg circle {
   stroke-width: 1px;
 }
 
@@ -1631,30 +1634,18 @@ svg:not(.logo) * {
   transform-box: fill-box;
 }
 
-.section--metodo svg g {
-  stroke-width: 1px;
+#metodosvg g {
+  /* stroke-width: 0.5px; */
   stroke: var(--black-color);
   -moz-transform-origin: center;
   -webkit-transform-origin: center;
   transform-origin: center;
-  -moz-transform:
-    translateX(35px)
-    translateY(22px)
-    scale(1.5)
-  ;
-  -webkit-transform:
-    translateX(35px)
-    translateY(22px)
-    scale(1.5)
-  ;
-  transform:
-    translateX(35px)
-    translateY(22px)
-    scale(1.5)
-  ;
+  -moz-transform: translateX(90%) translateY(61%) scale(2.4);
+  -webkit-transform: translateX(90%) translateY(61%) scale(2.4);
+  transform: translateX(90%) translateY(61%) scale(2.4);
 }
 
-#metodo circle {
+#metodosvg circle {
   fill: none;
   -moz-transform-origin: center;
   -webkit-transform-origin: center;
@@ -1663,60 +1654,57 @@ svg:not(.logo) * {
   animation-duration: 1s;
   animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
 }
-#metodo circle#uno {
+#metodosvg #uno {
   fill: var(--secondary-color);
   animation-delay: 1s;
 }
-#metodo circle#dos {
+#metodosvg #dos {
   fill: var(--primary-color);
   animation-delay: 2s;
 }
-#metodo circle#tres {
+#metodosvg #tres {
   fill: var(--tertiary-color);
   animation-delay: 3s;
 }
-#metodo circle#cuatro {
+#metodosvg #cuatro {
   fill: var(--quaternary-color);
   animation-delay: 4s;
 }
-#metodo circle#cinco {
-  fill: var(--grey-color-2)
+#metodosvg #cinco {
+  fill: var(--grey-color-2);
 };
-#metodo circle#seis {
-  fill: var(--grey-color-2)
-};
-#metodo circle#siete {
-  fill: var(--grey-color-2)
-};
-#metodo circle#ocho {
-  fill: var(--grey-color-2)
-};
-#metodo circle#nueve {
-  fill: var(--grey-color-2)
-};
-#metodo circle#cero {
-  fill: var(--black-color)
+#metodosvg #seis {
+  fill: blue;
 }
 
-#metodo #uno,#metodo #dos,#metodo #tres,#metodo #cuatro,#metodo #cinco,#metodo #seis,#metodo #siete,#metodo #ocho,#metodo #nueve,#metodo #cero {
+#metodosvg #uno,
+#metodosvg #dos,
+#metodosvg #tres,
+#metodosvg #cuatro,
+#metodosvg #cinco,
+#metodosvg #seis,
+#metodosvg #siete,
+#metodosvg #ocho,
+#metodosvg #nueve,
+#metodosvg #cero {
   stroke: none;
 }
 
-#metodo .puntero:hover {
+#metodosvg .puntero:hover {
   transform: scale(15.9);
   stroke:none;
 }
 
-#metodo #uno+.puntero:hover,
-#metodo #dos+.puntero:hover,
-#metodo #tres+.puntero:hover,
-#metodo #cuatro+.puntero:hover,
-#metodo #cinco+.puntero:hover,
-#metodo #seis+.puntero:hover,
-#metodo #siete+.puntero:hover,
-#metodo #ocho+.puntero:hover,
-#metodo #nueve+.puntero:hover,
-#metodo #cero+.puntero:hover {
+#metodosvg #uno+.puntero:hover,
+#metodosvg #dos+.puntero:hover,
+#metodosvg #tres+.puntero:hover,
+#metodosvg #cuatro+.puntero:hover,
+#metodosvg #cinco+.puntero:hover,
+#metodosvg #seis+.puntero:hover,
+#metodosvg #siete+.puntero:hover,
+#metodosvg #ocho+.puntero:hover,
+#metodosvg #nueve+.puntero:hover,
+#metodosvg #cero+.puntero:hover {
   cursor: pointer;
   -moz-transform-origin: center;
   -webkit-transform-origin: center;
@@ -1728,27 +1716,27 @@ svg:not(.logo) * {
   animation-name: escalar;
 }
 
-#metodo #cinco+.puntero,
-#metodo #seis+.puntero,
-#metodo #siete+.puntero,
-#metodo #cero+.puntero {
+#metodosvg #cinco +.puntero,
+#metodosvg #seis +.puntero,
+#metodosvg #siete +.puntero,
+#metodosvg #cero +.puntero {
   fill: var(--black-color);
 }
 
-#metodo #uno+.puntero:hover {
+#metodosvg #uno+.puntero:hover {
   fill: var(--secondary-color);
 }
-#metodo #dos+.puntero:hover {
+#metodosvg #dos+.puntero:hover {
   fill: var(--primary-color);
 }
-#metodo #tres+.puntero {
+#metodosvg #tres+.puntero {
   fill: var(--tertiary-color);
 }
-#metodo #cuatro+.puntero {
+#metodosvg #cuatro+.puntero {
   fill: var(--quaternary-color);
 }
-#metodo #ocho+.puntero,
-#metodo #nueve+.puntero {
+#metodosvg #ocho+.puntero,
+#metodosvg #nueve+.puntero {
   fill: var(--grey-color-2);
   stroke:inherit;
 }
@@ -1769,9 +1757,29 @@ svg:not(.logo) * {
     transform-origin: center;
   }
 }
+
+@-webkit-keyframes animcover {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    transform-origin: 9px 0.86px;
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    transform-origin: 9px 0.86px;
+  }
+}
 @keyframes animcover {
-  to {
-    transform: rotate(180deg) scale(2);
+  0% {
+    transform: rotate(0deg);
+    /* transform-origin: 0.5px -5px; */
+    transform-origin: 9px 0.86px;
+  }
+  100% {
+    transform: rotate(360deg);
+    transform-origin: 9px 0.86px;
   }
 }
 
