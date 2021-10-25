@@ -7,19 +7,21 @@ function load() {
   if (metodoSVG) {
     metodoSVG.width = window.innerWidth;
     metodoSVG.height = window.outerHeight;
+
+    let elementoCero = document.querySelector("svg#metodosvg circle#cero");
+    let elementoUno = document.querySelector("svg#metodosvg circle#uno");
+    let elementoDos = document.querySelector("svg#metodosvg circle#dos");
+    let elementoTres = document.querySelector("svg#metodosvg circle#tres");
+    let elementoCuatro = document.querySelector("svg#metodosvg circle#cuatro");
+
+    elementoCero.addEventListener("click", accionCero);
+    elementoUno.addEventListener("click", accionUno);
+    elementoDos.addEventListener("click", accionDos);
+    elementoTres.addEventListener("click", accionTres);
+    elementoCuatro.addEventListener("click", accionCuatro);
   }
 
-  let elementoCero = document.querySelector("svg#metodosvg circle#cero");
-  let elementoUno = document.querySelector("svg#metodosvg circle#uno");
-  let elementoDos = document.querySelector("svg#metodosvg circle#dos");
-  let elementoTres = document.querySelector("svg#metodosvg circle#tres");
-  let elementoCuatro = document.querySelector("svg#metodosvg circle#cuatro");
 
-  elementoCero.addEventListener("click", accionCero);
-  elementoUno.addEventListener("click", accionUno);
-  elementoDos.addEventListener("click", accionDos);
-  elementoTres.addEventListener("click", accionTres);
-  elementoCuatro.addEventListener("click", accionCuatro);
 
   function accionCero(e) {
     let txtCero = document.getElementById("txt0");
