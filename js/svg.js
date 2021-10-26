@@ -7,18 +7,24 @@ function load() {
   if (metodoSVG) {
     metodoSVG.style.width = window.innerWidth;
     metodoSVG.style.height = window.innerHeight;
-    console.log(metodoSVG.width);
 
     const svgBtns = document.querySelectorAll(".clickableItem");
+    const svgTxts = document.querySelectorAll(".txt");
+
+    // svgTxts.forEach(svgTxt => {
+    //   console.log(svgTxt);
+    // });
 
     svgBtns.forEach((svgBtn,idx) => {
       svgBtn.addEventListener("click", () => {
         ToggleActive(svgBtn,idx);
+        svgTxts[idx].style.display = "block";
+        console.log(svgTxts[idx]);
       });
     });
 
     function ToggleActive(el,index) {
-      el.classList.toggle("txt--active");
+      el.classList.add("txt--active");
       svgBtns.forEach((svgBtn,idx) => {
         if(idx !== index) {
           svgBtn.classList.remove("txt--active");
@@ -26,7 +32,6 @@ function load() {
       });
     }
 
-    console.log(svgBtns);
   }
 
 
