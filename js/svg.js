@@ -6,7 +6,7 @@ function load() {
 
   if (metodoSVG) {
     metodoSVG.style.width = window.innerWidth;
-    // metodoSVG.style.height = window.innerHeight/2;
+    metodoSVG.style.height = window.innerHeight;
     console.log(metodoSVG.width);
 
     const svgBtns = document.querySelectorAll(".clickableItem");
