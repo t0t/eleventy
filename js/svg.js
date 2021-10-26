@@ -6,13 +6,13 @@ function load() {
 
   if (metodoSVG) {
 
-    var onresize = function() {
-      metodoSVG.style.width = window.innerWidth;
-      // metodoSVG.style.height = window.innerHeight;
-      // width = document.body.clientWidth;
-      // height = document.body.clientHeight;
-   }
-   window.addEventListener("resize", onresize);
+  //   var onresize = function() {
+  //     metodoSVG.style.width = window.innerWidth;
+  //     // metodoSVG.style.height = window.innerHeight;
+  //     // width = document.body.clientWidth;
+  //     // height = document.body.clientHeight;
+  //  }
+  //  window.addEventListener("resize", onresize);
 
 
     svgBtns.forEach((svgBtn, idx) => {
