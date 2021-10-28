@@ -1,9 +1,31 @@
 function load() {
   // svg animacion metodo
+  const coverSVG = document.querySelector("svg#coversvg");
+  const elementos = document.querySelectorAll(".elemento");
+
   const metodoSVG = document.querySelector("svg#metodosvg");
   const svgBtns = document.querySelectorAll(".clickableItem");
   const svgTxts = document.querySelectorAll(".txt");
 
+  if (coverSVG) {
+    console.log(coverSVG);
+    elementos.forEach(elemento => {
+      elemento.addEventListener("click", (e) => {
+        let numeroRandom = Math.ceil(Math.floor(Math.random() * 9));
+        let txt = elemento.nextElementSibling;
+
+        txt.setAttribute("x", numeroRandom);
+        txt.setAttribute("y", numeroRandom);
+
+        let contenidoTexto = txt.innerHTML;
+        console.log("el contenido del texto adyacente es: ", contenidoTexto);
+        console.log(e.target.attributes);
+        console.log(e.target.attributes.r.value = numeroRandom);
+      })
+
+    });
+
+  }
   if (metodoSVG) {
 
   //   var onresize = function() {

@@ -155,10 +155,7 @@ body {
 }
 
 
-text {
-  font-size: 0.4rem;
-  letter-spacing: 1px;
-}
+
 
 /* GRID */
 
@@ -350,6 +347,10 @@ hr {
   display: none;
 }
 
+/* Seccion formulario */
+.section--form .resultado {
+  /* font-weight: bold; */
+}
 /* Helpers */
 
 .tar {
@@ -468,6 +469,16 @@ hr {
   place-items: center;
 }
 
+text {
+  font-size: 0.4rem;
+  letter-spacing: 1px;
+  stroke: none;
+  font-size: 0.24rem;
+  font-weight: bold;
+  /* font-family: "Montserrat", ; */
+  letter-spacing: 0.1px;
+}
+
 /* FORMS */
 
 button {
@@ -531,7 +542,7 @@ input:checked+.switch {
 }
 
 input {
-  display: none;
+  /* display: none; */
 }
 
 .switch {
@@ -1373,13 +1384,9 @@ img.hover-shadow {
   /* #metodosvg a#link2:hover circle {
   transform: scale(2);
 } */
+
   .section--metodo .txt {
     display: none;
-    font-size: 0.24rem;
-    font-weight: bold;
-    /* font-family: "Montserrat", ; */
-    letter-spacing: 0.1px;
-    stroke: none;
   }
 
   .section--metodo .txt--active {
@@ -1759,7 +1766,7 @@ svg {
   /* transform-box: fill-box; */
 }
 #coversvg g {
-  stroke-width: 2px;
+  stroke-width: 0.5px;
   stroke: var(--black-color);
   /* -moz-transform-origin: center;
   -webkit-transform-origin: center;
@@ -1817,18 +1824,19 @@ svg {
   -webkit-animation-name: animcover;
   -moz-animation-name: animcover;
   animation-name: animcover;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  transition: all 0.3 cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 #coversvg #cero {
-  fill: none;
-  animation-delay: 9s;
-}
-
-#coversvg #siete {
   fill: var(--black-color);
-  animation-delay: 9s;
   stroke: none;
 }
+
+/* #coversvg #siete { */
+  /* fill: var(--black-color); */
+/* } */
 
 #coversvg #update {
   stroke: var(--grey-color-2);
@@ -1883,12 +1891,15 @@ svg {
 @-webkit-keyframes animcover {
   0% {
     transform: rotate(0deg);
-    transform-origin: 9px 0.86px;
+    /* transform-origin: 0px 0px; */
+    transform-box: fill-box;
+
   }
 
   100% {
+    transform-box: fill-box;
     transform: rotate(360deg);
-    transform-origin: 9px 0.86px;
+    /* transform-origin: 9px 0.86px; */
   }
 }
 
@@ -1906,13 +1917,17 @@ svg {
 
 @keyframes animcover {
   0% {
-    transform: rotate(0deg);
-    transform-origin: 9px 0.86px;
+    /* transform: rotate(0deg); */
+    transform: translateX(6px);
+    transform-origin: 0px 0px;
+    /* transform-box: fill-box; */
   }
 
   100% {
-    transform: rotate(360deg);
-    transform-origin: 9px 0.86px;
+    transform: translateX(10px);
+    /* transform-box: fill-box; */
+    /* transform: rotate(360deg); */
+    transform-origin: 1px 0px;
   }
 }
 
