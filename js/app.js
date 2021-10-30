@@ -3,54 +3,61 @@ let input = document.getElementById("entrada");
 let btnGenerar = document.getElementById("lanza");
 let output = document.getElementById("output");
 let outputFecha = document.getElementById("outputfecha");
+let fechaNacimiento = document.getElementById('fechanacimiento');
 
-let fechaNacimiento = document.getElementById('fechaNacimiento');
+if (fechaNacimiento) {
 
   fechaNacimiento.addEventListener('change', (e) => {
 
     let fechaNacimientoUsuario = e.target.value;
-    let agno = fechaNacimientoUsuario.split("-");
-    let diasDelAgnio = obtenerCantidadDias(agno[0])
+    // let agno = fechaNacimientoUsuario.split("-");
+    // let diasDelAgnio = obtenerCantidadDias(agno[0]);
+    // let diasHastaNacimiento = obtenerDiasHastaNacimiento(fechaNacimientoUsuario);
+    console.log("Fecha nacimiento " + fechaNacimientoUsuario);
 
-  outputFecha.textContent = `
-    En la fecha ${fechaNacimientoUsuario} el total de dias de ese año son: ${diasDelAgnio};
-  `;
-});
+    outputFecha.textContent = `
+      En la fecha ${fechaNacimientoUsuario} el total de dias de ese año fue:;
+    `;
+  }, false);
+}
 
-btnGenerar.addEventListener("click", () => {
+if (btnGenerar) {
 
-  entradaTexto = input.value;
-	let normaliza = entradaTexto.toLowerCase()
+  btnGenerar.addEventListener("click", () => {
 
-	const removeAccents = (str) => {
-			return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-	}
+    entradaTexto = input.value;
+    let normaliza = entradaTexto.toLowerCase()
+    const removeAccents = (str) => {
+        return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    }
+    var textoIntroducido = removeAccents(normaliza);
+    let resultadoSuma = extraeValoresLetras(textoIntroducido).reduce( (a,v) => (a += v, +a), 0);
 
-	var cadenaFinal = removeAccents(normaliza);
-	let resultadoSuma = extraeValoresLetras(cadenaFinal).reduce( (a,v) => (a += v, +a), 0);
+    let fechaActual = new Date();
+    let diasAnyoTranscurridos = obtenerDiasTranscurridos(fechaActual);
+    let diasRestantesAnyo = 365 - diasAnyoTranscurridos;
 
-
-
-  let fechaActual = new Date();
-
-  let diasAnyoTranscurridos = obtenerDiasTranscurridos(fechaActual);
-  let diasRestantesAnyo = 365 - diasAnyoTranscurridos;
-  console.log(diasRestantesAnyo);
-
-
-	output.innerHTML = `
-  <p>El código de <strong>"${cadenaFinal}"</strong> es <strong>${resultadoSuma}</strong></p>
-  <p>La frecuencia de hoy: <strong>${diasAnyoTranscurridos}</strong></p>
-  <p>Dias restantes Año: <strong>${diasRestantesAnyo}</strong></p>
-  <p>Dias del año transcurridos hasta la fecha de tu nacimiento fue de: xxx </p>
-  `
-})
-
+    output.innerHTML = `
+    <p>El código de <strong>"${textoIntroducido}"</strong> es <strong>${resultadoSuma}</strong></p>
+    <p>La frecuencia de hoy: <strong>${diasAnyoTranscurridos}</strong></p>
+    <p>Dias restantes Año: <strong>${diasRestantesAnyo}</strong></p>
+    <p>Dias del año transcurridos hasta la fecha de tu nacimiento fue de: xxx </p>
+    `
+  })
+}
 
 // dias del año transcurridos hasta tu nacimiento
-function obtenerDiasTranscurridos(fecha) {
-  let previo = new Date(fecha.getFullYear(), 0, 1);
-  let actual = new Date(fecha.getTime());
+function obtenerDiasHastaNacimiento(fechanacido) {
+  let previo = new Date(fechanacido.getFullYear(), 0, 1);
+  let actual = new Date(fechanacido.getTime());
+
+  return Math.ceil((actual - previo + 1) / 86400000);
+}
+
+// dias del año transcurridos hasta hoy
+function obtenerDiasTranscurridos(fechaactual) {
+  let previo = new Date(fechaactual.getFullYear(), 0, 1);
+  let actual = new Date(fechaactual.getTime());
 
   return Math.ceil((actual - previo + 1) / 86400000);
 }
