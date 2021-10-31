@@ -1642,7 +1642,7 @@ img.hover-shadow {
 
   .nav {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     position: fixed;
     list-style: none;
     transition: top 0.3s;
