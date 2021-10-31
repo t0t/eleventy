@@ -15,13 +15,28 @@ if (fechaNacimiento) {
     // let diasDelAgnio = obtenerCantidadDias(agno[0]);
     // let diasHastaNacimiento = obtenerDiasHastaNacimiento(fechaNacimientoUsuario);
     let frecuenciaNacimiento = obtenerDiasHastaNacimiento(fechaNacimientoUsuario)
-    console.log("Fecha introducida Nacimiento " + fechaNacimientoUsuario);
-    console.log("Dias del año hasta esa fecha: " + fechaNacimientoUsuario);
+    // console.log("Fecha introducida Nacimiento " + fechaNacimientoUsuario);
+    // console.log("Dias del año hasta esa fecha: " + fechaNacimientoUsuario);
+// dias del año transcurridos hasta tu nacimiento
+function obtenerDiasHastaNacimiento(f1) {
+  console.log("la fecha introducida " + f1);
+  var aFecha1 = f1.split('-'); // ['1975', '10', '15']
+  var fFecha1 = Date.UTC(aFecha1[0],aFecha1[1]-1,aFecha1[2]);
+  var fFecha2 = Date.UTC(aFecha1[0],-00,00);
+  console.log("fecha nacimiento " + aFecha1);
+  console.log("dia 1 del agno " + fFecha2);
+  console.log("del agno " + aFecha1[0]);
 
+  // var dif = (fFecha2 - fFecha1);
+  var dif = (fFecha1 - fFecha2) / (1000 * 60 * 60 * 24);
+
+  console.log(Math.floor(dif));
+  return Math.floor(dif);
+}
     outputFecha.textContent = `
       La Fecha de nacimiento ${fechaNacimientoUsuario} tiene la impronta de la frecuencia ${frecuenciaNacimiento}:
     `;
-  }, false);
+  });
 }
 
 if (btnGenerar) {
@@ -46,15 +61,6 @@ if (btnGenerar) {
     <p>Dias restantes del año en curso: <strong>${diasRestantesAnyo}</strong></p>
     `
   })
-}
-
-// dias del año transcurridos hasta tu nacimiento
-function obtenerDiasHastaNacimiento(fechanacido) {
-  console.log("la introducida" + Date.parse(fechanacido))
-  let previo = new Date(); // obtener año de actual mes 1, dia 1.
-  let actual = Date.parse(fechanacido); // 174700800000
-  // let previo = new Date(Date.UTC(96, 11, 1, 0, 0, 0));
-  return Math.ceil((actual - previo + 1) / 86400000); //restar ambos y pasar a dias
 }
 
 // dias del año transcurridos hasta hoy
