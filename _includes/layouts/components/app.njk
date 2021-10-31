@@ -1,74 +1,78 @@
 <div class="section--form">
 
-  <h1 class="titlePage">
-    Aplicación para decodificar la realidad
-  </h1>
+  <h3 class="titlePage">
+    Herramienta para descifrar
+  </h3>
 
-  <div class="grid">
+  <div class="grid  form-group">
 
-    <label for="palabra">Frecuencia palabra/s:</label>
-    <input id="entrada" type="text" value=""/>
+    <label class="" for="palabra">Traduce palabras /nombres o frases:
+      <input id="entrada" type="text" placeholder="Escribe aqui..." value=""/>
+    </label>
 
-    <label for="fechanacimiento">Frecuencia fecha nacimiento:</label>
-    <input type="date" id="fechanacimiento" min="1930-12-12" max="2100-12-12" >
-    <button id="lanza" type="button">Decodificar</button>
+    <label class="" for="fechanacimiento">Frecuencia fecha nacimiento:
+      <input type="date" id="fechanacimiento" min="1930-12-12" max="2100-12-12" >
+    </label>
 
   </div>
 
-  <div id="outputfecha"></div>
-    <div id="output" class="resultado grid"></div>
+  <button id="lanza" type="button">Decodificar</button>
 
-    <svg id="appsvg" viewBox="0 0 140 88"
-    version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-
-      <g>
-
-        <line id="update" x1="0" y1="25%" x2="48" y2="25%" stroke-linecap="round" />
-        <circle id="satelite" class="elemento" cx="32" cy="22" r="1" vector-effect="non-scaling-stroke"></circle>
-
-        <!-- <circle cx="8" cy="22" r="8" stroke-dasharray="5.5" vector-effect="non-scaling-stroke"></circle>
-        <circle cx="24" cy="22" r="8" stroke-dasharray="5.5" vector-effect="non-scaling-stroke"></circle>
-        <circle cx="40" cy="22" r="8" stroke-dasharray="5.5" vector-effect="non-scaling-stroke"></circle> -->
-
-        <circle cx="32" cy="22" r="16" vector-effect="non-scaling-stroke"></circle>
-        <circle cx="16" cy="22" r="16" vector-effect="non-scaling-stroke"></circle>
-
-        <!-- <circle cx="4" cy="22" r="4" vector-effect="non-scaling-stroke"></circle>
-          <circle cx="12" cy="22" r="4" vector-effect="non-scaling-stroke"></circle>
-          <circle cx="20" cy="22" r="4" vector-effect="non-scaling-stroke"></circle>
-          <circle cx="28" cy="22" r="4" vector-effect="non-scaling-stroke"></circle>
-          <circle cx="36" cy="22" r="4" vector-effect="non-scaling-stroke"></circle>
-          <circle cx="44" cy="22" r="4" vector-effect="non-scaling-stroke"></circle> -->
-
-        <circle id="cero" class="elemento" cx="0.1" cy="22" r="1" vector-effect="non-scaling-stroke"></circle>
-
-        <circle id="uno" class="elemento" cx="48" cy="22" r="1" vector-effect="non-scaling-stroke"></circle>
-        <text x="10" y="10">1</text>
-
-        <circle id="dos" class="elemento" cx="40" cy="36" r="1" vector-effect="non-scaling-stroke"></circle>
-        <text x="10" y="10">2</text>
-
-        <circle id="tres" class="elemento" cx="40" cy="8" r="1" vector-effect="non-scaling-stroke">
-        </circle>
-        <text x="10" y="10">3</text>
-
-        <circle id="cuatro" class="elemento" cx="32" cy="22" r="1" vector-effect="non-scaling-stroke"></circle>
-        <text x="10" y="10">4</text>
-
-
-        <circle id="cinco" class="elemento" cx="24" cy="36" r="1" fill="red" vector-effect="non-scaling-stroke"></circle>
-        <!-- <circle class="puntero" cx="24" cy="36" r="1" vector-effect="non-scaling-stroke"></circle> -->
-
-        <circle id="seis" class="elemento" cx="24" cy="8" r="1" vector-effect="non-scaling-stroke"></circle>
-        <!-- <circle class="puntero" cx="24" cy="8" r="1" vector-effect="non-scaling-stroke"></circle> -->
-
-        <circle id="siete" class="elemento" cx="16" cy="22" r="1" vector-effect="non-scaling-stroke"></circle>
-        <circle id="ocho" class="elemento" cx="8" cy="36" r="1" vector-effect="non-scaling-stroke"></circle>
-        <!-- <circle class="puntero" cx="8" cy="36" r="1" vector-effect="non-scaling-stroke"></circle> -->
-        <circle id="nueve" class="elemento" cx="8" cy="8" r="1" vector-effect="non-scaling-stroke"></circle>
-        <!-- <circle class="puntero" cx="8" cy="8" r="1" vector-effect="non-scaling-stroke"></circle> -->
-      </g>
-    </svg>
+  <div class="output">
+    <div id="outputfecha"></div>
+    <div id="outputtexto" class="resultado grid"></div>
   </div>
+
+  <svg id="appsvg" viewBox="0 0 140 88"
+  version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g>
+
+      <line id="update" x1="0" y1="25%" x2="48" y2="25%" stroke-linecap="round" />
+      <circle id="satelite" class="elemento" cx="32" cy="22" r="1" vector-effect="non-scaling-stroke"></circle>
+
+      <!-- <circle cx="8" cy="22" r="8" stroke-dasharray="5.5" vector-effect="non-scaling-stroke"></circle>
+      <circle cx="24" cy="22" r="8" stroke-dasharray="5.5" vector-effect="non-scaling-stroke"></circle>
+      <circle cx="40" cy="22" r="8" stroke-dasharray="5.5" vector-effect="non-scaling-stroke"></circle> -->
+
+      <circle cx="32" cy="22" r="16" vector-effect="non-scaling-stroke"></circle>
+      <circle cx="16" cy="22" r="16" vector-effect="non-scaling-stroke"></circle>
+
+      <!-- <circle cx="4" cy="22" r="4" vector-effect="non-scaling-stroke"></circle>
+        <circle cx="12" cy="22" r="4" vector-effect="non-scaling-stroke"></circle>
+        <circle cx="20" cy="22" r="4" vector-effect="non-scaling-stroke"></circle>
+        <circle cx="28" cy="22" r="4" vector-effect="non-scaling-stroke"></circle>
+        <circle cx="36" cy="22" r="4" vector-effect="non-scaling-stroke"></circle>
+        <circle cx="44" cy="22" r="4" vector-effect="non-scaling-stroke"></circle> -->
+
+      <circle id="cero" class="elemento" cx="0.1" cy="22" r="1" vector-effect="non-scaling-stroke"></circle>
+
+      <circle id="uno" class="elemento" cx="48" cy="22" r="1" vector-effect="non-scaling-stroke"></circle>
+      <text x="10" y="10">1</text>
+
+      <circle id="dos" class="elemento" cx="40" cy="36" r="1" vector-effect="non-scaling-stroke"></circle>
+      <text x="10" y="10">2</text>
+
+      <circle id="tres" class="elemento" cx="40" cy="8" r="1" vector-effect="non-scaling-stroke">
+      </circle>
+      <text x="10" y="10">3</text>
+
+      <circle id="cuatro" class="elemento" cx="32" cy="22" r="1" vector-effect="non-scaling-stroke"></circle>
+      <text x="10" y="10">4</text>
+
+
+      <circle id="cinco" class="elemento" cx="24" cy="36" r="1" fill="red" vector-effect="non-scaling-stroke"></circle>
+      <!-- <circle class="puntero" cx="24" cy="36" r="1" vector-effect="non-scaling-stroke"></circle> -->
+
+      <circle id="seis" class="elemento" cx="24" cy="8" r="1" vector-effect="non-scaling-stroke"></circle>
+      <!-- <circle class="puntero" cx="24" cy="8" r="1" vector-effect="non-scaling-stroke"></circle> -->
+
+      <circle id="siete" class="elemento" cx="16" cy="22" r="1" vector-effect="non-scaling-stroke"></circle>
+      <circle id="ocho" class="elemento" cx="8" cy="36" r="1" vector-effect="non-scaling-stroke"></circle>
+      <!-- <circle class="puntero" cx="8" cy="36" r="1" vector-effect="non-scaling-stroke"></circle> -->
+      <circle id="nueve" class="elemento" cx="8" cy="8" r="1" vector-effect="non-scaling-stroke"></circle>
+      <!-- <circle class="puntero" cx="8" cy="8" r="1" vector-effect="non-scaling-stroke"></circle> -->
+    </g>
+  </svg>
 
 </div>

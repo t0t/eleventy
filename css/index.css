@@ -492,9 +492,49 @@ button:hover {
   color: var(--primary-color);
 }
 
+label {
+  font-size: var(--size-0);
+}
+input {
+  background-color: var(--secondary-color);
+  border: none;
+  border-radius: var(--size-1);
+  padding: var(--size-1);
+  /* display: none; */
+}
+
+input[type="date" i] {
+  align-items: center;
+  display: -webkit-inline-flex;
+  font-family: monospace;
+  padding-inline-start: var(--size-1);
+  cursor: default;
+  overflow: hidden;
+  /* padding: 0px; */
+}
+::placeholder,
+input[type="date" i] {
+  color: var(--black-color);
+  font-weight: var(--medium);
+  font-family: "Montserrat", helvetica, sans-serif;
+}
+
 input:checked+.switch {
   color: var(--primary-color);
 }
+
+
+
+.output {
+  padding: var(--size-2);
+  border: 1px solid black;
+
+}
+.form-group  input {
+  margin-top: var(--size-0);
+  width: 100%;
+}
+
 
 .menu3d {
   display: grid;
@@ -541,9 +581,7 @@ input:checked+.switch {
   fill: var(--primary-color);
 }
 
-input {
-  /* display: none; */
-}
+
 
 .switch {
   justify-self: start;

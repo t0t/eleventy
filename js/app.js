@@ -1,7 +1,7 @@
 let entradaTexto = "";
 let input = document.getElementById("entrada");
 let btnGenerar = document.getElementById("lanza");
-let output = document.getElementById("output");
+let output = document.getElementById("outputtexto");
 let outputFecha = document.getElementById("outputfecha");
 let fechaNacimiento = document.getElementById('fechanacimiento');
 
@@ -10,31 +10,11 @@ if (fechaNacimiento) {
   fechaNacimiento.addEventListener('change', (e) => {
 
     let fechaNacimientoUsuario = e.target.value;
-    console.log(typeof fechaNacimientoUsuario);
-    // let agno = fechaNacimientoUsuario.split("-");
-    // let diasDelAgnio = obtenerCantidadDias(agno[0]);
-    // let diasHastaNacimiento = obtenerDiasHastaNacimiento(fechaNacimientoUsuario);
     let frecuenciaNacimiento = obtenerDiasHastaNacimiento(fechaNacimientoUsuario)
-    // console.log("Fecha introducida Nacimiento " + fechaNacimientoUsuario);
-    // console.log("Dias del año hasta esa fecha: " + fechaNacimientoUsuario);
-// dias del año transcurridos hasta tu nacimiento
-function obtenerDiasHastaNacimiento(f1) {
-  console.log("la fecha introducida " + f1);
-  var aFecha1 = f1.split('-'); // ['1975', '10', '15']
-  var fFecha1 = Date.UTC(aFecha1[0],aFecha1[1]-1,aFecha1[2]);
-  var fFecha2 = Date.UTC(aFecha1[0],-00,00);
-  console.log("fecha nacimiento " + aFecha1);
-  console.log("dia 1 del agno " + fFecha2);
-  console.log("del agno " + aFecha1[0]);
+    // dias del año transcurridos hasta tu nacimiento
 
-  // var dif = (fFecha2 - fFecha1);
-  var dif = (fFecha1 - fFecha2) / (1000 * 60 * 60 * 24);
-
-  console.log(Math.floor(dif));
-  return Math.floor(dif);
-}
-    outputFecha.textContent = `
-      La Fecha de nacimiento ${fechaNacimientoUsuario} tiene la impronta de la frecuencia ${frecuenciaNacimiento}:
+    outputFecha.innerHTML = `
+      <p>La Fecha de nacimiento ${fechaNacimientoUsuario} tiene la impronta de la frecuencia <strong>${frecuenciaNacimiento}</strong>:</p>
     `;
   });
 }
@@ -61,6 +41,14 @@ if (btnGenerar) {
     <p>Dias restantes del año en curso: <strong>${diasRestantesAnyo}</strong></p>
     `
   })
+}
+
+function obtenerDiasHastaNacimiento(f1) {
+  var aFecha1 = f1.split('-'); // ['1975', '10', '15']
+  var fFecha1 = Date.UTC(aFecha1[0],aFecha1[1]-1,aFecha1[2]);
+  var fFecha2 = Date.UTC(aFecha1[0],-00,00);
+  var dif = (fFecha1 - fFecha2) / (1000 * 60 * 60 * 24);
+  return Math.floor(dif);
 }
 
 // dias del año transcurridos hasta hoy
