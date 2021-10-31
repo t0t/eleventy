@@ -10,13 +10,16 @@ if (fechaNacimiento) {
   fechaNacimiento.addEventListener('change', (e) => {
 
     let fechaNacimientoUsuario = e.target.value;
+    console.log(typeof fechaNacimientoUsuario);
     // let agno = fechaNacimientoUsuario.split("-");
     // let diasDelAgnio = obtenerCantidadDias(agno[0]);
     // let diasHastaNacimiento = obtenerDiasHastaNacimiento(fechaNacimientoUsuario);
-    console.log("Fecha nacimiento " + fechaNacimientoUsuario);
+    let frecuenciaNacimiento = obtenerDiasHastaNacimiento(fechaNacimientoUsuario)
+    console.log("Fecha introducida Nacimiento " + fechaNacimientoUsuario);
+    console.log("Dias del año hasta esa fecha: " + fechaNacimientoUsuario);
 
     outputFecha.textContent = `
-      En la fecha ${fechaNacimientoUsuario} el total de dias de ese año fue:;
+      La Fecha de nacimiento ${fechaNacimientoUsuario} tiene la impronta de la frecuencia ${frecuenciaNacimiento}:
     `;
   }, false);
 }
@@ -40,18 +43,18 @@ if (btnGenerar) {
     output.innerHTML = `
     <p>El código de <strong>"${textoIntroducido}"</strong> es <strong>${resultadoSuma}</strong></p>
     <p>La frecuencia de hoy: <strong>${diasAnyoTranscurridos}</strong></p>
-    <p>Dias restantes Año: <strong>${diasRestantesAnyo}</strong></p>
-    <p>Dias del año transcurridos hasta la fecha de tu nacimiento fue de: xxx </p>
+    <p>Dias restantes del año en curso: <strong>${diasRestantesAnyo}</strong></p>
     `
   })
 }
 
 // dias del año transcurridos hasta tu nacimiento
 function obtenerDiasHastaNacimiento(fechanacido) {
-  let previo = new Date(fechanacido.getFullYear(), 0, 1);
-  let actual = new Date(fechanacido.getTime());
-
-  return Math.ceil((actual - previo + 1) / 86400000);
+  console.log("la introducida" + Date.parse(fechanacido))
+  let previo = new Date(); // obtener año de actual mes 1, dia 1.
+  let actual = Date.parse(fechanacido); // 174700800000
+  // let previo = new Date(Date.UTC(96, 11, 1, 0, 0, 0));
+  return Math.ceil((actual - previo + 1) / 86400000); //restar ambos y pasar a dias
 }
 
 // dias del año transcurridos hasta hoy
