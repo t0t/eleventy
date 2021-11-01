@@ -4,17 +4,31 @@ let btnGenerar = document.getElementById("lanza");
 let output = document.getElementById("outputtexto");
 let outputFecha = document.getElementById("outputfecha");
 let fechaNacimiento = document.getElementById('fechanacimiento');
+let graficaGenerada = document.getElementById('graficagenerada');
+
+let fechaNacimientoUsuario, frecuenciaNacimiento, diasRestantesAnyo,diasAnyoTranscurridos, resultadoSuma;
+
+let grafica = {
+  "fechanacimiento": fechaNacimientoUsuario,
+  "frecuencianacimiento": frecuenciaNacimiento,
+  "diasrestantesanyo": diasRestantesAnyo,
+  "diasanyotranscurridos": diasAnyoTranscurridos,
+  "resultadosuma": resultadoSuma
+}
+
 
 if (fechaNacimiento) {
 
   fechaNacimiento.addEventListener('change', (e) => {
 
-    let fechaNacimientoUsuario = e.target.value;
-    let frecuenciaNacimiento = obtenerDiasHastaNacimiento(fechaNacimientoUsuario)
-    // dias del año transcurridos hasta tu nacimiento
+    fechaNacimientoUsuario = e.target.value;
+    frecuenciaNacimiento = obtenerDiasHastaNacimiento(fechaNacimientoUsuario);
+
+    grafica.fechanacimiento = fechaNacimientoUsuario;
+    grafica.frecuencianacimiento = frecuenciaNacimiento;
 
     outputFecha.innerHTML = `
-      <p>La Fecha de nacimiento ${fechaNacimientoUsuario} tiene la impronta de la frecuencia <strong>${frecuenciaNacimiento}</strong>:</p>
+      <p>La Fecha de nacimiento ${fechaNacimientoUsuario} tiene la impronta de la frecuencia <strong>${frecuenciaNacimiento}-${365 - frecuenciaNacimiento}</strong></p>
     `;
   });
 }
@@ -29,17 +43,25 @@ if (btnGenerar) {
         return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     }
     var textoIntroducido = removeAccents(normaliza);
-    let resultadoSuma = extraeValoresLetras(textoIntroducido).reduce( (a,v) => (a += v, +a), 0);
+    resultadoSuma = extraeValoresLetras(textoIntroducido).reduce( (a,v) => (a += v, +a), 0);
 
     let fechaActual = new Date();
-    let diasAnyoTranscurridos = obtenerDiasTranscurridos(fechaActual);
-    let diasRestantesAnyo = 365 - diasAnyoTranscurridos;
+    diasAnyoTranscurridos = obtenerDiasTranscurridos(fechaActual);
+    diasRestantesAnyo = 365 - diasAnyoTranscurridos;
+
+    grafica.diasrestantesanyo = diasRestantesAnyo;
+    grafica.diasanyotranscurridos = diasAnyoTranscurridos;
+    grafica.resultadosuma = resultadoSuma;
 
     output.innerHTML = `
     <p>El código de <strong>"${textoIntroducido}"</strong> es <strong>${resultadoSuma}</strong></p>
     <p>La frecuencia de hoy: <strong>${diasAnyoTranscurridos}</strong></p>
     <p>Dias restantes del año en curso: <strong>${diasRestantesAnyo}</strong></p>
     `
+    graficaGenerada.setAttribute("d",`M${diasRestantesAnyo},100 L${diasAnyoTranscurridos},${resultadoSuma} A30,50 0 0,1 100,100
+
+    `);
+
   })
 }
 
@@ -80,6 +102,9 @@ function esAgnioBisiesto(agnio) {
 function obtenerCantidadDias(agnio) {
   return esAgnioBisiesto(agnio) ? 366 : 365;
 }
+
+
+
 
 // seleccionar dato al azar
 
