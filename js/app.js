@@ -65,7 +65,7 @@ function DOMCargado() {
     "fechanacimiento": fechaNacimientoUsuario,
     "frecuencianacimiento": frecuenciaNacimiento,
     "diasrestantesanyo": diasRestantesAnyo,
-    "diasrestantesnacimiento": 0,
+    "diasrestantesnacimiento": 100,
     "diasanyotranscurridos": diasAnyoTranscurridos,
     "resultadosuma": resultadoSuma
   }
