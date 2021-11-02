@@ -8,7 +8,7 @@ function DOMCargado() {
   let fechaNacimiento = document.getElementById('fechanacimiento');
   let graficaGenerada = document.getElementById('graficagenerada');
 
-  let fechaNacimientoUsuario, frecuenciaNacimiento, diasRestantesAnyo,diasAnyoTranscurridos, agnio, resultadoSuma;
+  let fechaNacimientoUsuario = 0, frecuenciaNacimiento, diasRestantesAnyo,diasAnyoTranscurridos, agnio, resultadoSuma;
 
   if (btnGenerar) {
 
@@ -52,9 +52,8 @@ function DOMCargado() {
       `
 
       graficaGenerada.setAttribute("d",`
-        M${grafica.diasrestantesanyo},200
-        L${grafica.diasanyotranscurridos},
-        ${grafica.resultadosuma}
+        M0,${grafica.diasrestantesanyo}
+        L${grafica.diasanyotranscurridos},${grafica.resultadosuma}
         A${grafica.resultadosuma},${grafica.diasrestantesnacimiento} 0 0,1 ${grafica.frecuencianacimiento},100 Z`);
       console.log(grafica);
 

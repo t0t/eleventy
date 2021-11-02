@@ -546,6 +546,7 @@ svg.grafica {
 svg.grafica g {
   fill: none;
   stroke: var(--black-color);
+  transform: scale(7);
 }
 svg.grafica path {
   fill: var(--quaternary-color);
@@ -560,9 +561,11 @@ svg.grafica path {
 }
 svg.grafica rect {
   fill: var(--secondary-color);
-  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
+}
+
+svg.grafica text {
+  fill: var(--black-color);
+  font-size: 3px;
 }
 .output {
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
