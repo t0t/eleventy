@@ -110,12 +110,13 @@ code {
   --bp4: 1023px;
   --bp5: 1439px;
   --bp6: 2559px;
+  --mainff: 'Montserrat', Arial, Helvetica, sans-serif;
 }
 
 body {
   margin: 0;
   color: var(--black-color);
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-family: var(--mainff);
   font-size: var(--size-1);
   font-weight: var(--normal);
   background-color: var(--grey-color-0);
@@ -475,7 +476,6 @@ text {
   stroke: none;
   font-size: 0.24rem;
   font-weight: bold;
-  /* font-family: "Montserrat", ; */
   letter-spacing: 0.1px;
 }
 
@@ -500,17 +500,19 @@ input {
   border: none;
   border-radius: var(--size-1);
   padding: var(--size-1);
-  /* display: none; */
+  font-family: var(--mainff);
+  font-weight: var(--medium);
+  font-size: inherit;
 }
 
 input[type="date" i] {
-  align-items: center;
   display: -webkit-inline-flex;
-  font-family: monospace;
   padding-inline-start: var(--size-1);
-  cursor: default;
   overflow: hidden;
   /* padding: 0px; */
+}
+.form-group {
+  align-items: end
 }
 .form-group input {
   margin-top: var(--size-0);
@@ -522,8 +524,6 @@ input[type="date" i] {
 ::placeholder,
 input[type="date" i] {
   color: var(--black-color);
-  font-weight: var(--medium);
-  font-family: "Montserrat", helvetica, sans-serif;
 }
 input[type="submit"] {
   border-radius: 0px;
@@ -548,13 +548,29 @@ svg.grafica g {
   stroke: var(--black-color);
 }
 .output {
-  display: grid;
   grid-template-columns: 1fr 1fr;
   padding: var(--size-2);
-  border: 1px solid var(--black-color);
+  transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 2s;
+  display: none;
 }
 
-
+.codigos-ejemplo {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 0 var(--size-3) var(--size-2);
+}
+.codigos-ejemplo dt {
+  text-align: right;
+}
+.codigos-ejemplo dt span {
+  font-weight: var(--bold);
+}
+.codigos-ejemplo dd {
+  margin-left: var(--size-1);
+  font-size: var(--size-0);
+  line-height: 1.5;
+}
 .menu3d {
   display: grid;
   padding-bottom: var(--size-1);
