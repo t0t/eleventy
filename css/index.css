@@ -161,7 +161,6 @@ body {
 
 .grid {
   display: grid;
-  text-align: center;
   gap: var(--size-0);
   padding: var(--size-2);
   place-items: center;
@@ -228,7 +227,8 @@ h3 {
 }
 
 p,
-ul {
+ul,
+dl {
   line-height: var(--size-2);
 }
 
@@ -512,11 +512,26 @@ input[type="date" i] {
   overflow: hidden;
   /* padding: 0px; */
 }
+.form-group input {
+  margin-top: var(--size-0);
+  width: 100%;
+}
+.form-group__item {
+  /* display: grid; */
+}
 ::placeholder,
 input[type="date" i] {
   color: var(--black-color);
   font-weight: var(--medium);
   font-family: "Montserrat", helvetica, sans-serif;
+}
+input[type="submit"] {
+  border-radius: 0px;
+  background-color: var(--grey-color-2);
+}
+input[type="submit"]:hover {
+  cursor: pointer;
+  background-color: var(--grey-color-0);
 }
 
 input:checked +.switch {
@@ -533,13 +548,10 @@ svg.grafica g {
   stroke: var(--black-color);
 }
 .output {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   padding: var(--size-2);
   border: 1px solid var(--black-color);
-
-}
-.form-group  input {
-  margin-top: var(--size-0);
-  width: 100%;
 }
 
 
