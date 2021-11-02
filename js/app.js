@@ -50,9 +50,13 @@ function DOMCargado() {
           <dd>Frecuencia nacimiento: <strong>${grafica.frecuencianacimiento}</strong><strong>${grafica.diasrestantesnacimiento}</strong></dd>
       </dl>
       `
-      graficaGenerada.setAttribute("d",`M${diasRestantesAnyo},100 L${diasAnyoTranscurridos},${resultadoSuma} A30,50 0 0,1 100,100
 
-      `);
+      graficaGenerada.setAttribute("d",`
+        M${grafica.diasrestantesanyo},100
+        L${grafica.diasanyotranscurridos},
+        ${grafica.resultadosuma}
+        A${grafica.resultadosuma},${grafica.diasrestantesnacimiento} 0 0,1 ${grafica.frecuencianacimiento},100 Z`);
+      console.log(grafica);
 
     })
   }
@@ -61,7 +65,7 @@ function DOMCargado() {
     "fechanacimiento": fechaNacimientoUsuario,
     "frecuencianacimiento": frecuenciaNacimiento,
     "diasrestantesanyo": diasRestantesAnyo,
-    "diasrestantesnacimiento": "",
+    "diasrestantesnacimiento": 0,
     "diasanyotranscurridos": diasAnyoTranscurridos,
     "resultadosuma": resultadoSuma
   }

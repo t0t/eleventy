@@ -548,20 +548,20 @@ svg.grafica g {
   stroke: var(--black-color);
 }
 .output {
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   padding: var(--size-2);
   transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 2s;
   display: none;
 }
 
 .codigos-ejemplo {
-  display: grid;
-  align-items: center;
-  grid-template-columns: repeat(4, 1fr);
+  /* display: inline-flex; */
+  /* align-items: center; */
+  text-align: center;
   padding: 0 var(--size-3) var(--size-2);
 }
 .codigos-ejemplo dt {
-  text-align: right;
+  /* text-align: right; */
 }
 .codigos-ejemplo dt span {
   font-weight: var(--bold);
@@ -1615,6 +1615,18 @@ img.hover-shadow {
 /* @media screen and (max-width: 767px) {} */
 
 @media screen and (min-width: 767px) {
+
+  .codigos-ejemplo {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0 var(--size-3) var(--size-2);
+    text-align: inherit;
+  }
+  .codigos-ejemplo dt {
+    text-align: right;
+  }
+
   /* .section--metodo .txt--cero {
     top: 10px;
     left: 10px;
