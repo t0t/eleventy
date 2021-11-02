@@ -1814,9 +1814,9 @@ img.hover-shadow {
     grid-template-columns: repeat(auto-fit, minmax(var(--size-7), 1fr));
   }
 
-  .nav {
+  /* .nav {
     width: 30%;
-  }
+  } */
 
 }
 
