@@ -547,6 +547,23 @@ svg.grafica g {
   fill: none;
   stroke: var(--black-color);
 }
+svg.grafica path {
+  fill: var(--quaternary-color);
+  stroke-width: 5px;
+  stroke-dashoffset: 50px;
+  stroke-dasharray: 540px;
+  animation: dash2;
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  stroke: var(--primary-color);
+}
+svg.grafica rect {
+  fill: var(--secondary-color);
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
 .output {
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   padding: var(--size-2);
@@ -1949,6 +1966,22 @@ svg {
   50% {
     stroke-dashoffset: 100px;
     stroke-width: 1px;
+  }
+}
+
+@-moz-keyframes dash2 {
+  50% {
+    stroke-dashoffset: 540px;
+  }
+}
+@-webkit-keyframes dash2 {
+  50% {
+    stroke-dashoffset: 540px;
+  }
+}
+@keyframes dash2 {
+  50% {
+    stroke-dashoffset: 540px;
   }
 }
 

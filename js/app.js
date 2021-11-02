@@ -52,7 +52,7 @@ function DOMCargado() {
       `
 
       graficaGenerada.setAttribute("d",`
-        M${grafica.diasrestantesanyo},100
+        M${grafica.diasrestantesanyo},200
         L${grafica.diasanyotranscurridos},
         ${grafica.resultadosuma}
         A${grafica.resultadosuma},${grafica.diasrestantesnacimiento} 0 0,1 ${grafica.frecuencianacimiento},100 Z`);
