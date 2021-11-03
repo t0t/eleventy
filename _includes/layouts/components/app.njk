@@ -4,6 +4,17 @@
     Herramienta para descifrar
   </h3>
 
+  <div class="path-wrapper">
+    <div id="emoji">😱</div>
+    <svg id="thepath" width="61px" height="36px" viewBox="0 0 61 36">
+      <path stroke="red" fill="black" stroke-width="2px" d="M 750 300 A 50 50 0 1 1 450 300 A 150 150 0 1 1 450 299 A 150 150 0 1 1 750 300 Z"></path>
+    </svg>
+  </div>
+
+  <svg id="polymorph" width="140" height="140" viewBox="0 0 140 140">
+      <polygon class="polygon" stroke-width="1" stroke="currentColor" points="70 38.708352504238924 118.63947564273603 59.43447564273603 110.42476792990365 131.64886535895954 59.480011502543356 86.79169621028902 22.71764749576107 60.892805141888246 "></polygon>
+  </svg>
+
   <div class="grid  form-group">
 
     <div class="form-group__item">
@@ -26,8 +37,18 @@
 
   <div class="output">
     <div id="outputtexto" class="resultado"></div>
+
+
+
+    <!-- <svg id="turbulence" viewBox="0 0 248 248.667">
+      <filter id="displacementFilter">
+        <feTurbulence type="turbulence" baseFrequency="0.05" numOctaves="3" result="turbulence" />
+        <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="50" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+      <path id="logo" style="filter: url(#displacementFilter);transform-origin:center;" fill="#00AE7B" d="M124,86.421c21.006,0,38.095,17.089,38.095,38.095S145.006,162.612,124,162.612 s-38.095-17.089-38.095-38.095S102.994,86.421,124,86.421 M124,57.85c-36.819,0-66.667,29.848-66.667,66.667 S87.181,191.183,124,191.183s66.667-29.848,66.667-66.667S160.819,57.85,124,57.85L124,57.85z" />
+    </svg> -->
+
     <svg class="grafica" viewBox="0 0 365 365" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-      <!-- <rect x="0" y="0" width="100%" height="100%"/> -->
       <path id="graficagenerada" />
 
       <g>
@@ -60,6 +81,8 @@
         <circle id="nueve" class="elemento" cx="8" cy="8" r="1" vector-effect="non-scaling-stroke"></circle>
       </g>
     </svg>
+
+
   </div>
 
   <section>

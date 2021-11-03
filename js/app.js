@@ -6,7 +6,6 @@ function DOMCargado() {
   let outputWrapper = document.querySelector(".output");
   let output = document.getElementById("outputtexto");
   let fechaNacimiento = document.getElementById('fechanacimiento');
-  let graficaGenerada = document.getElementById('graficagenerada');
 
   let fechaNacimientoUsuario = 0, frecuenciaNacimiento, diasRestantesAnyo,diasAnyoTranscurridos, agnio, resultadoSuma;
 
@@ -50,12 +49,6 @@ function DOMCargado() {
           <dd>Frecuencia nacimiento: <strong>${grafica.frecuencianacimiento}</strong><strong>${grafica.diasrestantesnacimiento}</strong></dd>
       </dl>
       `
-
-      graficaGenerada.setAttribute("d",`
-        M0,${grafica.diasrestantesanyo}
-        L${grafica.diasanyotranscurridos},${grafica.resultadosuma}
-        A${grafica.resultadosuma},${grafica.diasrestantesnacimiento} 0 0,1 ${grafica.frecuencianacimiento},100 Z`);
-      console.log(grafica);
 
     })
   }
@@ -108,8 +101,41 @@ function DOMCargado() {
     return esAgnioBisiesto(agnio) ? 366 : 365;
   }
 
+  let path = anime.path("#thepath path");
+    anime({
+      targets: "#emoji",
+      translateX: path("x"),
+      translateY: path("y"),
+      easing: "linear",
+      duration: 10000,
+      loop: true
+    })
+
+  let morfing = document.querySelector("#polymorph polygon");
+  console.log(morfing);
+  if (morfing) {
+    anime({
+      targets: [morfing],
+      points: [
+        { value: [
+          '70 24 119.574 60.369 100.145 117.631 50.855 101.631 3.426 54.369',
+          '70 41 118.574 59.369 111.145 132.631 60.855 84.631 20.426 60.369']
+        },
+        { value: '70 6 119.574 60.369 100.145 117.631 39.855 117.631 55.426 68.369' },
+        { value: '70 57 136.574 54.369 89.145 100.631 28.855 132.631 38.426 64.369' },
+        { value: '70 24 119.574 60.369 100.145 117.631 50.855 101.631 3.426 54.369' }
+      ],
+      easing: 'easeOutQuad',
+      duration: 2000,
+      loop: true
+    });
+  }
+
+
+
 }
 document.addEventListener("DOMContentLoaded", DOMCargado);
+
 
 // seleccionar dato al azar
 
