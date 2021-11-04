@@ -6,8 +6,18 @@ function DOMCargado() {
   let outputWrapper = document.querySelector(".output");
   let output = document.getElementById("outputtexto");
   let fechaNacimiento = document.getElementById('fechanacimiento');
+  let petalPath = document.getElementById('petalpath');
 
   let fechaNacimientoUsuario = 0, frecuenciaNacimiento, diasRestantesAnyo,diasAnyoTranscurridos, agnio, resultadoSuma;
+
+  let grafica = {
+    "fechanacimiento": fechaNacimientoUsuario,
+    "frecuencianacimiento": frecuenciaNacimiento,
+    "diasrestantesanyo": diasRestantesAnyo,
+    "diasrestantesnacimiento": 0,
+    "diasanyotranscurridos": diasAnyoTranscurridos,
+    "resultadosuma": resultadoSuma
+  }
 
   if (btnGenerar) {
 
@@ -18,7 +28,7 @@ function DOMCargado() {
 
       grafica.fechanacimiento = fechaNacimientoUsuario;
       grafica.frecuencianacimiento = frecuenciaNacimiento;
-      grafica.diasrestantesnacimiento = frecuenciaNacimiento - obtenerCantidadDias(agnio);
+      grafica.diasrestantesnacimiento = parseInt(frecuenciaNacimiento - obtenerCantidadDias(agnio));
 
     });
 
@@ -53,14 +63,7 @@ function DOMCargado() {
     })
   }
 
-  let grafica = {
-    "fechanacimiento": fechaNacimientoUsuario,
-    "frecuencianacimiento": frecuenciaNacimiento,
-    "diasrestantesanyo": diasRestantesAnyo,
-    "diasrestantesnacimiento": 0,
-    "diasanyotranscurridos": diasAnyoTranscurridos,
-    "resultadosuma": resultadoSuma
-  }
+
 
   function inputFecha(f1) {
     var aFecha1 = f1.split('-'); // ['1975', '10', '15']
@@ -101,18 +104,17 @@ function DOMCargado() {
     return esAgnioBisiesto(agnio) ? 366 : 365;
   }
 
-  let path = anime.path("#thepath path");
-    anime({
-      targets: "#emoji",
-      translateX: path("x"),
-      translateY: path("y"),
-      easing: "linear",
-      duration: 10000,
-      loop: true
-    })
+  // let path = anime.path("#thepath path");
+  //   anime({
+  //     targets: "#emoji",
+  //     translateX: path("x"),
+  //     translateY: path("y"),
+  //     easing: "linear",
+  //     duration: 10000,
+  //     loop: true
+  //   })
 
   let morfing = document.querySelector("#polymorph polygon");
-  console.log(morfing);
   if (morfing) {
     anime({
       targets: [morfing],
@@ -130,6 +132,64 @@ function DOMCargado() {
       loop: true
     });
   }
+
+  // Grafica D3
+
+  const DUMMY_DATA = [
+    { "id": 01, "numero": 25, "lupa": 24, "color": "red"},
+    { "id": 02, "numero": 75, "lupa": 13, "color": "blue"},
+    { "id": 03, "numero": 55, "lupa": 4, "color": "yellow"},
+    { "id": 04, "numero": 40, "lupa": 3, "color": "green"}
+  ]
+
+  DUMMY_DATA.forEach( dto => {
+    dto.numero
+  });
+
+  const width = 500;
+  const height = 300;
+
+  const container = d3.select("svg#petalpath")
+  .attr("width", width)
+  .attr("height", height)
+
+  const circle = container.append("circle")
+    .attr("r", height/3)
+    .attr("cx", width/2)
+    .attr("cy", height/2)
+    .attr("fill", "yellow")
+
+  const uno = container.append("circle")
+    .attr("r", height/6)
+    .attr("cx", width/2.5)
+    .attr("cy", height/2)
+    .attr("fill", "black")
+
+  const dos = container.append("circle")
+    .attr("r", height/6)
+    .attr("cx", width/2+height/6)
+    .attr("cy", height/2)
+    .attr("fill", "black")
+
+  const g = container.append("g")
+    .attr("transform", `translate(${width/2},${width/4})`);
+
+  const arco = d3.arc()
+    .innerRadius(98)
+    .outerRadius(100)
+    .startAngle(Math.PI / 2)
+    .endAngle(Math.PI * 3 / 2);
+
+  let sz1 = 50;
+  let sz2 = 20;
+  let sz3 = 30;
+  let pPath = `M 0,0 C -${sz2},-${sz2}, -${sz2},-${sz3} 0,-${sz1} C ${sz2},-${sz3} ${sz2},-${sz2} 0,0`;
+
+  g.append("path")
+    .attr("d", pPath)
+  g.append("path")
+    .attr("d", arco)
+
 
 
 

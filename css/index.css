@@ -1867,19 +1867,42 @@ img.hover-shadow {
 
 svg:not(.logo) * {}
 
-svg {
-  /* transform-box: fill-box; */
-}
+/* svg {
+  transform-box: fill-box;
+} */
 
-.path-wrapper {
-  /* position: relative; */
-}
-.path-wrapper #emoji {
-  /* position: absolute;
+/* .path-wrapper {
+  position: relative;
+} */
+/* .path-wrapper #emoji {
+  position: absolute;
   top: -30px;
-  left: -30px; */
+  left: -30px;
+} */
+svg#petalpath {
+  background-color: var(--grey-color-1);
 }
-
+#petalpath g path {
+  fill: blue;
+  transform-origin: 50% 50%;
+  transform-box: fill-box;
+  /* transform: translate(450%, 200%); */
+  /* animation: animcover 1s linear infinite; */
+}
+#petalpath g path:nth-child(2) {
+  /* animation: animcover 0.99s linear infinite; */
+}
+.chartContainer {
+  background-color: var(--primary-color);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.bar {
+  padding: 10px;
+  fill: var(--quaternary-color);
+}
 
 #coversvg {
   position: relative;
