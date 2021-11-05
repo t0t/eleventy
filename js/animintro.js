@@ -44,23 +44,23 @@ let node = svg.append("g")
   .selectAll("circle")
   .data(data)
   .join("circle")
-    .attr("r", radio/1.9)
+    .attr("r", radio)
     .attr("cx", width / 2)
     .attr("cy", height / 2)
     .style("fill", d => color(d.group))
     .attr("stroke-width", "4")
     .call(d3.drag() // call specific function when circle is dragged
-         .on("start", dragstarted)
-         .on("drag", dragged)
-         .on("end", dragended));
+      .on("start", dragstarted)
+      .on("drag", dragged)
+      .on("end", dragended));
 
 // Features of the forces applied to the nodes:
 var simulation = d3.forceSimulation()
-    .force("x", d3.forceX().strength(0.3).x(d => x(d.group)))
-    .force("y", d3.forceY().strength(0.1).y( height / 2 ))
-    .force("center", d3.forceCenter().x(width / 2).y(height / 2)) // Attraction to the center of the svg area
-    .force("charge", d3.forceManyBody().strength(0.1)) // Nodes are attracted one each other of value is > 0
-    .force("collide", d3.forceCollide().strength(0.5).radius(radio).iterations(1)) // Force that avoids circle overlapping
+  .force("x", d3.forceX().strength(0.3).x(d => x(d.group)))
+  .force("y", d3.forceY().strength(0.1).y( height / 2 ))
+  .force("center", d3.forceCenter().x(width / 2).y(height / 2)) // Attraction to the center of the svg area
+  .force("charge", d3.forceManyBody().strength(0.1)) // Nodes are attracted one each other of value is > 0
+  .force("collide", d3.forceCollide().strength(8).radius(radio).iterations(3)) // Force that avoids circle overlapping
 
 // Apply these forces to the nodes and update their positions.
 // Once the force algorithm is happy with positions ('alpha' value is low enough), simulations will stop.

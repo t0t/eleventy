@@ -150,14 +150,6 @@ body {
   opacity: 0;
 }
 
-.animintro {
-  width: 200px;
-  /* height: auto; */
-}
-
-
-
-
 /* GRID */
 
 .grid {
@@ -1874,6 +1866,12 @@ svg#petalpath {
   fill: blue;
   transform-origin: 50% 50%;
   transform-box: fill-box;
+}
+#animcover {
+  border: 1px solid black;
+  border-radius: 50%;
+  overflow: hidden;
+  height: 450px;
 }
 
 #animcover circle:hover {
