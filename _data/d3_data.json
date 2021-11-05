@@ -1,0 +1,32 @@
+{
+  "name": "Max",
+  "value": 100,
+  "children": [
+    {
+      "name": "Silvia",
+      "value": 75,
+      "children": [
+        {"name": "kh", "value": 25},
+        {"name": "eeee", "value": 25},
+        {"name": "rrrr", "value": 25}
+      ]
+    },
+    {
+      "name": "AAAAAA",
+      "value": 75,
+      "children": [
+        {"name": "ooo", "value": 25},
+        {"name": "jk", "value": 25},
+        {"name": "kjhkjhlh", "value": 25}
+      ]
+    },
+    {
+      "name": "XXXXXX",
+      "value": 75,
+      "children": [
+        {"name": "lllll", "value": 25},
+        {"name": "nnnnn", "value": 25}
+      ]
+    }
+  ]
+}

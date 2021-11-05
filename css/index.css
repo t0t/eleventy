@@ -1867,20 +1867,6 @@ img.hover-shadow {
   border: 1px solid black;
 } */
 
-svg:not(.logo) * {}
-
-/* svg {
-  transform-box: fill-box;
-} */
-
-/* .path-wrapper {
-  position: relative;
-} */
-/* .path-wrapper #emoji {
-  position: absolute;
-  top: -30px;
-  left: -30px;
-} */
 svg#petalpath {
   background-color: var(--grey-color-1);
 }
@@ -1888,15 +1874,50 @@ svg#petalpath {
   fill: blue;
   transform-origin: 50% 50%;
   transform-box: fill-box;
-  /* transform: translate(450%, 200%); */
-  /* animation: animcover 1s linear infinite; */
 }
-#petalpath g path:nth-child(2) {
-  /* animation: animcover 0.99s linear infinite; */
+
+#animcover circle:hover {
+  cursor: grab;
 }
-#animcover {
-  z-index: 1;
-  border: 1px solid var(--secondary-color);
+#animcover circle:active {
+  fill-opacity: 0.8;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+#animcover circle:nth-child(1){
+  fill: var(--primary-color);
+  stroke: var(--black-color);
+}
+#animcover circle:nth-child(2){
+  fill: var(--secondary-color);
+  stroke: var(--black-color);
+}
+#animcover circle:nth-child(3){
+  fill: var(--tertiary-color);
+  stroke: var(--black-color);
+}
+#animcover circle:nth-child(4){
+  fill: var(--quaternary-color);
+  stroke: var(--black-color);
+}
+#animcover circle:nth-child(5){
+  fill: var(--black-color);
+}
+#animcover circle:nth-child(6){
+  fill: var(--black-color);
+}
+#animcover circle:nth-child(7){
+  fill: var(--black-color);
+}
+#animcover circle:nth-child(8){
+  fill: var(--black-color);
+}
+#animcover circle:nth-child(9){
+  fill: var(--black-color);
+}
+#animcover circle:nth-child(10){
+  fill: var(--black-color);
 }
 
 .chartContainer {
