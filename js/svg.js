@@ -8,7 +8,6 @@ function load() {
   const svgTxts = document.querySelectorAll(".txt");
 
   if (coverSVG) {
-    console.log(coverSVG);
     elementos.forEach(elemento => {
       elemento.addEventListener("click", (e) => {
         let numeroRandom = Math.ceil(Math.floor(Math.random() * 9));

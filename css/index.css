@@ -1864,9 +1864,14 @@ svg#petalpath {
 }
 #petalpath g path {
   fill: blue;
-  transform-origin: 50% 50%;
   transform-box: fill-box;
 }
+#petalpath g text {
+  stroke: none;
+  font-size: var(--size-1);
+  /* font-family: serif; */
+}
+
 #animcover {
   border: 1px solid black;
   border-radius: 50%;
