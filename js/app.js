@@ -108,23 +108,23 @@ function DOMCargado() {
   // Grafica D3
 
 const datos = [
-  { id: 00, angle: 0, x: -30, y: 0, lupa: 3, color: 'black', nombre: "0" },
-  { id: 01, angle: 0, x: 30, y: 0, lupa: 24, color: '#2BC4A9', nombre: "1" },
-  { id: 02, angle: 0, x: 13, y: 35, lupa: 13, color: '#FF6874', nombre: "2" },
-  { id: 03, angle: 0, x: 13, y: -30, lupa: 4, color: '#9F9FFF', nombre: "3" },
+  { id: 00, angle: 0, x: -60, y: 0, lupa: 3, color: 'black', nombre: "0" },
+  { id: 01, angle: 0, x: 35, y: 0, lupa: 24, color: '#2BC4A9', nombre: "1" },
+  { id: 02, angle: 0, x: 15, y: 50, lupa: 13, color: '#FF6874', nombre: "2" },
+  { id: 03, angle: 0, x: 15, y: -45, lupa: 4, color: '#9F9FFF', nombre: "3" },
   { id: 04, angle: 0, x: 0, y: 0, lupa: 3, color: '#FFFF9F', nombre: "4" },
-  { id: 05, angle: 0, x: 0, y: 35, lupa: 3, color: 'grey', nombre: "5" },
-  { id: 06, angle: 0, x: 0, y: -30, lupa: 3, color: 'grey', nombre: "6" },
-  { id: 07, angle: 0, x: 212, y: 0, lupa: 3, color: 'grey', nombre: "7" },
-  { id: 08, angle: 0, x: -15, y: 35, lupa: 3, color: 'grey', nombre: "8" },
-  { id: 09, angle: 0, x: -15, y: -30, lupa: 3, color: 'grey', nombre: "9" },
+  { id: 05, angle: 0, x: -17, y: 50, lupa: 3, color: 'grey', nombre: "5" },
+  { id: 06, angle: 0, x: -17, y: -45, lupa: 3, color: 'grey', nombre: "6" },
+  { id: 07, angle: 0, x: -38, y: 0, lupa: 3, color: 'grey', nombre: "7" },
+  { id: 08, angle: 0, x: -50, y: 50, lupa: 3, color: 'grey', nombre: "8" },
+  { id: 09, angle: 0, x: -50, y: -45, lupa: 3, color: 'grey', nombre: "9" },
 ]
 
 let sz1 = 50;
 let sz2 = 20;
 let sz3 = 30;
 let pPath = `M 0,0 C -${sz2},-${sz2}, -${sz2},-${sz3} 0,-${sz1} C ${sz2},-${sz3} ${sz2},-${sz2} 0,0`;
-
+let hoveredId;
 
   datos.forEach( dto => {
     console.log(dto)
@@ -158,23 +158,27 @@ let pPath = `M 0,0 C -${sz2},-${sz2}, -${sz2},-${sz3} 0,-${sz1} C ${sz2},-${sz3}
     .attr("cx", -(radio/1.5))
     .attr("stroke", datos[0].color)
     .attr("strokeWidth", "1px")
-    .attr("fill", "none");
+    .attr("fill", "none")
+    .on('mouseover', (e) => { e.target.style.fill = datos[0].color })
+    .on('mouseout', (e) => { e.target.style.fill = datos[1].color })
 
-  g
+  let numeros = g
     .selectAll("text")
     .data(datos)
     .enter()
     .append("text")
-    .attr("x", d=>d.x * Math.PI)
-    .attr("y", d=>d.y)
+    .attr("x", d => d.x * Math.PI)
+    .attr("y", d => d.y)
     .attr("transform", d => {
-      return `
-        rotate(${d.angle})
-        translate(${d.x}, ${d.y})
-      `
+      return `translate(${d.x}, ${d.y})`
     })
     .text(d => d.nombre)
     .attr("fill", d => d.color);
+
+  numeros
+    .selectAll("circle")
+    .append("circle")
+    .enter()
 
   const arco = d3.arc()
     .innerRadius(129)
@@ -182,9 +186,20 @@ let pPath = `M 0,0 C -${sz2},-${sz2}, -${sz2},-${sz3} 0,-${sz1} C ${sz2},-${sz3}
     .startAngle(Math.PI / 2)
     .endAngle(Math.PI * 3 / 2);
 
+  const arco2 = d3.arc()
+    .innerRadius(129)
+    .outerRadius(135)
+    .startAngle(Math.PI * 2)
+    .endAngle(10);
+
   g
     .append("path")
     .attr("d", arco);
+
+  g
+    .append("path")
+    .attr("d", arco2)
+    .attr("transform", `rotate(360) translate(-${radio*1.345} 0)`);
 
   const uno = g.append("circle")
     .attr("r", radio/3)
