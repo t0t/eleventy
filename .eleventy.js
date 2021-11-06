@@ -69,6 +69,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("js");
   eleventyConfig.addPassthroughCopy("videos");
+  // eleventyConfig.addPassthroughCopy("_data");
 
   // Customize Markdown library and settings:
   let markdownLibrary = markdownIt({

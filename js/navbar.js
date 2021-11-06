@@ -13,7 +13,7 @@ const isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { retu
 // Muestra efecto navbar si no es mobil NI Safari
 if ( !isSafari && !isMobileDevice()) {
 
-  console.log(`No es SAFARI porque da ${isSafari}`);
+  // console.log(`No es SAFARI porque da ${isSafari}`);
   var prevScrollpos = window.pageYOffset;
 
   window.onscroll = function () {

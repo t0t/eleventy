@@ -1,3 +1,4 @@
+
 function DOMCargado() {
 
   let entradaTexto = "";
@@ -6,9 +7,13 @@ function DOMCargado() {
   let outputWrapper = document.querySelector(".output");
   let output = document.getElementById("outputtexto");
   let fechaNacimiento = document.getElementById('fechanacimiento');
-  let petalPath = document.getElementById('petalpath');
+  let svgGrafica = document.getElementById('grafica');
 
   let fechaNacimientoUsuario = 0, frecuenciaNacimiento, diasRestantesAnyo,diasAnyoTranscurridos, agnio, resultadoSuma;
+
+  // for (let i = 0; i < d3data.length; i++) {
+  //   console.log(d3data[i])
+  // }
 
   let grafica = {
     "fechanacimiento": fechaNacimientoUsuario,
@@ -95,16 +100,16 @@ function DOMCargado() {
 
   // Codigo nombre
   function extraeValoresLetras(cadenaTexto){
-      const diccionario = {
-        a: 1, b: 2, c: 3, d: 4, e: 5, f: 6, g: 7, h: 8, i: 9, j: 10, k: 11,
-        l: 12, m: 13, n: 14, ñ: 15, o: 16, p: 17, q: 18, r: 19, s: 20,
-        t: 21, u: 22, v: 23, w: 24, x: 25, y: 26, z: 27
-      }
+    const diccionario = {
+      a: 1, b: 2, c: 3, d: 4, e: 5, f: 6, g: 7, h: 8, i: 9, j: 10, k: 11,
+      l: 12, m: 13, n: 14, ñ: 15, o: 16, p: 17, q: 18, r: 19, s: 20,
+      t: 21, u: 22, v: 23, w: 24, x: 25, y: 26, z: 27
+    }
 
-      if (cadenaTexto.length == 1) {
-        return diccionario[cadenaTexto] || ' ';
-      }
-      return cadenaTexto.split('').map(extraeValoresLetras);
+    if (cadenaTexto.length == 1) {
+      return diccionario[cadenaTexto] || ' ';
+    }
+    return cadenaTexto.split('').map(extraeValoresLetras);
   }
 
   function esAgnioBisiesto(agnio) {
@@ -115,98 +120,155 @@ function DOMCargado() {
     return esAgnioBisiesto(agnio) ? 366 : 365;
   }
 
-  // let path = anime.path("#thepath path");
-  //   anime({
-  //     targets: "#emoji",
-  //     translateX: path("x"),
-  //     translateY: path("y"),
-  //     easing: "linear",
-  //     duration: 10000,
-  //     loop: true
-  //   })
-
-  let morfing = document.querySelector("#polymorph polygon");
-  if (morfing) {
-    anime({
-      targets: [morfing],
-      points: [
-        { value: [
-          '70 24 119.574 60.369 100.145 117.631 50.855 101.631 3.426 54.369',
-          '70 41 118.574 59.369 111.145 132.631 60.855 84.631 20.426 60.369']
-        },
-        { value: '70 6 119.574 60.369 100.145 117.631 39.855 117.631 55.426 68.369' },
-        { value: '70 57 136.574 54.369 89.145 100.631 28.855 132.631 38.426 64.369' },
-        { value: '70 24 119.574 60.369 100.145 117.631 50.855 101.631 3.426 54.369' }
-      ],
-      easing: 'easeOutQuad',
-      duration: 2000,
-      loop: true
-    });
-  }
 
   // Grafica D3
 
-  const DUMMY_DATA = [
-    { "id": 01, "numero": 25, "lupa": 24, "color": "red"},
-    { "id": 02, "numero": 75, "lupa": 13, "color": "blue"},
-    { "id": 03, "numero": 55, "lupa": 4, "color": "yellow"},
-    { "id": 04, "numero": 40, "lupa": 3, "color": "green"}
+  const datos = [
+    { id: 00, angle: 0, x: -60, y: 0, lupa: 3, color: 'black', nombre: "0" },
+    { id: 01, angle: 0, x: 35, y: 0, lupa: 24, color: '#2BC4A9', nombre: "1" },
+    { id: 02, angle: 0, x: 15, y: 50, lupa: 13, color: '#FF6874', nombre: "2" },
+    { id: 03, angle: 0, x: 15, y: -45, lupa: 4, color: '#9F9FFF', nombre: "3" },
+    { id: 04, angle: 0, x: 0, y: 0, lupa: 3, color: '#FFFF9F', nombre: "4" },
+    { id: 05, angle: 0, x: -17, y: 50, lupa: 3, color: 'grey', nombre: "5" },
+    { id: 06, angle: 0, x: -17, y: -45, lupa: 3, color: 'grey', nombre: "6" },
+    { id: 07, angle: 0, x: -38, y: 0, lupa: 3, color: 'grey', nombre: "7" },
+    { id: 08, angle: 0, x: -50, y: 50, lupa: 3, color: 'grey', nombre: "8" },
+    { id: 09, angle: 0, x: -50, y: -45, lupa: 3, color: 'grey', nombre: "9" },
   ]
-
-  DUMMY_DATA.forEach( dto => {
-    dto.numero
-  });
-
-  const width = 500;
-  const height = 300;
-
-  const container = d3.select("svg#petalpath")
-  .attr("width", width)
-  .attr("height", height)
-
-  const circle = container.append("circle")
-    .attr("r", height/3)
-    .attr("cx", width/2)
-    .attr("cy", height/2)
-    .attr("fill", "yellow")
-
-  const uno = container.append("circle")
-    .attr("r", height/6)
-    .attr("cx", width/2.5)
-    .attr("cy", height/2)
-    .attr("fill", "black")
-
-  const dos = container.append("circle")
-    .attr("r", height/6)
-    .attr("cx", width/2+height/6)
-    .attr("cy", height/2)
-    .attr("fill", "black")
-
-  const g = container.append("g")
-    .attr("transform", `translate(${width/2},${width/4})`);
-
-  const arco = d3.arc()
-    .innerRadius(98)
-    .outerRadius(100)
-    .startAngle(Math.PI / 2)
-    .endAngle(Math.PI * 3 / 2);
 
   let sz1 = 50;
   let sz2 = 20;
   let sz3 = 30;
   let pPath = `M 0,0 C -${sz2},-${sz2}, -${sz2},-${sz3} 0,-${sz1} C ${sz2},-${sz3} ${sz2},-${sz2} 0,0`;
 
-  g.append("path")
-    .attr("d", pPath)
-  g.append("path")
-    .attr("d", arco)
 
+  let width = window.innerWidth;
+  let height = window.innerHeight / 2;
+
+  // window.addEventListener("resize", ajustaEscala);
+
+  // function ajustaEscala() {
+  //   width = window.innerWidth;
+  //   height = window.innerHeight/2;
+  // }
+
+  const radio = height / 2;
+
+  const container = d3.select("svg#grafica")
+    .attr("width", width)
+    .attr("height", height)
+
+  const g = container.append("g")
+    .attr("transform", `translate(${width / 2},${height / 2})`);
+
+  // Escala svg y g en window
+  d3.select(window).on("resize", (e)=> {
+    let iw = e.target.innerWidth;
+    let ih = e.target.innerHeight;
+    container.attr("width", iw).attr("height", ih / 2);
+    g.attr("transform", `translate(${iw / 2},${ih / 4})`);
+  })
+
+  const circuloGrande = g.append("circle")
+    .attr("r", radio / 1.5)
+    .attr("cx", radio / 2 - radio / 2)
+    .attr("stroke", datos[0].color)
+    .attr("strokeWidth", "1px")
+    .attr("fill", "none");
+
+  const circuloGrande2 = g.append("circle")
+    .attr("r", radio / 1.5)
+    .attr("cx", radio / 1.5)
+    .attr("stroke", datos[0].color)
+    .attr("strokeWidth", "1px")
+    .attr("fill", "none");
+
+    const circuloGrande3 = g.append("circle")
+    .attr("r", radio / 1.5)
+    .attr("cx", -(radio / 1.5))
+    .attr("stroke", datos[0].color)
+    .attr("strokeWidth", "1px")
+    .attr("fill", "none")
+    .on('mouseover', (e) => { e.target.style.fill = datos[0].color })
+    .on('mouseout', (e) => { e.target.style.fill = datos[1].color })
+
+    // https://bl.ocks.org/mbostock/3151228
+
+  let numeros = g
+    .selectAll("text")
+    .data(datos)
+    .enter()
+    .append("text")
+    .attr("x", d => d.x * Math.PI)
+    .attr("y", d => d.y)
+    .attr("transform", d => {
+      return `translate(${d.x}, ${d.y})`
+    })
+    .text(d => d.nombre)
+    .attr("fill", d => d.color);
+
+  numeros
+    .selectAll("circle")
+    .append("circle")
+    .enter()
+
+  const arco = d3.arc()
+    .innerRadius(129)
+    .outerRadius(131)
+    .startAngle(Math.PI / 2)
+    .endAngle(Math.PI * 3 / 2);
+
+  const arco2 = d3.arc()
+    .innerRadius(129)
+    .outerRadius(135)
+    .startAngle(Math.PI * 2)
+    .endAngle(10);
+
+  g
+    .append("path")
+    .attr("d", arco);
+
+  g
+    .append("path")
+    .attr("d", arco2)
+    .attr("transform", `rotate(360) translate(-${radio*1.345} 0)`);
+
+  const uno = g.append("circle")
+    .attr("r", radio/3)
+    .attr("cx", radio/3)
+    .attr("stroke", datos[0].color)
+    .attr("strokeWidth", "1px")
+    .attr("fill", "none")
+
+  const dos = g.append("circle")
+    .attr("r", radio/3)
+    .attr("cx", radio/3 - radio/1.5)
+    .attr("stroke", datos[0].color)
+    .attr("fill", "none")
+    .attr("strokeWidth", "1px")
+
+  const tres = g.append("circle")
+    .attr("r", radio/3)
+    .attr("cx", 0)
+    .attr("stroke", datos[0].color)
+    .attr("fill", "none")
+    .attr("strokeWidth", "1px")
+
+  const cuatro = g.append("circle")
+    .attr("r", radio/3)
+    .attr("cx", radio - radio/3)
+    .attr("stroke", datos[0].color)
+    .attr("fill", "none")
+    .attr("strokeWidth", "1px")
+
+
+  // g.append("path")
+  //   .attr("d", pPath)
 
 
 
 }
 document.addEventListener("DOMContentLoaded", DOMCargado);
-
 
 // seleccionar dato al azar
 
