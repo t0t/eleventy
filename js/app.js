@@ -132,7 +132,7 @@ function DOMCargado() {
 
 
   let width = window.innerWidth;
-  let height = window.innerHeight/2;
+  let height = window.innerHeight / 2;
 
   // window.addEventListener("resize", ajustaEscala);
 
@@ -141,30 +141,40 @@ function DOMCargado() {
   //   height = window.innerHeight/2;
   // }
 
-  const radio = height/2;
+  const radio = height / 2;
 
   const container = d3.select("svg#grafica")
     .attr("width", width)
     .attr("height", height)
 
   const g = container.append("g")
-    .attr("transform", `translate(${width/2},${height/2})`);
+    .attr("transform", `translate(${width / 2},${height / 2})`);
+
+  // Escala svg y g en window
+  d3.select(window).on("resize", (e)=> {
+    let iw = e.target.innerWidth;
+    let ih = e.target.innerHeight;
+    container.attr("width", iw).attr("height", ih / 2);
+    g.attr("transform", `translate(${iw / 2},${ih / 4})`);
+  })
 
   const circuloGrande = g.append("circle")
-    .attr("r", radio/1.5)
-    .attr("cx", radio/2 - radio/2)
+    .attr("r", radio / 1.5)
+    .attr("cx", radio / 2 - radio / 2)
     .attr("stroke", datos[0].color)
     .attr("strokeWidth", "1px")
     .attr("fill", "none");
+
   const circuloGrande2 = g.append("circle")
-    .attr("r", radio/1.5)
-    .attr("cx", radio/1.5)
+    .attr("r", radio / 1.5)
+    .attr("cx", radio / 1.5)
     .attr("stroke", datos[0].color)
     .attr("strokeWidth", "1px")
     .attr("fill", "none");
-  const circuloGrande3 = g.append("circle")
-    .attr("r", radio/1.5)
-    .attr("cx", -(radio/1.5))
+
+    const circuloGrande3 = g.append("circle")
+    .attr("r", radio / 1.5)
+    .attr("cx", -(radio / 1.5))
     .attr("stroke", datos[0].color)
     .attr("strokeWidth", "1px")
     .attr("fill", "none")
