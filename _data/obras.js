@@ -60,6 +60,3 @@ module.exports = {
   ],
   anyo: 2021
 }
-
-
-

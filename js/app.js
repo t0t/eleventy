@@ -1,3 +1,4 @@
+
 function DOMCargado() {
 
   let entradaTexto = "";
@@ -6,9 +7,13 @@ function DOMCargado() {
   let outputWrapper = document.querySelector(".output");
   let output = document.getElementById("outputtexto");
   let fechaNacimiento = document.getElementById('fechanacimiento');
-  let petalPath = document.getElementById('petalpath');
+  let svgGrafica = document.getElementById('grafica');
 
   let fechaNacimientoUsuario = 0, frecuenciaNacimiento, diasRestantesAnyo,diasAnyoTranscurridos, agnio, resultadoSuma;
+
+  // for (let i = 0; i < d3data.length; i++) {
+  //   console.log(d3data[i])
+  // }
 
   let grafica = {
     "fechanacimiento": fechaNacimientoUsuario,
@@ -84,16 +89,16 @@ function DOMCargado() {
 
   // Codigo nombre
   function extraeValoresLetras(cadenaTexto){
-      const diccionario = {
-        a: 1, b: 2, c: 3, d: 4, e: 5, f: 6, g: 7, h: 8, i: 9, j: 10, k: 11,
-        l: 12, m: 13, n: 14, ñ: 15, o: 16, p: 17, q: 18, r: 19, s: 20,
-        t: 21, u: 22, v: 23, w: 24, x: 25, y: 26, z: 27
-      }
+    const diccionario = {
+      a: 1, b: 2, c: 3, d: 4, e: 5, f: 6, g: 7, h: 8, i: 9, j: 10, k: 11,
+      l: 12, m: 13, n: 14, ñ: 15, o: 16, p: 17, q: 18, r: 19, s: 20,
+      t: 21, u: 22, v: 23, w: 24, x: 25, y: 26, z: 27
+    }
 
-      if (cadenaTexto.length == 1) {
-        return diccionario[cadenaTexto] || ' ';
-      }
-      return cadenaTexto.split('').map(extraeValoresLetras);
+    if (cadenaTexto.length == 1) {
+      return diccionario[cadenaTexto] || ' ';
+    }
+    return cadenaTexto.split('').map(extraeValoresLetras);
   }
 
   function esAgnioBisiesto(agnio) {
@@ -107,34 +112,38 @@ function DOMCargado() {
 
   // Grafica D3
 
-const datos = [
-  { id: 00, angle: 0, x: -60, y: 0, lupa: 3, color: 'black', nombre: "0" },
-  { id: 01, angle: 0, x: 35, y: 0, lupa: 24, color: '#2BC4A9', nombre: "1" },
-  { id: 02, angle: 0, x: 15, y: 50, lupa: 13, color: '#FF6874', nombre: "2" },
-  { id: 03, angle: 0, x: 15, y: -45, lupa: 4, color: '#9F9FFF', nombre: "3" },
-  { id: 04, angle: 0, x: 0, y: 0, lupa: 3, color: '#FFFF9F', nombre: "4" },
-  { id: 05, angle: 0, x: -17, y: 50, lupa: 3, color: 'grey', nombre: "5" },
-  { id: 06, angle: 0, x: -17, y: -45, lupa: 3, color: 'grey', nombre: "6" },
-  { id: 07, angle: 0, x: -38, y: 0, lupa: 3, color: 'grey', nombre: "7" },
-  { id: 08, angle: 0, x: -50, y: 50, lupa: 3, color: 'grey', nombre: "8" },
-  { id: 09, angle: 0, x: -50, y: -45, lupa: 3, color: 'grey', nombre: "9" },
-]
+  const datos = [
+    { id: 00, angle: 0, x: -60, y: 0, lupa: 3, color: 'black', nombre: "0" },
+    { id: 01, angle: 0, x: 35, y: 0, lupa: 24, color: '#2BC4A9', nombre: "1" },
+    { id: 02, angle: 0, x: 15, y: 50, lupa: 13, color: '#FF6874', nombre: "2" },
+    { id: 03, angle: 0, x: 15, y: -45, lupa: 4, color: '#9F9FFF', nombre: "3" },
+    { id: 04, angle: 0, x: 0, y: 0, lupa: 3, color: '#FFFF9F', nombre: "4" },
+    { id: 05, angle: 0, x: -17, y: 50, lupa: 3, color: 'grey', nombre: "5" },
+    { id: 06, angle: 0, x: -17, y: -45, lupa: 3, color: 'grey', nombre: "6" },
+    { id: 07, angle: 0, x: -38, y: 0, lupa: 3, color: 'grey', nombre: "7" },
+    { id: 08, angle: 0, x: -50, y: 50, lupa: 3, color: 'grey', nombre: "8" },
+    { id: 09, angle: 0, x: -50, y: -45, lupa: 3, color: 'grey', nombre: "9" },
+  ]
 
-let sz1 = 50;
-let sz2 = 20;
-let sz3 = 30;
-let pPath = `M 0,0 C -${sz2},-${sz2}, -${sz2},-${sz3} 0,-${sz1} C ${sz2},-${sz3} ${sz2},-${sz2} 0,0`;
-let hoveredId;
+  let sz1 = 50;
+  let sz2 = 20;
+  let sz3 = 30;
+  let pPath = `M 0,0 C -${sz2},-${sz2}, -${sz2},-${sz3} 0,-${sz1} C ${sz2},-${sz3} ${sz2},-${sz2} 0,0`;
 
-  datos.forEach( dto => {
-    console.log(dto)
-  });
 
-  const width = window.innerWidth;
-  const height = window.innerHeight/2;
+  let width = window.innerWidth;
+  let height = window.innerHeight/2;
+
+  // window.addEventListener("resize", ajustaEscala);
+
+  // function ajustaEscala() {
+  //   width = window.innerWidth;
+  //   height = window.innerHeight/2;
+  // }
+
   const radio = height/2;
 
-  const container = d3.select("svg#petalpath")
+  const container = d3.select("svg#grafica")
     .attr("width", width)
     .attr("height", height)
 
@@ -161,6 +170,8 @@ let hoveredId;
     .attr("fill", "none")
     .on('mouseover', (e) => { e.target.style.fill = datos[0].color })
     .on('mouseout', (e) => { e.target.style.fill = datos[1].color })
+
+    // https://bl.ocks.org/mbostock/3151228
 
   let numeros = g
     .selectAll("text")
@@ -235,10 +246,8 @@ let hoveredId;
 
 
 
-
 }
 document.addEventListener("DOMContentLoaded", DOMCargado);
-
 
 // seleccionar dato al azar
 
