@@ -113,12 +113,14 @@ function DOMCargado() {
   // Arcos
   group
     .append("path")
-    .attr("d", arco);
+    .attr("d", arco)
+    .attr("stroke", "none");
 
-  group
+    group
     .append("path")
     .attr("d", arco2)
-    .attr("transform", `rotate(360) translate(-${radio * 1.345} 0)`);
+    .attr("transform", `rotate(360) translate(-${radio * 1.345} 0)`)
+    .attr("stroke", "none");
 
   // Uno
   group
@@ -177,38 +179,33 @@ function DOMCargado() {
     diahoy = diasTranscurridos(fechaActual);
     diasfinanyo = obtenerCantidadDias(agnio) - diahoy;
 
+    let grafica = [
+      frpalabras,
+      diahoy,
+      diasfinanyo,
+      frpositiva,
+      frnegativa
+    ];
+
     radiog = frpositiva / Math.PI * 0.1;
 
     // grafica lineas output
     group
       .selectAll("line")
-      .data([1,2,3,4,5,66])
+      .data(grafica)
       .enter()
       .append("line")
-      .attr("stroke", "blue")
+      .attr("stroke", datos[3].color)
+      .attr("stroke-width", "10px")
       .attr("x1", "0")
       .attr("y1", "0")
-      .attr("x2", "100")
+      .attr("x2", d => d)
       .attr("y2", "100")
       .exit()
 
-    let grafica = [
-      {
-        "frpalabras": frpalabras,
-        "diahoy": diahoy,
-        "diasfinanyo": diasfinanyo,
-        "frpositiva": frpositiva,
-        "frnegativa": frnegativa
-      }
-    ];
-
-    console.log(
-      grafica[0].frpalabras,
-      grafica[0].diahoy,
-      grafica[0].diasfinanyo,
-      grafica[0].frpositiva,
-      grafica[0].frnegativa
-    )
+  for (let i = 0; i < grafica.length; i++) {
+    console.log(grafica[i]);
+  }
 
     output.classList.add("resultado")
 
