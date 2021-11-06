@@ -4,16 +4,11 @@ function DOMCargado() {
   let entradaTexto = "";
   let input = document.getElementById("entrada");
   let btnGenerar = document.getElementById("lanza");
-  let outputWrapper = document.querySelector(".output");
-  let output = document.getElementById("outputtexto");
+  let output = document.querySelector(".output");
   let fechaNacimiento = document.getElementById('fechanacimiento');
-  let svgGrafica = document.getElementById('grafica');
+  let graficaWrapper = document.getElementById('grafica');
 
   let fechaNacimientoUsuario = 0, frecuenciaNacimiento, diasRestantesAnyo,diasAnyoTranscurridos, agnio, resultadoSuma;
-
-  // for (let i = 0; i < d3data.length; i++) {
-  //   console.log(d3data[i])
-  // }
 
   let grafica = {
     "fechanacimiento": fechaNacimientoUsuario,
@@ -55,20 +50,15 @@ function DOMCargado() {
       grafica.diasanyotranscurridos = diasAnyoTranscurridos;
       grafica.resultadosuma = resultadoSuma;
 
-      outputWrapper.style.display = "grid";
+      output.classList.toggle("resultado")
       output.innerHTML = `
-      <dl>
-        <dt>Frecuencias de palabras:</dt>
-          <dd>"${textoIntroducido}" = <strong>${resultadoSuma}</strong></dd>
-          <dd>Frecuencia Hoy: <strong>${diasAnyoTranscurridos}</strong> - <strong>${diasRestantesAnyo}</strong></dd>
-          <dd>Frecuencia nacimiento: <strong>${grafica.frecuencianacimiento}</strong><strong>${grafica.diasrestantesnacimiento}</strong></dd>
-      </dl>
-      `
+        <h2>${resultadoSuma}</h2>
+        <h2>${diasAnyoTranscurridos}-${diasRestantesAnyo}</h2>
+        <h2>${grafica.frecuencianacimiento}${grafica.diasrestantesnacimiento}</h2>
 
+      `
     })
   }
-
-
 
   function inputFecha(f1) {
     var aFecha1 = f1.split('-'); // ['1975', '10', '15']
@@ -90,9 +80,7 @@ function DOMCargado() {
   // Codigo nombre
   function extraeValoresLetras(cadenaTexto){
     const diccionario = {
-      a: 1, b: 2, c: 3, d: 4, e: 5, f: 6, g: 7, h: 8, i: 9, j: 10, k: 11,
-      l: 12, m: 13, n: 14, ñ: 15, o: 16, p: 17, q: 18, r: 19, s: 20,
-      t: 21, u: 22, v: 23, w: 24, x: 25, y: 26, z: 27
+      a: 1, b: 2, c: 3, d: 4, e: 5, f: 6, g: 7, h: 8, i: 9, j: 10, k: 11, l: 12, m: 13, n: 14, ñ: 15, o: 16, p: 17, q: 18, r: 19, s: 20, t: 21, u: 22, v: 23, w: 24, x: 25, y: 26, z: 27
     }
 
     if (cadenaTexto.length == 1) {
@@ -113,37 +101,101 @@ function DOMCargado() {
   // Grafica D3
 
   const datos = [
-    { id: 00, angle: 0, x: -60, y: 0, lupa: 3, color: 'black', nombre: "0" },
-    { id: 01, angle: 0, x: 35, y: 0, lupa: 24, color: '#2BC4A9', nombre: "1" },
-    { id: 02, angle: 0, x: 15, y: 50, lupa: 13, color: '#FF6874', nombre: "2" },
-    { id: 03, angle: 0, x: 15, y: -45, lupa: 4, color: '#9F9FFF', nombre: "3" },
-    { id: 04, angle: 0, x: 0, y: 0, lupa: 3, color: '#FFFF9F', nombre: "4" },
-    { id: 05, angle: 0, x: -17, y: 50, lupa: 3, color: 'grey', nombre: "5" },
-    { id: 06, angle: 0, x: -17, y: -45, lupa: 3, color: 'grey', nombre: "6" },
-    { id: 07, angle: 0, x: -38, y: 0, lupa: 3, color: 'grey', nombre: "7" },
-    { id: 08, angle: 0, x: -50, y: 50, lupa: 3, color: 'grey', nombre: "8" },
-    { id: 09, angle: 0, x: -50, y: -45, lupa: 3, color: 'grey', nombre: "9" },
+    {
+      id: 00,
+      angle: 0,
+      x: -60,
+      y: 0,
+      lupa: 3,
+      color: 'black',
+      nombre: "0"
+    }, {
+      id: 01,
+      angle: 0,
+      x: 35,
+      y: 0,
+      lupa: 24,
+      color: '#2BC4A9',
+      nombre: "1"
+    }, {
+      id: 02,
+      angle: 0,
+      x: 15,
+      y: 50,
+      lupa: 13,
+      color: '#FF6874',
+      nombre: "2"
+    }, {
+      id: 03,
+      angle: 0,
+      x: 15,
+      y: -45,
+      lupa: 4,
+      color: '#9F9FFF',
+      nombre: "3"
+    }, {
+      id: 04,
+      angle: 0,
+      x: 0,
+      y: 0,
+      lupa: 3,
+      color: '#FFFF9F',
+      nombre: "4"
+    }, {
+      id: 05,
+      angle: 0,
+      x: -17,
+      y: 50,
+      lupa: 3,
+      color: 'grey',
+      nombre: "5"
+    }, {
+      id: 06,
+      angle: 0,
+      x: -17,
+      y: -45,
+      lupa: 3,
+      color: 'grey',
+      nombre: "6"
+    }, {
+      id: 07,
+      angle: 0,
+      x: -38,
+      y: 0,
+      lupa: 3,
+      color: 'grey',
+      nombre: "7"
+    }, {
+      id: 08,
+      angle: 0,
+      x: -50,
+      y: 50,
+      lupa: 3,
+      color: 'grey',
+      nombre: "8"
+    }, {
+      id: 09,
+      angle: 0,
+      x: -50,
+      y: -45,
+      lupa: 3,
+      color: 'grey',
+      nombre: "9"
+    }
   ]
 
-  let sz1 = 50;
-  let sz2 = 20;
-  let sz3 = 30;
-  let pPath = `M 0,0 C -${sz2},-${sz2}, -${sz2},-${sz3} 0,-${sz1} C ${sz2},-${sz3} ${sz2},-${sz2} 0,0`;
-
+  // let sz1 = 50;
+  // let sz2 = 20;
+  // let sz3 = 30;
+  // let pPath = `M 0,0 C -${sz2},-${sz2}, -${sz2},-${sz3} 0,-${sz1} C ${sz2},-${sz3} ${sz2},-${sz2} 0,0`;
 
   let width = window.innerWidth;
   let height = window.innerHeight / 2;
 
-  // window.addEventListener("resize", ajustaEscala);
-
-  // function ajustaEscala() {
-  //   width = window.innerWidth;
-  //   height = window.innerHeight/2;
-  // }
-
   const radio = height / 2;
 
-  const container = d3.select("svg#grafica")
+  const container = d3.select("#grafica")
+    .append("svg")
     .attr("width", width)
     .attr("height", height)
 
@@ -172,7 +224,7 @@ function DOMCargado() {
     .attr("strokeWidth", "1px")
     .attr("fill", "none");
 
-    const circuloGrande3 = g.append("circle")
+  const circuloGrande3 = g.append("circle")
     .attr("r", radio / 1.5)
     .attr("cx", -(radio / 1.5))
     .attr("stroke", datos[0].color)
@@ -250,10 +302,8 @@ function DOMCargado() {
     .attr("fill", "none")
     .attr("strokeWidth", "1px")
 
-
   // g.append("path")
   //   .attr("d", pPath)
-
 
 
 }
@@ -266,5 +316,3 @@ document.addEventListener("DOMContentLoaded", DOMCargado);
 //   return azarDatos[Math.floor(Math.random() * azarDatos.length)]
 // }
 // console.log(seleccionarDatoAlAzar(azarDatos))
-
-

@@ -341,10 +341,6 @@ hr {
   display: none;
 }
 
-/* Seccion formulario */
-.section--form .resultado {
-  /* font-weight: bold; */
-}
 /* Helpers */
 
 .tar {
@@ -518,20 +514,16 @@ input[type="submit"]:focus {
   background-color: var(--quaternary-color);
 }
 
-.form-group__item {
-  /* display: grid; */
-}
 ::placeholder,
 input[type="date" i] {
   color: var(--black-color);
 }
 input[type="submit"] {
-  border-radius: 0px;
   background-color: var(--grey-color-2);
 }
 input[type="submit"]:hover {
   cursor: pointer;
-  background-color: var(--grey-color-2);
+  background-color: var(--quaternary-color);
 }
 
 input:checked +.switch {
@@ -569,9 +561,22 @@ svg.grafica text {
 }
 .output {
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  padding: var(--size-2);
-  transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 2s;
-  display: none;
+  opacity: 0;
+  position: absolute;
+  color: var(--primary-color);
+  transition: background-color .2s, opacity 0.5s , color .2s, transform .7s;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform: scale(3) rotate(-30deg);
+  background-color: var(--quaternary-color);
+}
+
+.output.resultado {
+  color: inherit;
+  opacity: 1;
+  transition: background-color 3s, opacity 3s , color 6s, transform 2s;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform: translate(var(--size-2), var(--size-2)) scale(1) rotate(0deg);
+  background-color: inherit;
 }
 
 .codigos-ejemplo {
@@ -1866,8 +1871,9 @@ img.hover-shadow {
   border: 1px solid black;
 } */
 
-svg#grafica {
+#grafica {
   background-color: var(--grey-color-1);
+  position: relative;
 }
 #grafica g path {
   fill: var(--primary-color);
