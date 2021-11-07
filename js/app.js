@@ -52,7 +52,7 @@ function DOMCargado() {
     container
     .attr("width", iw)
     .attr("height", ih / 2);
-    g.attr("transform", `translate(${iw / 2},${ih / 4})`);
+    group.attr("transform", `translate(${iw / 2},${ih / 4})`);
   })
 
   // Circulo grande
@@ -186,8 +186,6 @@ function DOMCargado() {
       frpositiva,
       frnegativa
     ];
-
-    radiog = frpositiva / Math.PI * 0.1;
 
     // grafica lineas output
     group
