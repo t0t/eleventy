@@ -1651,45 +1651,12 @@ img.hover-shadow {
     text-align: right;
   }
 
-  /* .section--metodo .txt--cero {
-    top: 10px;
-    left: 10px;
+  .nav-item a {
+    color: var(--black-color);
   }
-
-  .section--metodo .txt--uno {
-    top: -400px;
-    right: 100px;
-  }
-
-  .section--metodo .txt--dos {
-    top: -100px;
-    right: 230px;
-  }
-
-  .section--metodo .txt--tres {
-    top: -639px;
-    right: 150px;
-  }
-
-  .section--metodo .txt--cuatro {
-    top: -400px;
-    right: 350px;
-  } */
-
-  #metodosvg g {
-    stroke-width: 2px;
-  }
-
-  h3 {
-    font-size: var(--size-2);
-  }
-
-  p {
-    max-width: var(--bp3);
-  }
-
-  .section--cover {
-    padding-top: 0;
+  .nav-item a:hover {
+    color: var(--white-color);
+    background-color: var(--black-color);
   }
 
   /* GRID */
@@ -1775,9 +1742,9 @@ img.hover-shadow {
     justify-self: end;
   }
 
-  .nav a:hover {
+  /* .nav a:hover {
     background-color: var(--white-color);
-  }
+  } */
 
   .nav-item-active a,
   .nav-item-active a:hover {
