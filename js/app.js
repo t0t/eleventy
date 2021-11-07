@@ -201,10 +201,6 @@ function DOMCargado() {
       .attr("y2", "100")
       .exit()
 
-  for (let i = 0; i < grafica.length; i++) {
-    console.log(grafica[i]);
-  }
-
     output.classList.add("resultado")
 
     output.innerHTML = `
