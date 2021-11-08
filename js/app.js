@@ -8,28 +8,27 @@ function DOMCargado() {
   let width = window.innerWidth;
   let height = window.innerHeight / 2;
 
-
   const datos = [
     {
-      id: 00, angle: 0, x: -60, y: 0, lupa: 3, color: 'black', nombre: '0'
+      id: 0, angle: 0, x: -60, y: 0, lupa: 3, color: 'black', nombre: '0'
     },{
-      id: 01, angle: 0, x: 35, y: 0, lupa: 24, color: '#2BC4A9', nombre: '1'
+      id: 1, angle: 0, x: 35, y: 0, lupa: 24, color: '#2BC4A9', nombre: '1'
     },{
-      id: 02, angle: 0, x: 15, y: 50, lupa: 13, color: '#FF6874', nombre: '2'
+      id: 2, angle: 0, x: 15, y: 50, lupa: 13, color: '#FF6874', nombre: '2'
     },{
-      id: 03, angle: 0, x: 15, y: -45, lupa: 4, color: '#9F9FFF', nombre: '3'
+      id: 3, angle: 0, x: 15, y: -45, lupa: 4, color: '#9F9FFF', nombre: '3'
     },{
-      id: 04, angle: 0, x: 0, y: 0, lupa: 3, color: '#FFFF9F', nombre: '4'
+      id: 4, angle: 0, x: 0, y: 0, lupa: 3, color: '#FFFF9F', nombre: '4'
     },{
-      id: 05, angle: 0, x: -17, y: 50, lupa: 3, color: 'grey', nombre: '5'
+      id: 5, angle: 0, x: -17, y: 50, lupa: 3, color: 'grey', nombre: '5'
     },{
-      id: 06, angle: 0, x: -17, y: -45, lupa: 3, color: 'grey', nombre: '6'
+      id: 6, angle: 0, x: -17, y: -45, lupa: 3, color: 'grey', nombre: '6'
     },{
-      id: 07, angle: 0, x: -38, y: 0, lupa: 3, color: 'grey', nombre: '7'
+      id: 7, angle: 0, x: -38, y: 0, lupa: 3, color: 'grey', nombre: '7'
     },{
-      id: 08, angle: 0, x: -50, y: 50, lupa: 3, color: 'grey', nombre: '8'
+      id: 8, angle: 0, x: -50, y: 50, lupa: 3, color: 'grey', nombre: '8'
     },{
-      id: 09, angle: 0, x: -50, y: -45, lupa: 3, color: 'grey', nombre: '9'
+      id: 9, angle: 0, x: -50, y: -45, lupa: 3, color: 'grey', nombre: '9'
     }
   ];
 
@@ -213,7 +212,7 @@ function DOMCargado() {
   function inputFecha(f1) {
     var aFecha1 = f1.split('-'); // ['1975', '10', '15']
     var fFecha1 = Date.UTC(aFecha1[0], aFecha1[1] - 1, aFecha1[2]);
-    var fFecha2 = Date.UTC(aFecha1[0], -00, 00);
+    var fFecha2 = Date.UTC(aFecha1[0], -0, 0);
     agnio = aFecha1[0];
     var dif = (fFecha1 - fFecha2) / (1000 * 60 * 60 * 24);
     return Math.floor(dif);
